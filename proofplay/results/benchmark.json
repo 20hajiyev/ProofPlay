@@ -1,0 +1,1242 @@
+{
+ "date": "2026-10-09 15:49",
+ "sessions": 14,
+ "summary": {
+  "rule": {
+   "advice": 42,
+   "tested": 32,
+   "works": 12,
+   "no_effect": 1,
+   "worse": 11,
+   "crash": 8,
+   "works_pct": 37.5,
+   "mean_gain_s": 0.309,
+   "planted_flaw_first": "7/12",
+   "planted_fix_direction_first": "4/12"
+  },
+  "proofplay": {
+   "advice": 31,
+   "tested": 31,
+   "works": 31,
+   "no_effect": 0,
+   "worse": 0,
+   "crash": 0,
+   "works_pct": 100.0,
+   "mean_gain_s": 1.054,
+   "planted_flaw_first": "7/12",
+   "planted_fix_direction_first": "5/12"
+  },
+  "llm": {
+   "advice": 42,
+   "tested": 34,
+   "works": 26,
+   "no_effect": 1,
+   "worse": 4,
+   "crash": 3,
+   "works_pct": 76.5,
+   "mean_gain_s": 0.633,
+   "planted_flaw_first": "7/12",
+   "planted_fix_direction_first": "5/12"
+  }
+ },
+ "llm_usage": [
+  {
+   "input_tokens": 698,
+   "output_tokens": 1167
+  },
+  {
+   "input_tokens": 621,
+   "output_tokens": 1039
+  },
+  {
+   "input_tokens": 698,
+   "output_tokens": 1233
+  },
+  {
+   "input_tokens": 698,
+   "output_tokens": 1233
+  },
+  {
+   "input_tokens": 621,
+   "output_tokens": 1423
+  },
+  {
+   "input_tokens": 618,
+   "output_tokens": 1359
+  },
+  {
+   "input_tokens": 624,
+   "output_tokens": 975
+  },
+  {
+   "input_tokens": 701,
+   "output_tokens": 1103
+  },
+  {
+   "input_tokens": 698,
+   "output_tokens": 1167
+  },
+  {
+   "input_tokens": 698,
+   "output_tokens": 1167
+  },
+  {
+   "input_tokens": 701,
+   "output_tokens": 1040
+  },
+  {
+   "input_tokens": 701,
+   "output_tokens": 1231
+  },
+  {
+   "input_tokens": 701,
+   "output_tokens": 1167
+  },
+  {
+   "input_tokens": 698,
+   "output_tokens": 1424
+  }
+ ],
+ "results": [
+  {
+   "row": {
+    "name": "c1_early25",
+    "flaw": "early_brake:955:25",
+    "corner": 1,
+    "fix": "brake_later",
+    "bot": "Normal"
+   },
+   "coaches": {
+    "rule": [
+     {
+      "amount_m": 15,
+      "corner": 1,
+      "gain_s": 1.3916702270507812,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 15,
+      "corner": 2,
+      "kind": "brake_earlier",
+      "lap": 1,
+      "status": "not_testable"
+     },
+     {
+      "amount_m": 15,
+      "corner": 3,
+      "gain_s": -0.3166656494140625,
+      "kind": "brake_earlier",
+      "lap": 1,
+      "status": "worse"
+     }
+    ],
+    "proofplay": [
+     {
+      "amount_m": 30.0,
+      "corner": 1,
+      "gain_s": 1.9666671752929688,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 30.0,
+      "corner": 3,
+      "gain_s": 0.40833282470703125,
+      "kind": "brake_later",
+      "lap": 1,
+      "status": "works"
+     }
+    ],
+    "llm": [
+     {
+      "amount_m": 30,
+      "corner": 1,
+      "gain_s": 1.9666671752929688,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 20,
+      "corner": 1,
+      "gain_s": 0.9666671752929688,
+      "kind": "brake_later",
+      "lap": 1,
+      "status": "works"
+     },
+     {
+      "amount_m": 10,
+      "corner": 3,
+      "gain_s": 0.0,
+      "kind": "brake_later",
+      "lap": 1,
+      "status": "no_effect"
+     }
+    ]
+   }
+  },
+  {
+   "row": {
+    "name": "c1_early40",
+    "flaw": "early_brake:955:40",
+    "corner": 1,
+    "fix": "brake_later",
+    "bot": "Normal"
+   },
+   "coaches": {
+    "rule": [
+     {
+      "amount_m": 15,
+      "corner": 1,
+      "gain_s": 0.0,
+      "kind": "brake_later",
+      "lap": 1,
+      "status": "crash"
+     },
+     {
+      "amount_m": 15,
+      "corner": 2,
+      "kind": "brake_earlier",
+      "lap": 2,
+      "status": "not_testable"
+     },
+     {
+      "amount_m": 15,
+      "corner": 3,
+      "gain_s": -0.125,
+      "kind": "brake_earlier",
+      "lap": 1,
+      "status": "worse"
+     }
+    ],
+    "proofplay": [
+     {
+      "amount_m": 30.0,
+      "corner": 3,
+      "gain_s": 0.38333892822265625,
+      "kind": "brake_later",
+      "lap": 1,
+      "status": "works"
+     }
+    ],
+    "llm": [
+     {
+      "amount_m": 25,
+      "corner": 1,
+      "gain_s": -0.6166648864746094,
+      "kind": "brake_later",
+      "lap": 1,
+      "status": "worse"
+     },
+     {
+      "amount_m": 15,
+      "corner": 2,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "not_testable"
+     },
+     {
+      "amount_m": 15,
+      "corner": 3,
+      "gain_s": 0.1666717529296875,
+      "kind": "brake_later",
+      "lap": 1,
+      "status": "works"
+     }
+    ]
+   }
+  },
+  {
+   "row": {
+    "name": "c1_late30",
+    "flaw": "late_brake:980:30",
+    "corner": 1,
+    "fix": "brake_earlier",
+    "bot": "Normal"
+   },
+   "coaches": {
+    "rule": [
+     {
+      "amount_m": 15,
+      "corner": 1,
+      "gain_s": 0.9500045776367188,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 15,
+      "corner": 2,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "not_testable"
+     },
+     {
+      "amount_m": 15,
+      "corner": 3,
+      "gain_s": 0.5916748046875,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     }
+    ],
+    "proofplay": [
+     {
+      "amount_m": 10.0,
+      "corner": 1,
+      "gain_s": 5.408332824707031,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 30.0,
+      "corner": 3,
+      "gain_s": 0.9250030517578125,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 30.0,
+      "corner": 2,
+      "gain_s": 0.10833358764648438,
+      "kind": "brake_later",
+      "lap": 1,
+      "status": "works"
+     }
+    ],
+    "llm": [
+     {
+      "amount_m": 25,
+      "corner": 1,
+      "gain_s": 0.7833328247070312,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 15,
+      "corner": 2,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "not_testable"
+     },
+     {
+      "amount_m": 20,
+      "corner": 3,
+      "gain_s": 0.708343505859375,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     }
+    ]
+   }
+  },
+  {
+   "row": {
+    "name": "c1_late45",
+    "flaw": "late_brake:980:45",
+    "corner": 1,
+    "fix": "brake_earlier",
+    "bot": "Normal"
+   },
+   "coaches": {
+    "rule": [
+     {
+      "amount_m": 15,
+      "corner": 3,
+      "gain_s": 0.4583282470703125,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 15,
+      "corner": 2,
+      "kind": "brake_earlier",
+      "lap": 2,
+      "status": "not_testable"
+     },
+     {
+      "amount_m": 15,
+      "corner": 1,
+      "gain_s": 0.0,
+      "kind": "brake_earlier",
+      "lap": 2,
+      "status": "crash"
+     }
+    ],
+    "proofplay": [
+     {
+      "amount_m": 30.0,
+      "corner": 3,
+      "gain_s": 0.5999908447265625,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 30.0,
+      "corner": 2,
+      "gain_s": 0.10833358764648438,
+      "kind": "brake_later",
+      "lap": 1,
+      "status": "works"
+     }
+    ],
+    "llm": [
+     {
+      "amount_m": 25,
+      "corner": 3,
+      "gain_s": 0.5583343505859375,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 15,
+      "corner": 2,
+      "kind": "brake_earlier",
+      "lap": 2,
+      "status": "not_testable"
+     },
+     {
+      "amount_m": 10,
+      "corner": 2,
+      "gain_s": 0.0,
+      "kind": "brake_earlier",
+      "lap": 1,
+      "status": "crash"
+     }
+    ]
+   }
+  },
+  {
+   "row": {
+    "name": "c2_early25",
+    "flaw": "early_brake:1203:25",
+    "corner": 2,
+    "fix": "brake_later",
+    "bot": "Normal"
+   },
+   "coaches": {
+    "rule": [
+     {
+      "amount_m": 15,
+      "corner": 1,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "not_testable"
+     },
+     {
+      "amount_m": 15,
+      "corner": 2,
+      "gain_s": 0.48332977294921875,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 15,
+      "corner": 3,
+      "gain_s": 0.5833358764648438,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     }
+    ],
+    "proofplay": [
+     {
+      "amount_m": 30.0,
+      "corner": 2,
+      "gain_s": 0.7333297729492188,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 30.0,
+      "corner": 3,
+      "gain_s": 0.9000015258789062,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     }
+    ],
+    "llm": [
+     {
+      "amount_m": 25,
+      "corner": 1,
+      "kind": "brake_earlier",
+      "lap": 2,
+      "status": "not_testable"
+     },
+     {
+      "amount_m": 10,
+      "corner": 2,
+      "gain_s": 0.383331298828125,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 20,
+      "corner": 3,
+      "gain_s": -3.241668701171875,
+      "kind": "brake_earlier",
+      "lap": 2,
+      "status": "worse"
+     }
+    ]
+   }
+  },
+  {
+   "row": {
+    "name": "c2_early40",
+    "flaw": "early_brake:1203:40",
+    "corner": 2,
+    "fix": "brake_later",
+    "bot": "Normal"
+   },
+   "coaches": {
+    "rule": [
+     {
+      "amount_m": 15,
+      "corner": 2,
+      "gain_s": 1.4666671752929688,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 15,
+      "corner": 1,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "not_testable"
+     },
+     {
+      "amount_m": 15,
+      "corner": 3,
+      "gain_s": -0.3083343505859375,
+      "kind": "brake_earlier",
+      "lap": 1,
+      "status": "worse"
+     }
+    ],
+    "proofplay": [
+     {
+      "amount_m": 30.0,
+      "corner": 2,
+      "gain_s": 2.25,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 30.0,
+      "corner": 3,
+      "gain_s": 0.38333892822265625,
+      "kind": "brake_later",
+      "lap": 1,
+      "status": "works"
+     }
+    ],
+    "llm": [
+     {
+      "amount_m": 25,
+      "corner": 2,
+      "gain_s": 2.25,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 20,
+      "corner": 1,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "not_testable"
+     },
+     {
+      "amount_m": 15,
+      "corner": 2,
+      "gain_s": 0.6833343505859375,
+      "kind": "brake_later",
+      "lap": 1,
+      "status": "works"
+     }
+    ]
+   }
+  },
+  {
+   "row": {
+    "name": "c2_late30",
+    "flaw": "late_brake:1228:30",
+    "corner": 2,
+    "fix": "brake_earlier",
+    "bot": "Normal"
+   },
+   "coaches": {
+    "rule": [
+     {
+      "amount_m": 15,
+      "corner": 1,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "not_testable"
+     },
+     {
+      "amount_m": 15,
+      "corner": 3,
+      "gain_s": 5.058326721191406,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 15,
+      "corner": 2,
+      "gain_s": 0.0,
+      "kind": "brake_earlier",
+      "lap": 2,
+      "status": "crash"
+     }
+    ],
+    "proofplay": [
+     {
+      "amount_m": 30.0,
+      "corner": 3,
+      "gain_s": 5.51666259765625,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 30.0,
+      "corner": 2,
+      "gain_s": 0.09999847412109375,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     }
+    ],
+    "llm": [
+     {
+      "amount_m": 25,
+      "corner": 1,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "not_testable"
+     },
+     {
+      "amount_m": 20,
+      "corner": 3,
+      "gain_s": 5.233329772949219,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 10,
+      "corner": 3,
+      "gain_s": 0.116668701171875,
+      "kind": "brake_later",
+      "lap": 1,
+      "status": "works"
+     }
+    ]
+   }
+  },
+  {
+   "row": {
+    "name": "c2_late45",
+    "flaw": "late_brake:1228:45",
+    "corner": 2,
+    "fix": "brake_earlier",
+    "bot": "Normal"
+   },
+   "coaches": {
+    "rule": [
+     {
+      "amount_m": 15,
+      "corner": 3,
+      "gain_s": 0.366668701171875,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 15,
+      "corner": 1,
+      "kind": "brake_earlier",
+      "lap": 2,
+      "status": "not_testable"
+     },
+     {
+      "amount_m": 15,
+      "corner": 2,
+      "gain_s": -1.5333328247070312,
+      "kind": "brake_earlier",
+      "lap": 2,
+      "status": "worse"
+     }
+    ],
+    "proofplay": [
+     {
+      "amount_m": 30.0,
+      "corner": 3,
+      "gain_s": 0.6416702270507812,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     }
+    ],
+    "llm": [
+     {
+      "amount_m": 20,
+      "corner": 3,
+      "gain_s": 0.45833587646484375,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 15,
+      "corner": 1,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "not_testable"
+     },
+     {
+      "amount_m": 10,
+      "corner": 3,
+      "gain_s": 0.116668701171875,
+      "kind": "brake_later",
+      "lap": 1,
+      "status": "works"
+     }
+    ]
+   }
+  },
+  {
+   "row": {
+    "name": "c3_early25",
+    "flaw": "early_brake:2143:25",
+    "corner": 3,
+    "fix": "brake_later",
+    "bot": "Normal"
+   },
+   "coaches": {
+    "rule": [
+     {
+      "amount_m": 15,
+      "corner": 3,
+      "gain_s": -0.09166717529296875,
+      "kind": "brake_earlier",
+      "lap": 1,
+      "status": "worse"
+     },
+     {
+      "amount_m": 15,
+      "corner": 1,
+      "gain_s": -0.1750030517578125,
+      "kind": "brake_earlier",
+      "lap": 2,
+      "status": "worse"
+     },
+     {
+      "amount_m": 15,
+      "corner": 2,
+      "gain_s": 0.0,
+      "kind": "brake_earlier",
+      "lap": 1,
+      "status": "crash"
+     }
+    ],
+    "proofplay": [
+     {
+      "amount_m": 20.0,
+      "corner": 3,
+      "gain_s": 0.9083328247070312,
+      "kind": "brake_later",
+      "lap": 1,
+      "status": "works"
+     },
+     {
+      "amount_m": 30.0,
+      "corner": 1,
+      "gain_s": 0.30832672119140625,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 30.0,
+      "corner": 2,
+      "gain_s": 0.10833358764648438,
+      "kind": "brake_later",
+      "lap": 1,
+      "status": "works"
+     }
+    ],
+    "llm": [
+     {
+      "amount_m": 25,
+      "corner": 3,
+      "gain_s": 1.0666732788085938,
+      "kind": "brake_later",
+      "lap": 1,
+      "status": "works"
+     },
+     {
+      "amount_m": 20,
+      "corner": 1,
+      "gain_s": 0.16666412353515625,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 15,
+      "corner": 2,
+      "gain_s": 0.0749969482421875,
+      "kind": "brake_later",
+      "lap": 1,
+      "status": "works"
+     }
+    ]
+   }
+  },
+  {
+   "row": {
+    "name": "c3_early40",
+    "flaw": "early_brake:2143:40",
+    "corner": 3,
+    "fix": "brake_later",
+    "bot": "Normal"
+   },
+   "coaches": {
+    "rule": [
+     {
+      "amount_m": 15,
+      "corner": 3,
+      "gain_s": 0.6416702270507812,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 15,
+      "corner": 2,
+      "gain_s": 0.0,
+      "kind": "brake_earlier",
+      "lap": 1,
+      "status": "crash"
+     },
+     {
+      "amount_m": 15,
+      "corner": 1,
+      "kind": "brake_earlier",
+      "lap": 2,
+      "status": "not_testable"
+     }
+    ],
+    "proofplay": [
+     {
+      "amount_m": 30.0,
+      "corner": 3,
+      "gain_s": 1.3166656494140625,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 30.0,
+      "corner": 2,
+      "gain_s": 0.10833358764648438,
+      "kind": "brake_later",
+      "lap": 1,
+      "status": "works"
+     }
+    ],
+    "llm": [
+     {
+      "amount_m": 25,
+      "corner": 3,
+      "gain_s": 1.3000030517578125,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 20,
+      "corner": 3,
+      "gain_s": 0.741668701171875,
+      "kind": "brake_later",
+      "lap": 1,
+      "status": "works"
+     },
+     {
+      "amount_m": 10,
+      "corner": 2,
+      "gain_s": 0.058330535888671875,
+      "kind": "brake_later",
+      "lap": 1,
+      "status": "works"
+     }
+    ]
+   }
+  },
+  {
+   "row": {
+    "name": "c3_late30",
+    "flaw": "late_brake:2168:30",
+    "corner": 3,
+    "fix": "brake_earlier",
+    "bot": "Normal"
+   },
+   "coaches": {
+    "rule": [
+     {
+      "amount_m": 15,
+      "corner": 3,
+      "gain_s": 0.6333389282226562,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 15,
+      "corner": 1,
+      "gain_s": -0.125,
+      "kind": "brake_earlier",
+      "lap": 2,
+      "status": "worse"
+     },
+     {
+      "amount_m": 15,
+      "corner": 2,
+      "gain_s": 0.0,
+      "kind": "brake_earlier",
+      "lap": 2,
+      "status": "crash"
+     }
+    ],
+    "proofplay": [
+     {
+      "amount_m": 30.0,
+      "corner": 3,
+      "gain_s": 0.7249984741210938,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 30.0,
+      "corner": 1,
+      "gain_s": 0.5999984741210938,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 30.0,
+      "corner": 2,
+      "gain_s": 0.0749969482421875,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     }
+    ],
+    "llm": [
+     {
+      "amount_m": 25,
+      "corner": 3,
+      "gain_s": 0.7249984741210938,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 20,
+      "corner": 1,
+      "gain_s": 0.0,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "crash"
+     },
+     {
+      "amount_m": 12,
+      "corner": 2,
+      "gain_s": 0.0,
+      "kind": "brake_earlier",
+      "lap": 2,
+      "status": "crash"
+     }
+    ]
+   }
+  },
+  {
+   "row": {
+    "name": "c3_late45",
+    "flaw": "late_brake:2168:45",
+    "corner": 3,
+    "fix": "brake_earlier",
+    "bot": "Normal"
+   },
+   "coaches": {
+    "rule": [
+     {
+      "amount_m": 15,
+      "corner": 1,
+      "gain_s": -0.13333892822265625,
+      "kind": "brake_earlier",
+      "lap": 2,
+      "status": "worse"
+     },
+     {
+      "amount_m": 15,
+      "corner": 3,
+      "gain_s": -0.366668701171875,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "worse"
+     },
+     {
+      "amount_m": 15,
+      "corner": 2,
+      "gain_s": 0.0,
+      "kind": "brake_earlier",
+      "lap": 2,
+      "status": "crash"
+     }
+    ],
+    "proofplay": [
+     {
+      "amount_m": 30.0,
+      "corner": 1,
+      "gain_s": 0.524993896484375,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 30.0,
+      "corner": 2,
+      "gain_s": 0.0749969482421875,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     }
+    ],
+    "llm": [
+     {
+      "amount_m": 20,
+      "corner": 1,
+      "gain_s": 0.41666412353515625,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 25,
+      "corner": 3,
+      "gain_s": -0.366668701171875,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "worse"
+     },
+     {
+      "amount_m": 10,
+      "corner": 2,
+      "gain_s": 0.04166412353515625,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     }
+    ]
+   }
+  },
+  {
+   "row": {
+    "name": "clean_normal",
+    "flaw": "",
+    "corner": null,
+    "fix": null,
+    "bot": "Normal"
+   },
+   "coaches": {
+    "rule": [
+     {
+      "amount_m": 15,
+      "corner": 3,
+      "gain_s": 0.7750091552734375,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 15,
+      "corner": 1,
+      "gain_s": -0.1666717529296875,
+      "kind": "brake_earlier",
+      "lap": 2,
+      "status": "worse"
+     },
+     {
+      "amount_m": 15,
+      "corner": 2,
+      "gain_s": 0.0,
+      "kind": "brake_earlier",
+      "lap": 1,
+      "status": "crash"
+     }
+    ],
+    "proofplay": [
+     {
+      "amount_m": 30.0,
+      "corner": 3,
+      "gain_s": 0.9666748046875,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 30.0,
+      "corner": 1,
+      "gain_s": 0.43332672119140625,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 30.0,
+      "corner": 2,
+      "gain_s": 0.10833358764648438,
+      "kind": "brake_later",
+      "lap": 1,
+      "status": "works"
+     }
+    ],
+    "llm": [
+     {
+      "amount_m": 30,
+      "corner": 3,
+      "gain_s": 0.9666748046875,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 15,
+      "corner": 1,
+      "gain_s": -0.10833740234375,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "worse"
+     },
+     {
+      "amount_m": 10,
+      "corner": 2,
+      "gain_s": 0.058330535888671875,
+      "kind": "brake_later",
+      "lap": 1,
+      "status": "works"
+     }
+    ]
+   }
+  },
+  {
+   "row": {
+    "name": "clean_hard",
+    "flaw": "",
+    "corner": null,
+    "fix": null,
+    "bot": "Hard"
+   },
+   "coaches": {
+    "rule": [
+     {
+      "amount_m": 15,
+      "corner": 3,
+      "gain_s": -0.024993896484375,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "no_effect"
+     },
+     {
+      "amount_m": 15,
+      "corner": 1,
+      "gain_s": -0.14167022705078125,
+      "kind": "brake_earlier",
+      "lap": 2,
+      "status": "worse"
+     },
+     {
+      "amount_m": 15,
+      "corner": 2,
+      "kind": "brake_earlier",
+      "lap": 2,
+      "status": "not_testable"
+     }
+    ],
+    "proofplay": [
+     {
+      "amount_m": 30.0,
+      "corner": 3,
+      "gain_s": 5.5333404541015625,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 30.0,
+      "corner": 1,
+      "gain_s": 0.375,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 30.0,
+      "corner": 2,
+      "gain_s": 0.06666946411132812,
+      "kind": "brake_later",
+      "lap": 1,
+      "status": "works"
+     }
+    ],
+    "llm": [
+     {
+      "amount_m": 25,
+      "corner": 3,
+      "gain_s": 5.508338928222656,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 15,
+      "corner": 1,
+      "gain_s": 0.34999847412109375,
+      "kind": "brake_later",
+      "lap": 2,
+      "status": "works"
+     },
+     {
+      "amount_m": 10,
+      "corner": 2,
+      "kind": "brake_earlier",
+      "lap": 2,
+      "status": "not_testable"
+     }
+    ]
+   }
+  }
+ ]
+}

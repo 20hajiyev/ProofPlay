@@ -1,0 +1,100 @@
+{
+ "schema_version": 1,
+ "car": "D01",
+ "slots": {
+  "flares": {
+   "variants": [
+    "none",
+    "rally",
+    "widebody"
+   ],
+   "stock": "none"
+  },
+  "exhaust": {
+   "variants": [
+    "single",
+    "dual"
+   ],
+   "stock": "single"
+  },
+  "spoiler": {
+   "variants": [
+    "none",
+    "lip",
+    "wing",
+    "gt"
+   ],
+   "stock": "lip"
+  },
+  "aero_f": {
+   "variants": [
+    "none",
+    "lip",
+    "splitter"
+   ],
+   "stock": "none"
+  },
+  "skirt": {
+   "variants": [
+    "none",
+    "aero"
+   ],
+   "stock": "none"
+  },
+  "aero_r": {
+   "variants": [
+    "none",
+    "diffuser"
+   ],
+   "stock": "none"
+  },
+  "weapon": {
+   "variants": [
+    "none",
+    "minigun",
+    "rockets",
+    "oil",
+    "spikes"
+   ],
+   "stock": "none"
+  },
+  "hood": {
+   "variants": [
+    "stock",
+    "vent",
+    "carbon"
+   ],
+   "stock": "stock"
+  },
+  "roof": {
+   "variants": [
+    "none",
+    "scoop",
+    "rack",
+    "fin"
+   ],
+   "stock": "none"
+  },
+  "lights": {
+   "variants": [
+    "stock",
+    "drl",
+    "bar"
+   ],
+   "stock": "stock"
+  },
+  "rims": {
+   "variants": [
+    "five",
+    "mesh",
+    "dish",
+    "ten",
+    "fan",
+    "y_spoke",
+    "aero",
+    "split"
+   ],
+   "stock": "five"
+  }
+ }
+}

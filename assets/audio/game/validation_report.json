@@ -1,0 +1,732 @@
+[
+  {
+    "file": "engine/I4_NA/rpm1000_on.wav",
+    "seconds": 1.02,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.12,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/I4_NA/rpm1000_off.wav",
+    "seconds": 1.02,
+    "peak_dbfs": -4.0,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.058,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/I4_NA/rpm2500_on.wav",
+    "seconds": 1.008,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.248,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/I4_NA/rpm2500_off.wav",
+    "seconds": 1.008,
+    "peak_dbfs": -4.0,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.021,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/I4_NA/rpm4000_on.wav",
+    "seconds": 1.005,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.343,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/I4_NA/rpm4000_off.wav",
+    "seconds": 1.005,
+    "peak_dbfs": -4.0,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.246,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/I4_NA/rpm5500_on.wav",
+    "seconds": 1.0036,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.088,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/I4_NA/rpm5500_off.wav",
+    "seconds": 1.0036,
+    "peak_dbfs": -4.0,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.095,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/I4_NA/rpm7000_on.wav",
+    "seconds": 1.0029,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.198,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/I4_NA/rpm7000_off.wav",
+    "seconds": 1.0029,
+    "peak_dbfs": -4.0,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.024,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/I4_TURBO/rpm1000_on.wav",
+    "seconds": 1.02,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.254,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/I4_TURBO/rpm1000_off.wav",
+    "seconds": 1.02,
+    "peak_dbfs": -4.0,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.161,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/I4_TURBO/rpm2500_on.wav",
+    "seconds": 1.008,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.07,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/I4_TURBO/rpm2500_off.wav",
+    "seconds": 1.008,
+    "peak_dbfs": -4.0,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.037,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/I4_TURBO/rpm4000_on.wav",
+    "seconds": 1.005,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.434,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/I4_TURBO/rpm4000_off.wav",
+    "seconds": 1.005,
+    "peak_dbfs": -4.0,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.061,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/I4_TURBO/rpm5500_on.wav",
+    "seconds": 1.0036,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.036,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/I4_TURBO/rpm5500_off.wav",
+    "seconds": 1.0036,
+    "peak_dbfs": -4.0,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.127,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/I4_TURBO/rpm7200_on.wav",
+    "seconds": 1.0,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.673,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/I4_TURBO/rpm7200_off.wav",
+    "seconds": 1.0,
+    "peak_dbfs": -4.0,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.034,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/V6/rpm900_on.wav",
+    "seconds": 1.0,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.039,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/V6/rpm900_off.wav",
+    "seconds": 1.0,
+    "peak_dbfs": -4.0,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.094,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/V6/rpm2400_on.wav",
+    "seconds": 1.0,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.69,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/V6/rpm2400_off.wav",
+    "seconds": 1.0,
+    "peak_dbfs": -4.0,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.099,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/V6/rpm3900_on.wav",
+    "seconds": 1.0,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.399,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/V6/rpm3900_off.wav",
+    "seconds": 1.0,
+    "peak_dbfs": -4.0,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.404,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/V6/rpm5400_on.wav",
+    "seconds": 1.0,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.62,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/V6/rpm5400_off.wav",
+    "seconds": 1.0,
+    "peak_dbfs": -4.0,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.165,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/V6/rpm6800_on.wav",
+    "seconds": 0.9971,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.697,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/V6/rpm6800_off.wav",
+    "seconds": 0.9971,
+    "peak_dbfs": -4.0,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.232,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/V8/rpm800_on.wav",
+    "seconds": 0.975,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.136,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/V8/rpm800_off.wav",
+    "seconds": 0.975,
+    "peak_dbfs": -4.0,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.196,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/V8/rpm2000_on.wav",
+    "seconds": 0.99,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.572,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/V8/rpm2000_off.wav",
+    "seconds": 0.99,
+    "peak_dbfs": -4.0,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.101,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/V8/rpm3300_on.wav",
+    "seconds": 1.0,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.018,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/V8/rpm3300_off.wav",
+    "seconds": 1.0,
+    "peak_dbfs": -4.0,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.225,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/V8/rpm4700_on.wav",
+    "seconds": 0.9958,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.546,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/V8/rpm4700_off.wav",
+    "seconds": 0.9958,
+    "peak_dbfs": -4.0,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.107,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/V8/rpm6200_on.wav",
+    "seconds": 0.9968,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.839,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "engine/V8/rpm6200_off.wav",
+    "seconds": 0.9968,
+    "peak_dbfs": -4.0,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.14,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "sfx/pickup.wav",
+    "seconds": 0.35,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "ok": true
+  },
+  {
+    "file": "sfx/use_surge.wav",
+    "seconds": 0.9,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "ok": true
+  },
+  {
+    "file": "sfx/use_lance.wav",
+    "seconds": 0.5,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "ok": true
+  },
+  {
+    "file": "sfx/use_pulse.wav",
+    "seconds": 0.7,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "ok": true
+  },
+  {
+    "file": "sfx/use_trap.wav",
+    "seconds": 0.3,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "ok": true
+  },
+  {
+    "file": "sfx/use_needle.wav",
+    "seconds": 0.12,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "ok": true
+  },
+  {
+    "file": "sfx/use_ward.wav",
+    "seconds": 0.8,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "ok": true
+  },
+  {
+    "file": "sfx/use_mend.wav",
+    "seconds": 0.9,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "ok": true
+  },
+  {
+    "file": "sfx/use_storm.wav",
+    "seconds": 1.2,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "ok": true
+  },
+  {
+    "file": "sfx/impact_heavy.wav",
+    "seconds": 0.8,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "ok": true
+  },
+  {
+    "file": "sfx/impact_light.wav",
+    "seconds": 0.25,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "ok": true
+  },
+  {
+    "file": "sfx/block.wav",
+    "seconds": 0.4,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "ok": true
+  },
+  {
+    "file": "sfx/wreck.wav",
+    "seconds": 1.6,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "ok": true
+  },
+  {
+    "file": "sfx/countdown.wav",
+    "seconds": 0.18,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "ok": true
+  },
+  {
+    "file": "sfx/go.wav",
+    "seconds": 0.45,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "ok": true
+  },
+  {
+    "file": "sfx/warning.wav",
+    "seconds": 0.28,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "ok": true
+  },
+  {
+    "file": "sfx/ui_move.wav",
+    "seconds": 0.06,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "ok": true
+  },
+  {
+    "file": "sfx/ui_confirm.wav",
+    "seconds": 0.15,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "ok": true
+  },
+  {
+    "file": "sfx/ui_back.wav",
+    "seconds": 0.15,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "ok": true
+  },
+  {
+    "file": "sfx/horn.wav",
+    "seconds": 0.55,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "ok": true
+  },
+  {
+    "file": "sfx/indicator.wav",
+    "seconds": 0.03,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "ok": true
+  },
+  {
+    "file": "sfx/wiper.wav",
+    "seconds": 0.45,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "ok": true
+  },
+  {
+    "file": "sfx/blowoff.wav",
+    "seconds": 0.5,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "ok": true
+  },
+  {
+    "file": "sfx/backfire.wav",
+    "seconds": 0.22,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "ok": true
+  },
+  {
+    "file": "sfx/backfire2.wav",
+    "seconds": 0.22,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "ok": true
+  },
+  {
+    "file": "loops/turbo_whine.wav",
+    "seconds": 1.0,
+    "peak_dbfs": -1.5,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.953,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "music/harbor/drums.wav",
+    "seconds": 30.0,
+    "peak_dbfs": -11.98,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.0,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "music/harbor/bass.wav",
+    "seconds": 30.0,
+    "peak_dbfs": -17.89,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.0,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "music/harbor/harmony.wav",
+    "seconds": 30.0,
+    "peak_dbfs": -15.44,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.0,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "music/harbor/intensity.wav",
+    "seconds": 30.0,
+    "peak_dbfs": -24.67,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.002,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "music/nightdrive/drums.wav",
+    "seconds": 38.4,
+    "peak_dbfs": -11.98,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.0,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "music/nightdrive/bass.wav",
+    "seconds": 38.4,
+    "peak_dbfs": -17.95,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.0,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "music/nightdrive/harmony.wav",
+    "seconds": 38.4,
+    "peak_dbfs": -15.6,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.001,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "music/nightdrive/intensity.wav",
+    "seconds": 38.4,
+    "peak_dbfs": -24.65,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.001,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "music/rush/drums.wav",
+    "seconds": 27.4286,
+    "peak_dbfs": -11.97,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.0,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "music/rush/bass.wav",
+    "seconds": 27.4286,
+    "peak_dbfs": -17.96,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.0,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "music/rush/harmony.wav",
+    "seconds": 27.4286,
+    "peak_dbfs": -15.16,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.0,
+    "loop_ok": true,
+    "ok": true
+  },
+  {
+    "file": "music/rush/intensity.wav",
+    "seconds": 27.4286,
+    "peak_dbfs": -24.67,
+    "dc_offset": 0.0,
+    "clipping": false,
+    "loop_seam_ratio": 0.0,
+    "loop_ok": true,
+    "ok": true
+  }
+]

@@ -1,0 +1,14 @@
+diff --git a/WickedEngine/wiPhysics_Jolt.cpp b/WickedEngine/wiPhysics_Jolt.cpp
+--- a/WickedEngine/wiPhysics_Jolt.cpp
++++ b/WickedEngine/wiPhysics_Jolt.cpp
+@@ -2153,7 +2153,9 @@ namespace wi::physics
+
+ 		// First, do the creations when needed (AddRigidBody, AddSoftBody, etc):
+ 		//	These will be locking updates, but doesn't need to be performed frequently
+-		wi::jobsystem::Dispatch(ctx, (uint32_t)scene.rigidbodies.GetCount(), dispatchGroupSize, [&scene](wi::jobsystem::JobArgs args) {
++		// [racer P-002] One job, component order: Jolt assigns BodyIDs in creation order and its
++		//	solver is only repeatable when that order is. Parallel creation made identical races diverge.
++		wi::jobsystem::Dispatch(ctx, (uint32_t)scene.rigidbodies.GetCount(), std::max(1u, (uint32_t)scene.rigidbodies.GetCount()), [&scene](wi::jobsystem::JobArgs args) {
+
+ 			RigidBodyPhysicsComponent& physicscomponent = scene.rigidbodies[args.jobIndex];
+ 			const Entity entity = scene.rigidbodies.GetEntity(args.jobIndex);

@@ -1,0 +1,161 @@
+INFO Draco mesh compression is available, use library at C:\Users\Sanan\Documents\Cursor\Gamee\.tools\blender-4.5.14-windows-x64\4.5\scripts\addons_core\io_scene_gltf2\extern_draco.dll
+19:07:59 | INFO: Starting glTF 2.0 export
+19:07:59 | INFO: Extracting primitive: Cube.001
+19:07:59 | INFO: Primitives created: 2
+19:07:59 | INFO: Finished glTF 2.0 export in 0.007022380828857422 s
+
+19:07:59 | INFO: Starting glTF 2.0 export
+19:07:59 | INFO: Extracting primitive: Cylinder
+19:07:59 | INFO: Primitives created: 2
+19:07:59 | INFO: Finished glTF 2.0 export in 0.005514383316040039 s
+
+19:07:59 | INFO: Starting glTF 2.0 export
+19:07:59 | INFO: Extracting primitive: Cube.059
+19:07:59 | INFO: Primitives created: 1
+19:07:59 | INFO: Finished glTF 2.0 export in 0.003623485565185547 s
+
+19:07:59 | INFO: Starting glTF 2.0 export
+19:07:59 | INFO: Extracting primitive: Cube.067
+19:07:59 | INFO: Primitives created: 2
+19:07:59 | INFO: Finished glTF 2.0 export in 0.004999637603759766 s
+
+19:07:59 | INFO: Starting glTF 2.0 export
+19:07:59 | INFO: Extracting primitive: Cube.076
+19:07:59 | INFO: Primitives created: 2
+19:07:59 | INFO: Finished glTF 2.0 export in 0.0050067901611328125 s
+
+19:07:59 | INFO: Starting glTF 2.0 export
+19:07:59 | INFO: Extracting primitive: Cube.083
+19:07:59 | INFO: Primitives created: 1
+19:07:59 | INFO: Finished glTF 2.0 export in 0.0029931068420410156 s
+
+19:08:00 | INFO: Starting glTF 2.0 export
+19:08:00 | INFO: Extracting primitive: Cube.087
+19:08:00 | INFO: Primitives created: 3
+19:08:00 | INFO: Finished glTF 2.0 export in 0.017252206802368164 s
+
+19:08:00 | INFO: Starting glTF 2.0 export
+19:08:00 | INFO: Extracting primitive: Cube.088
+19:08:00 | INFO: Primitives created: 4
+19:08:00 | INFO: Finished glTF 2.0 export in 0.011123895645141602 s
+
+19:08:00 | INFO: Starting glTF 2.0 export
+19:08:00 | INFO: Extracting primitive: Cube.092
+19:08:00 | INFO: Primitives created: 3
+19:08:00 | INFO: Finished glTF 2.0 export in 0.0070037841796875 s
+
+19:08:00 | INFO: Starting glTF 2.0 export
+19:08:00 | INFO: Extracting primitive: Cylinder.003
+19:08:00 | INFO: Primitives created: 3
+19:08:00 | INFO: Finished glTF 2.0 export in 0.0063018798828125 s
+
+19:08:00 | INFO: Starting glTF 2.0 export
+19:08:00 | INFO: Extracting primitive: Cube.101
+19:08:00 | INFO: Primitives created: 4
+19:08:00 | INFO: Finished glTF 2.0 export in 0.00751948356628418 s
+
+19:08:00 | INFO: Starting glTF 2.0 export
+19:08:00 | INFO: Extracting primitive: Cube.110
+19:08:00 | INFO: Primitives created: 4
+19:08:00 | INFO: Finished glTF 2.0 export in 0.0060040950775146484 s
+
+19:08:00 | INFO: Starting glTF 2.0 export
+19:08:00 | INFO: Extracting primitive: Cube.130
+19:08:00 | INFO: Primitives created: 3
+19:08:00 | INFO: Finished glTF 2.0 export in 0.005509853363037109 s
+Blender 4.5.14 LTS (hash 62c1db4208e8 built 2026-09-15 01:33:49)
+Fra:1 Mem:67.64M (Peak 67.64M) | Time:00:25.95 | Rendering 1 / 64 samples
+Fra:1 Mem:67.64M (Peak 67.64M) | Time:00:25.96 | Rendering 25 / 64 samples
+Fra:1 Mem:67.64M (Peak 67.64M) | Time:00:25.96 | Rendering 50 / 64 samples
+Fra:1 Mem:67.64M (Peak 67.64M) | Time:00:25.96 | Rendering 64 / 64 samples
+Saved: 'C:\Users\Sanan\Documents\Cursor\Gamee\assets\environment\harbor\harbor_kit_preview.png'
+Time: 00:26.81 (Saving: 00:00.24)
+
+
+Info: Saved as "harbor_kit.blend"
+19:08:27 | INFO: Starting glTF 2.0 export
+19:08:27 | INFO: Extracting primitive: race_road
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: shoulder
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: edge_line
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: safety_verge
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: shoulder.001
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: edge_line.001
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: safety_verge.001
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: Cube.076
+19:08:27 | INFO: Primitives created: 2
+19:08:27 | INFO: Extracting primitive: Cube.088
+19:08:27 | INFO: Primitives created: 4
+19:08:27 | INFO: Extracting primitive: Cube.092
+19:08:27 | INFO: Primitives created: 3
+19:08:27 | INFO: Extracting primitive: Cube.110
+19:08:27 | INFO: Primitives created: 4
+19:08:27 | INFO: Extracting primitive: Cube.001
+19:08:27 | INFO: Primitives created: 2
+19:08:27 | INFO: Extracting primitive: Cube.130
+19:08:27 | INFO: Primitives created: 3
+19:08:27 | INFO: Extracting primitive: Cube.101
+19:08:27 | INFO: Primitives created: 4
+19:08:27 | INFO: Extracting primitive: Cylinder.003
+19:08:27 | INFO: Primitives created: 3
+19:08:27 | INFO: Extracting primitive: Cube.142
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: Cube.143
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: Cube.144
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: Cube.145
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: Cube.146
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: Cube.147
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: Cube.148
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: Cube.149
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: Cube.150
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: Cube.151
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: Cube.152
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: Cube.153
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: Cube.154
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: Cube.155
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: Cube.156
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: Cube.157
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: Cube.158
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: Cube.159
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: Cube.160
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: Cube.161
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: Cube.162
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Extracting primitive: Cube.163
+19:08:27 | INFO: Primitives created: 1
+19:08:27 | INFO: Finished glTF 2.0 export in 0.13456130027770996 s
+Fra:1 Mem:85.93M (Peak 85.93M) | Time:00:00.07 | Rendering 1 / 64 samples
+Fra:1 Mem:85.93M (Peak 85.93M) | Time:00:00.07 | Rendering 25 / 64 samples
+Fra:1 Mem:85.93M (Peak 85.93M) | Time:00:00.08 | Rendering 50 / 64 samples
+Fra:1 Mem:85.93M (Peak 85.93M) | Time:00:00.08 | Rendering 64 / 64 samples
+Saved: 'C:\Users\Sanan\Documents\Cursor\Gamee\assets\tracks\dock_loop\dock_loop_overhead.png'
+Time: 00:00.32 (Saving: 00:00.10)
+
+
+Info: Saved as "dock_loop.blend"
+HARBOR_GENERATION_COMPLETE {"centerline_length_2200m": true, "sample_count": 256, "grid_count": 20, "checkpoint_count": 16, "pickup_count": 32, "reset_count": 32, "minimum_road_width_m": 14, "all_coordinates_finite": true, "limits": "No drivability, collision cooking, engine import, AI or timing checks executed."}

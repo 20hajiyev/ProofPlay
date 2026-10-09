@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "assets": [
+    {
+      "asset_id": "FIXTURE_AXES",
+      "category": "fixture",
+      "status": "built",
+      "source_paths": [
+        "assets/fixtures/FIXTURE_AXES.blend"
+      ],
+      "runtime_paths": [
+        "assets/fixtures/FIXTURE_AXES.glb"
+      ],
+      "sha256": "5fa01f0b056ca92b68369572cb488976d9c3a028ba89ca0f9f2a7ebe4b0a4b6d",
+      "blender_marker_positions_m": {
+        "MARK_POS_X": [
+          2,
+          0,
+          0.5
+        ],
+        "MARK_POS_Y": [
+          0,
+          2,
+          0.5
+        ],
+        "MARK_POS_Z": [
+          0,
+          0,
+          2.5
+        ],
+        "CUBE_1M": [
+          0,
+          0,
+          0.5
+        ]
+      },
+      "provenance": {
+        "generator": "tools/generate_fixtures.py",
+        "blender": "4.5.14 LTS",
+        "external_inputs": []
+      }
+    },
+    {
+      "asset_id": "FIXTURE_VEHICLE_AXES",
+      "category": "fixture",
+      "status": "built",
+      "source_paths": [
+        "assets/fixtures/FIXTURE_VEHICLE_AXES.blend"
+      ],
+      "runtime_paths": [
+        "assets/fixtures/FIXTURE_VEHICLE_AXES.glb"
+      ],
+      "sha256": "1b36397c075bb48a43383af820cfb70705233f8b773c91d33dedbdcfd62b7b1f",
+      "blender_marker_positions_m": {
+        "VEH_NOSE_MARK": [
+          0,
+          2.2,
+          0.6
+        ],
+        "VEH_LEFT_MARK": [
+          -1.1,
+          0,
+          0.6
+        ],
+        "WHEEL_PIVOT_FL": [
+          -0.85,
+          1.3,
+          0.36
+        ]
+      },
+      "provenance": {
+        "generator": "tools/generate_fixtures.py",
+        "blender": "4.5.14 LTS",
+        "external_inputs": []
+      }
+    }
+  ]
+}

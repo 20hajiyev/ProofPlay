@@ -1,0 +1,1012 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ProofPlay race debrief</title>
+<meta name="description" content="Race debrief where every corner fix is proven by re-simulating the race in the game's own physics.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%224 4 252 196%22%3E%3Cstyle%3Epath{fill:#087F53}%40media (prefers-color-scheme: dark){path{fill:#4ADE80}}%3C/style%3E%3Cpath d=%22M30 135C7 95 16 47 55 27C92 9 129 29 172 54L222 86L176 89L123 58C86 36 52 44 42 72C34 93 40 112 54 132L30 135Z%22/%3E%3Cpath d=%22M54 69C47 88 50 114 66 133C82 153 112 151 143 131L182 106L161 93L229 91C247 90 251 105 233 117L146 174C95 207 47 192 25 157C14 141 10 127 10 114L54 69Z%22/%3E%3Cpath d=%22M86 77L139 109L87 141C102 115 102 98 86 77Z%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<script>
+  // Theme before first paint: stored choice, else the system preference.
+  try { const t = localStorage.getItem("pp-theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+<style>
+  :root {
+    --canvas: #F7F6F3; --surface: #FFFFFF; --sunk: #F1EFEA; --line: #EAEAEA; --line-2: #DEDCD6;
+    --ink: #111111; --ink-2: #2F3437; --muted: #6B6964; --faint: #8A877F; --inverse: #FFFFFF;
+    --green-bg: #EDF3EC; --green: #346538; --red-bg: #FDEBEC; --red: #9F2F2D;
+    --yellow-bg: #FBF3DB; --yellow: #956400; --blue-bg: #E1F3FE; --blue: #1F6C9F;
+    --accent: #0E8F5F; --accent-2: #12B076; --accent-bg: #E4F4EC; --on-accent: #FFFFFF; --amber: #A86A00; --amber-bg: #FBF0D9; --slate: #4F5B66; --slate-bg: #EAEEF1; --copper: #9A5434; --copper-bg: #F6E9E1; --hero-tint: #E9F3EE; --logo: #087F53; --glow-a: rgba(18,176,118,.13); --glow-b: rgba(232,194,90,.12); --lanes-o: .09;
+    --map-bg: #E8EBE6; --shadow: 0 1px 2px rgba(17,17,17,.04), 0 8px 24px rgba(17,17,17,.04);
+    --sans: "Schibsted Grotesk", "Helvetica Neue", system-ui, sans-serif;
+    --mono: "IBM Plex Mono", "SF Mono", ui-monospace, monospace;
+    --r-lg: 12px; --r-md: 8px; --r-sm: 6px;
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  :root[data-theme="dark"] {
+    --canvas: #121212; --surface: #1A1A1A; --sunk: #232323; --line: #2C2C2C; --line-2: #3A3A3A;
+    --ink: #EDEBE6; --ink-2: #CFCCC5; --muted: #A09D96; --faint: #8C8981; --inverse: #121212;
+    --green-bg: #1F2E21; --green: #8FC79A; --red-bg: #3A2020; --red: #F0A3A1;
+    --yellow-bg: #362C14; --yellow: #E5BE6A; --blue-bg: #17293A; --blue: #8EC5EC;
+    --accent: #3DD68C; --accent-2: #2FBF79; --accent-bg: #143024; --on-accent: #0B1A12; --amber: #E8B04B; --amber-bg: #3A2D12; --slate: #AAB6C2; --slate-bg: #222A31; --copper: #E2A07F; --copper-bg: #3A251C; --hero-tint: #17241E; --logo: #4ADE80; --glow-a: rgba(61,214,140,.10); --glow-b: rgba(232,176,75,.07); --lanes-o: .12;
+    --map-bg: #1C201E; --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --canvas: #121212; --surface: #1A1A1A; --sunk: #232323; --line: #2C2C2C; --line-2: #3A3A3A;
+      --ink: #EDEBE6; --ink-2: #CFCCC5; --muted: #A09D96; --faint: #8C8981; --inverse: #121212;
+      --green-bg: #1F2E21; --green: #8FC79A; --red-bg: #3A2020; --red: #F0A3A1;
+      --yellow-bg: #362C14; --yellow: #E5BE6A; --blue-bg: #17293A; --blue: #8EC5EC;
+      --accent: #3DD68C; --accent-2: #2FBF79; --accent-bg: #143024; --on-accent: #0B1A12; --amber: #E8B04B; --amber-bg: #3A2D12; --slate: #AAB6C2; --slate-bg: #222A31; --copper: #E2A07F; --copper-bg: #3A251C; --hero-tint: #17241E; --logo: #4ADE80; --glow-a: rgba(61,214,140,.10); --glow-b: rgba(232,176,75,.07); --lanes-o: .12;
+      --map-bg: #1C201E; --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 120px; }
+  body::before, body::after { content: ""; position: fixed; z-index: -1; pointer-events: none; border-radius: 50%; filter: blur(80px); will-change: transform; }
+  body::before { width: 60vmax; height: 60vmax; left: -18vmax; top: -22vmax; background: radial-gradient(circle, var(--glow-a), transparent 65%); animation: drift-a 38s ease-in-out infinite alternate; }
+  body::after { width: 55vmax; height: 55vmax; right: -20vmax; bottom: -25vmax; background: radial-gradient(circle, var(--glow-b), transparent 65%); animation: drift-b 46s ease-in-out infinite alternate; }
+  @keyframes drift-a { to { transform: translate(14vmax, 10vmax) scale(1.12); } }
+  @keyframes drift-b { to { transform: translate(-12vmax, -9vmax) scale(1.08); } }
+  .lanes { position: fixed; inset: 0; z-index: -1; pointer-events: none; width: 100%; height: 100%; opacity: var(--lanes-o); }
+  .lanes path { fill: none; stroke: var(--ink); stroke-width: 1.2; stroke-linecap: round; stroke-dasharray: 2200 1400; animation: lane 70s linear infinite; }
+  .lanes path + path { stroke-width: .8; stroke-dasharray: 1600 2000; animation-duration: 95s; animation-direction: reverse; }
+  @keyframes lane { to { stroke-dashoffset: -3600; } }
+  body { margin: 0; background: var(--canvas); color: var(--ink); font: 15px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
+  ::selection { background: var(--line-2); color: var(--ink); }
+  :focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; border-radius: 4px; }
+  * { scrollbar-width: thin; scrollbar-color: var(--line-2) transparent; }
+  h1, h2, h3 { margin: 0; letter-spacing: -0.02em; text-wrap: balance; }
+  p { margin: 0; text-wrap: pretty; }
+  button { font: inherit; color: inherit; }
+  .num { font-family: var(--mono); font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .skip { position: absolute; left: 8px; top: -60px; background: var(--ink); color: var(--inverse); padding: 8px 12px; border-radius: var(--r-sm); z-index: 50; text-decoration: none; }
+  .skip:focus { top: 8px; }
+  .ph { font-size: 18px; line-height: 1; }
+
+  /* top bar */
+  .top { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--canvas) 86%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+  .wrap { max-width: 1360px; margin: 0 auto; padding-left: 28px; padding-right: 28px; }
+  .bar { display: flex; align-items: center; gap: 10px; height: 64px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 16px; letter-spacing: -0.02em; margin-right: auto; color: var(--ink); text-decoration: none; }
+  .brand .mark { width: 34px; height: 27px; display: block; fill: var(--logo); flex: none; }
+  .brand { font-weight: 700; font-size: 19px; letter-spacing: -0.035em; }
+  .select { position: relative; display: inline-flex; }
+  .select select { appearance: none; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md); padding: 8px 32px 8px 12px; font: 500 13px var(--sans); color: var(--ink); cursor: pointer; transition: border-color .2s var(--ease); max-width: 240px; }
+  .select select:hover { border-color: var(--line-2); }
+  .select .ph { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 13px; color: var(--muted); pointer-events: none; }
+  .iconbtn { width: 36px; height: 36px; display: grid; place-items: center; border-radius: var(--r-md); border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; transition: background .15s var(--ease), border-color .15s var(--ease); }
+  .iconbtn:hover { background: var(--sunk); border-color: var(--line-2); }
+  .iconbtn:active { transform: scale(.96); }
+  .status { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; color: var(--muted); white-space: nowrap; padding: 0 4px; }
+  .status i { width: 7px; height: 7px; border-radius: 50%; background: var(--green); }
+  .status.busy i { background: var(--yellow); animation: pulse 1.2s ease-in-out infinite; }
+  .status.down i { background: var(--red); }
+  .status.rec i { background: #E5484D; box-shadow: 0 0 0 0 rgba(229,72,77,.5); animation: rec 1.6s ease-out infinite; }
+  .status.rec span { color: var(--ink); font-weight: 500; }
+  @keyframes rec { to { box-shadow: 0 0 0 7px rgba(229,72,77,0); } }
+  @keyframes pulse { 50% { opacity: .35; } }
+
+  /* pipeline strip */
+  .pipe { border-top: 1px solid var(--line); }
+  .pipe ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .pipe li { display: flex; align-items: center; gap: 10px; padding: 10px 0; font-size: 13px; color: var(--muted); min-width: 0; }
+  .pipe li b { color: var(--ink); font-weight: 500; white-space: nowrap; }
+  .pipe li span:last-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .pipe .ic { width: 20px; height: 20px; flex: none; border-radius: 50%; display: grid; place-items: center; border: 1.5px solid var(--line-2); }
+  .pipe .done .ic { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+  .pipe .done .ic .ph { font-size: 11px; }
+  .pipe .run .ic { border-color: var(--accent); border-right-color: transparent; animation: spin 1s linear infinite; }
+  .pipe .bad .ic { border-color: var(--red); color: var(--red); }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  main { padding-top: 28px; padding-bottom: 72px; display: grid; gap: 20px; }
+  .panel { position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); min-width: 0; box-shadow: 0 1px 2px rgba(17,24,20,.03), 0 12px 32px -18px rgba(17,24,20,.12); }
+  .head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 20px 24px 0; }
+  .head h2 { font-size: 20px; font-weight: 600; }
+  .head .meta { color: var(--muted); font-size: 13px; text-align: right; }
+
+  /* debrief */
+  .debrief { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); overflow: hidden; }
+  .debrief .text { padding: 32px 36px; display: flex; flex-direction: column; gap: 18px; }
+  .debrief .who { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 13px; }
+  .debrief h1 { font-size: clamp(26px, 2.6vw, 36px); line-height: 1.15; font-weight: 600; letter-spacing: -0.03em; max-width: 24ch; }
+  .debrief .lead { color: var(--ink-2); font-size: 15px; max-width: 60ch; }
+  .debrief .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 16px; border-radius: var(--r-md); border: 1px solid var(--accent); background: var(--accent); color: var(--on-accent); font-weight: 500; font-size: 14px; cursor: pointer; text-decoration: none; transition: opacity .15s var(--ease), transform .15s var(--ease); white-space: nowrap; }
+  .btn:hover { opacity: .88; } .btn:active { transform: translateY(1px); }
+  .btn.ghost { background: transparent; color: var(--ink); border-color: var(--line-2); }
+  .btn.ghost:hover { background: var(--sunk); opacity: 1; }
+  .debrief .stats { display: grid; grid-template-columns: repeat(4, auto); justify-content: start; gap: 32px; margin-top: auto; padding-top: 18px; border-top: 1px solid var(--line); }
+  .debrief .stats div span { display: block; font-size: 12px; color: var(--muted); }
+  .debrief .stats div b { font: 500 20px var(--mono); letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+  .debrief .stats small { font: 400 12px var(--mono); color: var(--muted); }
+  .debrief .art { position: relative; background: radial-gradient(120% 90% at 70% 30%, var(--hero-tint), var(--sunk) 70%); display: grid; place-items: center; min-height: 280px; border-left: 1px solid var(--line); }
+  .debrief .art img { width: 92%; max-width: 460px; height: auto; filter: grayscale(1) contrast(1.06); }
+  .rating { position: absolute; left: 20px; bottom: 18px; display: flex; align-items: baseline; gap: 8px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md); padding: 8px 12px; box-shadow: var(--shadow); }
+  .rating b { font: 600 26px/1 var(--sans); letter-spacing: -0.04em; }
+  .rating > span { font-size: 12px; color: var(--muted); }
+  .tier { display: inline-flex; align-items: center; gap: 5px; font: 700 11px var(--sans); letter-spacing: .06em; text-transform: uppercase; padding: 3px 9px; border-radius: 99px; background: var(--sunk); color: var(--ink-2); white-space: nowrap; }
+  .tier::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; opacity: .55; }
+  /* Metal plates: a light-to-dark sheen with an inner highlight, text dark enough for AA on every stop. */
+  .tier.gold { color: #4A3300; background: linear-gradient(135deg, #FBE7A1 0%, #E8C25A 45%, #C99A2E 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,.65), 0 1px 2px rgba(122,86,0,.25); }
+  .tier.silver { color: #2B323A; background: linear-gradient(135deg, #F4F6F8 0%, #CDD3DA 50%, #A9B1BB 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,.8), 0 1px 2px rgba(40,50,60,.2); }
+  .tier.bronze { color: #3D1E06; background: linear-gradient(135deg, #F1C59A 0%, #CD8A50 50%, #A0602C 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,.5), 0 1px 2px rgba(90,45,10,.25); }
+  .tier.elite { color: #052E1E; background: linear-gradient(135deg, #B9F5D8 0%, #4FD69A 50%, #1FA36B 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,.6), 0 1px 2px rgba(6,70,44,.25); }
+  .tier.gold::before, .tier.silver::before, .tier.bronze::before, .tier.elite::before { opacity: .45; }
+  /* The rating card wears its tier as a thin metal rim. */
+  .rating.gold { border-color: #E2BC55; } .rating.silver { border-color: #BCC4CD; } .rating.bronze { border-color: #C98A52; } .rating.elite { border-color: #3DCB8B; }
+  .delta { font: 500 12px var(--mono); margin-left: 6px; } .delta.up { color: var(--green); } .delta.down { color: var(--red); }
+
+  /* core: map + findings */
+  .core { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+  .mapwrap { position: relative; margin: 16px 24px 24px; border-radius: var(--r-md); overflow: hidden; background: var(--map-bg); border: 1px solid var(--line); }
+  #map { display: block; width: 100%; height: 620px; cursor: grab; touch-action: none; }
+  .tools { position: absolute; top: 12px; left: 12px; display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden; box-shadow: var(--shadow); }
+  .tools button { width: 36px; height: 36px; display: grid; place-items: center; border: 0; border-bottom: 1px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; transition: background .15s var(--ease); }
+  .tools button:last-child { border-bottom: 0; }
+  .tools button:hover { background: var(--sunk); }
+  .legend { position: absolute; left: 12px; bottom: 12px; display: flex; gap: 14px; flex-wrap: wrap; background: color-mix(in srgb, var(--surface) 92%, transparent); border: 1px solid var(--line); border-radius: var(--r-md); padding: 7px 12px; font-size: 12px; color: var(--ink-2); }
+  .legend i { display: inline-block; width: 18px; height: 0; vertical-align: middle; margin-right: 6px; border-top: 3px solid var(--accent); }
+  .legend i.dash { border-top: 3px dashed var(--muted); } .legend i.loss { border-top: 6px solid rgba(159,47,45,.6); }
+  .hintkeys { position: absolute; right: 12px; bottom: 12px; font-size: 12px; color: var(--muted); background: color-mix(in srgb, var(--surface) 92%, transparent); border: 1px solid var(--line); border-radius: var(--r-md); padding: 6px 10px; }
+  kbd { font: 500 11px var(--mono); border: 1px solid var(--line-2); border-bottom-width: 2px; border-radius: 4px; padding: 0 5px; background: var(--surface); color: var(--ink-2); }
+  .tip { position: absolute; left: 0; top: 0; pointer-events: none; background: var(--ink); color: var(--inverse); font-size: 12px; line-height: 1.4; padding: 7px 10px; border-radius: var(--r-sm); max-width: 260px; transform: translate(-50%, calc(-100% - 14px)); opacity: 0; transition: opacity .12s; }
+  .tip.on { opacity: 1; }
+  .tip b { font-weight: 600; } .tip span { opacity: .75; font-family: var(--mono); }
+  .mapnote { position: absolute; inset: 0; display: grid; place-items: center; pointer-events: none; }
+  .mapnote[hidden] { display: none; }
+  .mapnote div { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md); padding: 12px 16px; color: var(--ink-2); font-size: 13px; }
+
+  .list { padding: 16px; max-height: 704px; overflow-y: auto; }
+  .find { border: 1px solid var(--line); border-radius: var(--r-md); padding: 14px; margin-bottom: 8px; cursor: pointer; background: var(--surface); transition: border-color .2s var(--ease), box-shadow .2s var(--ease); animation: fade .45s var(--ease) both; animation-delay: calc(var(--i, 0) * 40ms); }
+  .find:hover { border-color: var(--line-2); }
+  .find.on { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent), var(--shadow); cursor: default; }
+  .find .row { display: grid; grid-template-columns: 24px 1fr auto; gap: 10px; align-items: start; }
+  .rank { width: 24px; height: 24px; border-radius: var(--r-sm); background: var(--sunk); color: var(--ink); display: grid; place-items: center; font: 600 12px var(--mono); }
+  .find.on .rank { background: var(--accent); color: var(--on-accent); }
+  .find h3 { font-size: 16px; font-weight: 600; line-height: 1.4; }
+  .find .impact { font: 500 15px var(--mono); letter-spacing: -0.03em; white-space: nowrap; }
+  .impact.gain { color: var(--green); } .impact.cost { color: var(--red); }
+  .find .src { margin-top: 5px; }
+  .find .act { margin: 8px 0 0 34px; font-size: 13px; color: var(--ink-2); }
+  .find .more { display: none; margin-left: 34px; }
+  .find.on .more { display: block; }
+  .find p.why { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 13px; line-height: 1.65; color: var(--ink-2); max-width: 65ch; }
+  .find .ev { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px; }
+  .tag { display: inline-flex; align-items: center; gap: 5px; font: 500 11px var(--sans); padding: 2px 8px; border-radius: 99px; background: var(--sunk); color: var(--ink-2); white-space: nowrap; }
+  .tag .ph { font-size: 12px; }
+  .tag.proof { background: var(--green-bg); color: var(--green); }
+  .tag.loss { background: var(--red-bg); color: var(--red); }
+  .tag.consistency { background: var(--yellow-bg); color: var(--yellow); }
+  .tag.stats { background: var(--blue-bg); color: var(--blue); }
+  .tag.mono { font-family: var(--mono); }
+  .notice { display: flex; gap: 10px; border: 1px dashed var(--line-2); border-radius: var(--r-md); padding: 12px 14px; color: var(--ink-2); font-size: 13px; margin-bottom: 10px; }
+  .notice .ph { color: var(--muted); margin-top: 2px; }
+  .skel { border-radius: var(--r-md); background: linear-gradient(90deg, var(--sunk), var(--surface), var(--sunk)); background-size: 200% 100%; animation: sh 1.4s linear infinite; }
+  @keyframes sh { to { background-position: -200% 0; } }
+
+  /* profile */
+  .profile { display: grid; grid-template-columns: 300px minmax(0, 1fr) minmax(0, 1fr); }
+  .profile > div { padding: 20px 24px 24px; min-width: 0; }
+  .profile > div + div { border-left: 1px solid var(--line); }
+  .profile h2, .profile h3 { font-size: 20px; font-weight: 600; margin-bottom: 14px; }
+  #radar { width: 248px; height: 232px; display: block; margin: 0 auto; }
+  .attrs { display: grid; gap: 12px; }
+  .attr { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; font-size: 13px; color: var(--ink-2); }
+  .attr b { font: 500 13px var(--mono); color: var(--ink); }
+  .attr .meter { grid-column: 1 / -1; height: 4px; border-radius: 2px; background: var(--sunk); overflow: hidden; }
+  .attr .meter i { display: block; height: 100%; background: var(--accent); transform-origin: left; transition: transform .6s var(--ease); }
+  .attr small { grid-column: 1 / -1; color: var(--muted); font-size: 12px; }
+  .laps { display: grid; gap: 8px; }
+  .lap { display: grid; grid-template-columns: 34px 1fr 72px; gap: 10px; align-items: center; font-size: 13px; }
+  .lap span { color: var(--muted); font-family: var(--mono); font-size: 12px; }
+  .lap i { height: 8px; border-radius: 4px; background: var(--line-2); transform-origin: left; transition: transform .6s var(--ease); }
+  .lap.best i { background: var(--accent); }
+  .attr .meter.mid i { background: var(--amber); } .attr .meter.lo i { background: var(--red); }
+  .lap b { font: 500 13px var(--mono); text-align: right; }
+  .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 20px; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
+  .facts span { display: block; font-size: 12px; color: var(--muted); }
+  .facts b { font: 500 16px var(--mono); }
+
+  /* bottom row */
+  .trio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .trio .body { padding: 14px 24px 22px; }
+  .hint { display: grid; grid-template-columns: 20px 1fr; gap: 8px; font-size: 13px; color: var(--ink-2); padding: 9px 0; border-bottom: 1px solid var(--line); }
+  .hint:last-child { border-bottom: 0; }
+  .hint .ph { font-size: 16px; margin-top: 2px; }
+  .hint .ph-check-circle { color: var(--green); } .hint .ph-warning-circle { color: var(--red); }
+  .note { color: var(--muted); font-size: 12px; margin-top: 12px; max-width: 60ch; }
+  #history { width: 100%; height: 190px; display: block; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 9px 6px; border-bottom: 1px solid var(--line); }
+  th { font-weight: 500; color: var(--muted); font-size: 12px; }
+  tr:last-child td { border-bottom: 0; }
+  td.n { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+  td .ph { color: var(--green); font-size: 14px; vertical-align: -2px; margin-left: 4px; }
+
+  /* next-race plan */
+  .plan { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); overflow: hidden; }
+  .plan[hidden] { display: none; }
+  .plan .steps { padding: 20px 24px 22px; }
+  .plan ol { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 8px; }
+  .plan li label { display: grid; grid-template-columns: 22px 1fr auto; gap: 10px; align-items: start; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--r-md); cursor: pointer; transition: background .15s var(--ease), border-color .15s var(--ease); }
+  .plan li label:hover { border-color: var(--line-2); }
+  .plan input[type=checkbox] { appearance: none; width: 20px; height: 20px; margin: 1px 0 0; border: 1.5px solid var(--line-2); border-radius: 6px; display: grid; place-items: center; cursor: pointer; background: var(--surface); }
+  .plan input[type=checkbox]:checked { background: var(--accent); border-color: var(--accent); }
+  .plan input[type=checkbox]:checked::after { content: ""; width: 10px; height: 5px; border: 2px solid var(--on-accent); border-top: 0; border-right: 0; transform: rotate(-45deg) translate(1px, -1px); }
+  .plan li.done span.t { color: var(--muted); text-decoration: line-through; }
+  .plan li span.t { font-size: 14px; color: var(--ink); }
+  .plan li small { display: block; color: var(--muted); font-size: 12px; margin-top: 2px; }
+  .plan li b { font: 500 13px var(--mono); color: var(--green); white-space: nowrap; }
+  .plan .total { background: linear-gradient(160deg, var(--accent-bg), var(--surface) 80%); border-left: 1px solid var(--line); padding: 24px; display: flex; flex-direction: column; gap: 10px; justify-content: center; }
+  .plan .total .big { font: 600 44px/1 var(--sans); letter-spacing: -0.04em; color: var(--accent); }
+  .plan .total p { font-size: 13px; color: var(--ink-2); max-width: 46ch; }
+  .plan .total .actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+  .btn.sm { height: 34px; padding: 0 12px; font-size: 13px; }
+
+  /* upload */
+  dialog { border: 1px solid var(--line); border-radius: var(--r-lg); background: var(--surface); color: var(--ink); padding: 0; width: min(460px, calc(100vw - 32px)); box-shadow: 0 24px 60px rgba(0,0,0,.25); }
+  dialog::backdrop { background: rgba(10,12,11,.45); backdrop-filter: blur(2px); }
+  dialog form { padding: 24px; display: grid; gap: 14px; }
+  dialog h2 { font-size: 20px; font-weight: 600; }
+  dialog p { font-size: 13px; color: var(--ink-2); }
+  dialog label { display: grid; gap: 6px; font-size: 13px; font-weight: 500; }
+  dialog input[type=text] { font: 14px var(--sans); color: var(--ink); background: var(--surface); border: 1px solid var(--line-2); border-radius: var(--r-md); padding: 9px 11px; }
+  dialog input[type=file] { font: 13px var(--sans); color: var(--ink-2); }
+  dialog .actions { display: flex; gap: 8px; justify-content: flex-end; }
+  .gamechip { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-radius: var(--r-md); background: var(--sunk); font-size: 13px; }
+  .gamechip.on { background: var(--accent-bg); color: var(--accent); font-weight: 500; }
+  .foot { display: flex; justify-content: space-between; gap: 12px; color: var(--muted); font-size: 12px; padding: 4px 4px 0; }
+  .foot button { background: none; border: 0; color: var(--muted); text-decoration: underline; cursor: pointer; font-size: 12px; padding: 0; }
+  .howto { margin: 0; padding-left: 20px; display: grid; gap: 6px; font-size: 13px; color: var(--ink-2); }
+  .bar .btn.sm[hidden] { display: none; }
+  .msg { font-size: 13px; min-height: 20px; } .msg.err { color: var(--red); } .msg.ok { color: var(--green); }
+  .drop { position: fixed; inset: 0; z-index: 60; display: none; place-items: center; background: color-mix(in srgb, var(--accent) 14%, transparent); border: 3px dashed var(--accent); pointer-events: none; }
+  .drop.on { display: grid; } .drop div { background: var(--surface); padding: 14px 20px; border-radius: var(--r-md); font-weight: 600; box-shadow: var(--shadow); }
+
+  /* how it works */
+  .how { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .how > div { padding: 22px 24px; display: grid; grid-template-columns: 36px 1fr; gap: 12px; }
+  .how > div + div { border-left: 1px solid var(--line); }
+  .how > div > .ph { font-size: 20px; width: 36px; height: 36px; display: grid; place-items: center; border-radius: var(--r-md); background: var(--sunk); }
+  .how h3 { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+  .how p { font-size: 13px; color: var(--ink-2); }
+
+  @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+  @media (max-width: 1180px) {
+    .core { grid-template-columns: 1fr; } .list { max-height: none; }
+    .profile { grid-template-columns: 1fr 1fr; } .profile > div:first-child { grid-column: 1 / -1; border-bottom: 1px solid var(--line); }
+    .profile > div:nth-child(2) { border-left: 0; }
+    .trio { grid-template-columns: 1fr 1fr; } .trio > :last-child { grid-column: 1 / -1; }
+  }
+  @media (max-width: 760px) {
+    .wrap { padding-left: 16px; padding-right: 16px; }
+    .top { position: static; }
+    .bar { height: auto; padding: 10px 0; flex-wrap: wrap; }
+    .brand { flex: 1 0 auto; }
+    .select { flex: 1 1 140px; } .select select { width: 100%; max-width: none; }
+    .pipe ol { grid-template-columns: 1fr 1fr; gap: 0 12px; } .pipe li { padding: 6px 0; }
+    .pipe li span:last-child { display: none; }
+    .debrief { grid-template-columns: 1fr; } .debrief .art { border-left: 0; border-top: 1px solid var(--line); min-height: 200px; }
+    .debrief .text { padding: 24px 20px; } .debrief .stats { grid-template-columns: repeat(2, auto); gap: 16px 32px; }
+    .mapwrap { margin: 12px; } #map { height: 420px; } .hintkeys { display: none; }
+    .profile, .trio, .how, .plan { grid-template-columns: 1fr; } .plan .total { border-left: 0; border-top: 1px solid var(--line); }
+    .profile > div + div, .how > div + div { border-left: 0; border-top: 1px solid var(--line); }
+    .head { padding: 18px 18px 0; } .trio .body { padding: 12px 18px 18px; } .list { padding: 12px; }
+    .find .act, .find .more { margin-left: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+<svg class="lanes" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M-80 640 C 220 520, 360 760, 640 600 S 1060 260, 1520 380"/><path d="M-60 300 C 260 180, 420 420, 760 330 S 1180 520, 1500 160"/></svg>
+<a class="skip" href="#findings">Skip to findings</a>
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#" aria-label="ProofPlay home">
+      <svg class="mark" viewBox="4 4 252 196" aria-hidden="true"><path d="M30 135C7 95 16 47 55 27C92 9 129 29 172 54L222 86L176 89L123 58C86 36 52 44 42 72C34 93 40 112 54 132L30 135Z"/><path d="M54 69C47 88 50 114 66 133C82 153 112 151 143 131L182 106L161 93L229 91C247 90 251 105 233 117L146 174C95 207 47 192 25 157C14 141 10 127 10 114L54 69Z"/><path d="M86 77L139 109L87 141C102 115 102 98 86 77Z"/></svg>
+      ProofPlay
+    </a>
+    <span class="status" id="status" role="status"><i></i><span>Connecting</span></span>
+    <label class="select"><span class="sr">Driver</span><select id="player"></select><i class="ph ph-caret-down"></i></label>
+    <label class="select"><span class="sr">Race</span><select id="run"></select><i class="ph ph-caret-down"></i></label>
+    <button class="btn sm" id="playGame" type="button" hidden><i class="ph ph-record"></i>Start session</button>
+    <button class="iconbtn" id="upload" type="button" aria-label="Upload a race file" title="Upload a race file"><i class="ph ph-upload-simple"></i></button>
+    <button class="iconbtn" id="theme" type="button" aria-label="Switch colour theme" title="Switch colour theme"><i class="ph ph-moon"></i></button>
+  </div>
+  <div class="pipe"><div class="wrap"><ol id="steps" aria-label="Analysis progress"></ol></div></div>
+</header>
+
+<main class="wrap">
+  <section class="panel debrief" aria-labelledby="debrief-title">
+    <div class="text">
+      <div class="who" id="who"></div>
+      <h1 id="debrief-title">Loading your race</h1>
+      <p class="lead" id="lead"></p>
+      <div class="actions">
+        <a class="btn" href="#findings"><i class="ph ph-map-trifold"></i>See it on the map</a>
+        <a class="btn ghost" href="#how"><i class="ph ph-question"></i>How fixes are proven</a>
+      </div>
+      <div class="stats" id="stats"></div>
+    </div>
+    <div class="art">
+      <img id="hero" src="assets/car_D01_hero.png" alt="The car used in this race" width="900" height="560">
+      <div class="rating" id="rating" title="Skill rating out of 99, measured from this race's replay"><b id="ovr">-</b><span>/ 99</span><span class="tier" id="tier">-</span></div>
+    </div>
+  </section>
+
+  <section class="panel plan" id="plan" aria-labelledby="h-plan" hidden>
+    <div class="steps">
+      <div class="head" style="padding:0"><h2 id="h-plan">Your plan for the next race</h2><span class="meta" id="planMeta"></span></div>
+      <ol id="planList"></ol>
+    </div>
+    <div class="total" id="planTotal"></div>
+  </section>
+
+  <div class="core" id="findings">
+    <section class="panel" aria-labelledby="h-map">
+      <div class="head"><h2 id="h-map">Track map</h2><span class="meta" id="mapMeta"></span></div>
+      <div class="mapwrap">
+        <canvas id="map" aria-label="Track map with numbered findings. Drag to pan, scroll to zoom." tabindex="0"></canvas>
+        <div class="tools" role="toolbar" aria-label="Map controls">
+          <button id="zin" type="button" title="Zoom in" aria-label="Zoom in"><i class="ph ph-plus"></i></button>
+          <button id="zout" type="button" title="Zoom out" aria-label="Zoom out"><i class="ph ph-minus"></i></button>
+          <button id="fit" type="button" title="Whole track (Esc)" aria-label="Show whole track"><i class="ph ph-corners-out"></i></button>
+          <button id="play" type="button" title="Pause replay" aria-label="Pause replay"><i class="ph ph-pause"></i></button>
+        </div>
+        <div class="legend"><span><i class="dash"></i>Your line</span><span><i></i>Proven fix</span><span><i class="loss"></i>Time lost</span></div>
+        <div class="hintkeys"><kbd>↑</kbd> <kbd>↓</kbd> findings, <kbd>Esc</kbd> whole track</div>
+        <div class="tip" id="tip"></div>
+        <div class="mapnote" id="mapNote" hidden><div>The map fills in when the replay analysis finishes.</div></div>
+      </div>
+    </section>
+    <section class="panel" aria-labelledby="h-find">
+      <div class="head"><h2 id="h-find">Findings</h2><span class="meta" id="findMeta"></span></div>
+      <div class="list" id="list"></div>
+    </section>
+  </div>
+
+  <section class="panel profile" aria-labelledby="h-prof">
+    <div>
+      <h2 id="h-prof">Driver profile</h2>
+      <canvas id="radar" aria-label="Skill profile radar chart"></canvas>
+    </div>
+    <div>
+      <h3>Skills</h3>
+      <div class="attrs" id="attrs"></div>
+    </div>
+    <div>
+      <h3>Laps</h3>
+      <div class="laps" id="laps"></div>
+      <div class="facts" id="facts"></div>
+    </div>
+  </section>
+
+  <div class="trio">
+    <section class="panel" aria-labelledby="h-first">
+      <div class="head"><h2 id="h-first">First look</h2><span class="meta">results screen, unverified</span></div>
+      <div class="body"><div id="hints"></div><p class="note">These appear seconds after the race. The findings above replace them with measured and proven results.</p></div>
+    </section>
+    <section class="panel" aria-labelledby="h-hist">
+      <div class="head"><h2 id="h-hist">Rating history</h2><span class="meta" id="histMeta"></span></div>
+      <div class="body"><canvas id="history" aria-label="Skill rating per race"></canvas></div>
+    </section>
+    <section class="panel" aria-labelledby="h-board">
+      <div class="head"><h2 id="h-board">Leaderboard</h2><span class="meta">replay-verified only</span></div>
+      <div class="body"><table id="board"></table></div>
+    </section>
+  </div>
+
+  <section class="panel how" id="how" aria-label="How ProofPlay works">
+    <div><i class="ph ph-record"></i><div><h3>Recorded in the game</h3><p>Every physics step of your inputs is saved with the race setup. Nothing else needs to be captured.</p></div></div>
+    <div><i class="ph ph-arrows-clockwise"></i><div><h3>Replayed exactly</h3><p>The game is deterministic, so the replay reproduces your race bit for bit. A result that does not reproduce is rejected from the leaderboard.</p></div></div>
+    <div><i class="ph ph-seal-check"></i><div><h3>Fixes are proven</h3><p>A fix is shown only after the changed inputs were run through the game's physics and saved time without a crash.</p></div></div>
+  </section>
+  <div class="foot"><span>ProofPlay runs on this computer. Races stay here unless you upload them.</span><button type="button" id="quit">Quit ProofPlay</button></div>
+</main>
+
+<dialog id="upDlg" aria-labelledby="up-title">
+  <form method="dialog" id="upForm">
+    <h2 id="up-title">Upload a race</h2>
+    <p>Pick a race file the game saved in its <code>sessions</code> folder. The server replays the race itself, so an edited file cannot fake a result.</p>
+    <label>Driver name<input type="text" id="upName" required maxlength="32" pattern="[A-Za-z0-9_\- ]{1,32}" autocomplete="nickname"></label>
+    <label>Race file<input type="file" id="upFile" accept=".json,application/json" required></label>
+    <p class="msg" id="upMsg" role="status"></p>
+    <div class="actions"><button class="btn ghost" value="cancel" formnovalidate>Close</button><button class="btn" id="upGo" value="go"><i class="ph ph-upload-simple"></i>Upload</button></div>
+  </form>
+</dialog>
+<dialog id="playDlg" aria-labelledby="play-title">
+  <form method="dialog" id="playForm">
+    <h2 id="play-title">Start a session</h2>
+    <p class="gamechip" id="gameChip"></p>
+    <ol class="howto"><li>Keep your game open and drive races as usual.</li><li>Every race you finish while the session runs is saved under your name and analysed by itself. Come back here to see it.</li></ol>
+    <label>Driver name<input type="text" id="playName" required maxlength="32" pattern="[A-Za-z0-9_\- ]{1,32}" autocomplete="nickname"></label>
+    <p class="msg" id="playMsg" role="status"></p>
+    <div class="actions"><button class="btn ghost" value="cancel" formnovalidate>Close</button><button class="btn" id="playGo" value="go"><i class="ph ph-record"></i>Start session</button></div>
+  </form>
+</dialog>
+<div class="drop" id="drop"><div>Drop the race file to upload it</div></div>
+
+<script>
+const $ = id => document.getElementById(id);
+const api = p => fetch(p, { cache: "no-store" }).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
+const ATTR = { pace: ["Pace", "speed vs the ideal profile"], line: ["Line", "distance from the racing line"], combat: ["Combat", "hits per weapon used"],
+  defense: ["Defence", "attacks blocked"], consistency: ["Consistency", "same corner, lap to lap"], recovery: ["Recovery", "resets and respawns"] };
+const SRC = { proof: ["proof", "ph-seal-check", "Proven by re-simulation"], loss: ["loss", "ph-timer", "Measured vs your best lap"],
+  consistency: ["consistency", "ph-shuffle", "Measured across laps"], stats: ["stats", "ph-list-numbers", "Results screen"] };
+const fmtTime = s => { if (s == null || !isFinite(s)) return "-"; const m = Math.floor(s / 60); return m + ":" + (s - m * 60).toFixed(2).padStart(5, "0"); };
+const tierOf = o => o >= 85 ? "Elite" : o >= 70 ? "Gold" : o >= 55 ? "Silver" : "Bronze";
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const css = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+const attrName = a => (ATTR[a.key] || [a.name])[0];
+
+let report = null, runsCache = [], shownKey = null, sel = 0, playing = true, anim = 0, pausedAt = 0, lastHist = [];
+
+// ---------- theme ----------
+function isDark() { const t = document.documentElement.dataset.theme; return t ? t === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; }
+function syncTheme() { $("theme").innerHTML = `<i class="ph ${isDark() ? "ph-sun" : "ph-moon"}"></i>`; drawRadar(); drawHistory(lastHist); }
+$("theme").onclick = () => {
+  const next = isDark() ? "light" : "dark";
+  document.documentElement.dataset.theme = next;
+  try { localStorage.setItem("pp-theme", next); } catch (e) {}
+  syncTheme();
+};
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", syncTheme);
+
+// ---------- data ----------
+async function loadPlayers() {
+  const players = await api("/api/players"), s = $("player"), cur = s.value;
+  s.innerHTML = players.map(p => `<option>${esc(p)}</option>`).join("");
+  if (players.includes(cur)) s.value = cur;
+  else if (lastStatus.session && players.includes(lastStatus.session.player)) s.value = lastStatus.session.player; // first load during a session
+  // A race just recorded by the Play button: jump to that driver once their first file arrives.
+  if (pendingPlayer && players.includes(pendingPlayer) && s.value !== pendingPlayer) { s.value = pendingPlayer; runsCache = []; pendingPlayer = null; }
+  if (!players.length) return firstRun();
+  await loadRuns();
+}
+function firstRun(name) {
+  report = null; shownKey = null;
+  $("run").innerHTML = "";
+  $("plan").hidden = true;
+  $("debrief-title").textContent = name ? `Waiting for ${name}'s first race` : "Play your first race";
+  $("lead").textContent = name ? "Drive a race in the game to the finish line. It shows up here a few seconds after you cross it, even if you leave before the other cars finish."
+    : "Open your game, press Start session, drive a race and come back. ProofPlay replays it and shows where you lost time and which fixes are proven to work.";
+  $("who").innerHTML = ""; $("stats").innerHTML = "";
+  $("list").innerHTML = `<div class="notice"><i class="ph ph-flag-checkered"></i><span>Findings appear here after your first race.</span></div>`;
+}
+async function loadRuns(latest) {
+  const player = $("player").value;
+  if (!player) return;
+  const runs = await api("/api/runs?player=" + encodeURIComponent(player));
+  if (!runs.length) { runsCache = []; return firstRun(player); } // a session driver before their first race
+  const s = $("run"), cur = s.value, changed = runs.length !== runsCache.length;
+  runsCache = runs;
+  s.innerHTML = runs.map((r, i) => `<option value="${r.id}">Race ${i + 1}, ${esc(r.track)}, P${r.position}${r.stage !== "full" ? " (analysing)" : ""}</option>`).join("");
+  s.value = (latest || changed || !cur) && runs.length ? runs[runs.length - 1].id : cur;
+  lastHist = runs.filter(r => r.stage !== "quick" && r.overall != null);
+  drawHistory(lastHist);
+  const r = runs.find(x => String(x.id) === s.value);
+  if ((r ? r.id + ":" + r.stage : null) !== shownKey) await loadReport();
+}
+async function loadReport() {
+  const id = $("run").value;
+  if (!id) return;
+  report = await api("/api/report?id=" + id);
+  if (!report) return;
+  const r = runsCache.find(x => String(x.id) === id);
+  shownKey = r ? r.id + ":" + r.stage : null;
+  sel = 0; cam.fitted = false;
+  render();
+}
+
+// ---------- render ----------
+function render() {
+  const r = report, stage = r.stage || "full", replay = stage !== "quick", done = stage === "full", q = r.quick, adv = r.advice || [];
+  const car = r.setup.car || "D01";
+  $("hero").src = `assets/car_${car}_hero.png`; $("hero").alt = `Car ${car}, used in this race`;
+  const pos = q ? q.position : r.result.position, n = q ? q.participants : r.setup.cars;
+  const laps = (q ? q.lap_times : r.result.lap_times) || [];
+  const best = q ? q.best_lap_s : (laps.length > 1 ? Math.min(...laps.slice(1)) : laps[0]);
+  $("who").innerHTML = `<i class="ph ph-flag-checkered"></i>${esc(r.setup.player || $("player").value)} on ${esc(r.setup.track)}, ${r.setup.laps} laps, ${n} cars`;
+
+  // Debrief: the one thing to know about this race.
+  const top = adv.find(a => a.impact_s != null) || adv[0];
+  if (!replay) { $("debrief-title").textContent = `P${pos} of ${n}. Working out where the time went.`; $("lead").textContent = "The results screen is in. The replay analysis takes a few seconds, and the findings appear here when it finishes."; }
+  else if (top) { $("debrief-title").textContent = top.title; $("lead").textContent = top.explanation.split(/(?<=\.)\s/).slice(0, 2).join(" "); }
+  else { $("debrief-title").textContent = "A clean race. Nothing big to fix."; $("lead").textContent = "No stretch cost more than half a second against your best lap, and no tested fix was faster."; }
+  $("stats").innerHTML = [["Position", `${pos}<small>/${n}</small>`], ["Race time", fmtTime(q ? q.time_s : r.result.time_s)], ["Best lap", fmtTime(best)],
+    ["Top speed", q ? `${Math.round(q.top_speed_kmh)}<small> km/h</small>` : "-"]].map(([k, v]) => `<div><span>${k}</span><b>${v}</b></div>`).join("");
+  $("ovr").textContent = replay ? r.overall : "-";
+  $("tier").textContent = replay ? tierOf(r.overall) : "pending";
+  $("tier").className = "tier" + (replay ? " " + tierOf(r.overall).toLowerCase() : "");
+  $("rating").className = "rating" + (replay ? " " + tierOf(r.overall).toLowerCase() : "");
+  renderDeltas(r, replay);
+  renderPlan(r, adv, done);
+
+  // Pipeline
+  const verified = replay && r.result.verified, cons = r.consistency;
+  $("steps").innerHTML = [
+    [q ? "done" : "", "Results screen", q ? `${q.hints.length} quick notes` : "not saved for this race"],
+    [replay ? "done" : "run", "Replay analysis", replay ? `${r.analysis_s ?? "-"} s` : "replaying"],
+    [done ? "done" : replay ? "run" : "", "Proven fixes", done ? `${r.proofs.length} proven` : replay ? "re-simulating" : "waiting"],
+    [!replay ? "" : verified ? "done" : "bad", "Verified", !replay ? "waiting" : (verified ? "replay identical" : "replay differs") + (cons ? `, stats ${cons.matched}/${cons.checked} match` : "")],
+  ].map(([s, t, d]) => `<li class="${s}"><span class="ic">${s === "done" ? '<i class="ph ph-check"></i>' : s === "bad" ? '<i class="ph ph-x"></i>' : ""}</span><b>${t}</b><span>${d}</span></li>`).join("");
+
+  // Findings
+  if (sel >= adv.length) sel = 0;
+  $("findMeta").textContent = adv.length ? `${adv.length} found, biggest first` : "";
+  $("mapMeta").textContent = r.track ? `${r.setup.track}, ${(r.track.length * 5).toLocaleString("en")} m lap` : r.setup.track;
+  let html = "";
+  if (!replay) html = `<div class="skel" style="height:96px;margin-bottom:8px"></div><div class="skel" style="height:96px;margin-bottom:8px"></div><div class="skel" style="height:96px"></div>`;
+  else {
+    if (!done) html += `<div class="notice"><i class="ph ph-hourglass-medium"></i><span>Testing candidate fixes in the game's physics. The findings below are already measured.</span></div>`;
+    else if (!r.proofs.length) html += `<div class="notice"><i class="ph ph-info"></i><span>No corner fix proved faster this race: no human-sized change to braking or throttle saved time. The findings show where the time went instead.</span></div>`;
+    html += adv.map((a, i) => {
+      const [cls, icon, label] = SRC[a.source] || ["", "ph-dot-outline", a.source];
+      const imp = a.impact_s == null ? "" : `<div class="impact ${a.source === "proof" ? "gain" : "cost"}">${a.source === "proof" ? "+" : "−"}${a.impact_s.toFixed(a.impact_s >= 10 ? 1 : 2)} s</div>`;
+      return `<article class="find ${i === sel ? "on" : ""}" data-i="${i}" style="--i:${Math.min(i, 8)}" tabindex="0" aria-expanded="${i === sel}">
+        <div class="row"><div class="rank">${i + 1}</div><div><h3>${esc(a.title)}</h3><div class="src"><span class="tag ${cls}"><i class="ph ${icon}"></i>${label}</span></div></div>${imp}</div>
+        <p class="act">${esc(a.action)}</p>
+        <div class="more"><p class="why">${esc(a.explanation)}</p><div class="ev">${a.evidence.map(e => `<span class="tag mono">${esc(e)}</span>`).join("")}</div></div>
+      </article>`;
+    }).join("");
+    if (!adv.length) html += `<div class="notice"><i class="ph ph-check-circle"></i><span>Nothing worth fixing stood out in this race.</span></div>`;
+  }
+  $("list").innerHTML = html;
+  document.querySelectorAll(".find").forEach(el => {
+    el.onclick = () => select(+el.dataset.i, true);
+    el.onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(+el.dataset.i, true); } };
+  });
+  $("mapNote").hidden = replay;
+
+  // Profile
+  $("attrs").innerHTML = replay && r.attributes ? r.attributes.map(a => `<div class="attr"><span>${attrName(a)}</span><b>${a.rating}</b><span class="meter ${a.rating >= 70 ? "" : a.rating >= 45 ? "mid" : "lo"}"><i style="transform:scaleX(${(a.rating / 99).toFixed(3)})"></i></span><small>${(ATTR[a.key] || ["", ""])[1]}</small></div>`).join("")
+    : Array(6).fill('<div class="skel" style="height:40px"></div>').join("");
+  const slowest = Math.max(...laps, 1), fastest = Math.min(...laps);
+  $("laps").innerHTML = laps.map((t, i) => `<div class="lap ${t === fastest ? "best" : ""}"><span>L${i + 1}</span><i style="transform:scaleX(${(t / slowest).toFixed(3)})"></i><b>${fmtTime(t)}</b></div>`).join("") || `<p class="note">No laps recorded.</p>`;
+  const hits = q ? q.hits : r.combat.hits, uses = q ? q.uses : r.combat.uses, dmg = q ? q.damage_taken : r.combat.damage_taken;
+  $("facts").innerHTML = [["Hits", `${hits} / ${uses}`], ["Damage taken", Math.round(dmg)], ["Average speed", q ? `${Math.round(q.avg_speed_kmh)} km/h` : "-"], ["Resets", q ? q.resets : "-"]]
+    .map(([k, v]) => `<div><span>${k}</span><b>${v}</b></div>`).join("");
+  drawRadar();
+
+  $("hints").innerHTML = q && q.hints.length
+    ? q.hints.map(h => `<div class="hint"><i class="ph ${h.tone === "good" ? "ph-check-circle" : "ph-warning-circle"}"></i><div>${esc(h.text)}</div></div>`).join("")
+    : `<p class="note">This race was recorded before the game saved its results screen.</p>`;
+  anim = performance.now();
+  if (replay) focusSelection();
+}
+
+function select(i, fromList) {
+  sel = i;
+  document.querySelectorAll(".find").forEach(el => { const on = +el.dataset.i === i; el.classList.toggle("on", on); el.setAttribute("aria-expanded", on); });
+  const el = document.querySelector(`.find[data-i="${i}"]`);
+  if (el && !fromList) el.scrollIntoView({ block: "nearest", behavior: "smooth" });
+  anim = performance.now();
+  focusSelection();
+}
+
+// ---------- since last race ----------
+function renderDeltas(r, replay) {
+  // The previous analysed race on the same track, so the numbers compare like with like.
+  const id = +$("run").value, prev = runsCache.filter(x => x.id < id && x.track === r.setup.track && x.stage !== "quick" && x.overall != null).pop();
+  const old = document.querySelector("#rating .delta"); if (old) old.remove();
+  if (!prev || !replay) return;
+  const d = r.overall - prev.overall;
+  if (d) $("rating").insertAdjacentHTML("beforeend", `<span class="delta ${d > 0 ? "up" : "down"}" title="Since your last race on ${esc(r.setup.track)}">${d > 0 ? "+" : "−"}${Math.abs(d)}</span>`);
+  const dt = r.result.time_s - prev.time_s, cell = $("stats").children[1];
+  if (cell && prev.time_s && Math.abs(dt) >= 0.01) cell.querySelector("b").insertAdjacentHTML("beforeend", `<span class="delta ${dt < 0 ? "up" : "down"}" title="Since your last race on this track">${dt < 0 ? "−" : "+"}${Math.abs(dt).toFixed(2)} s</span>`);
+}
+
+// ---------- next-race plan ----------
+function planKey() { return "pp-plan-" + $("run").value; }
+function renderPlan(r, adv, done) {
+  const box = $("plan");
+  const p = r.plan, other = adv.filter(a => a.source === "loss" || a.source === "consistency");
+  let proven = adv.filter(a => a.source === "proof").sort((a, b) => b.impact_s - a.impact_s);
+  // The tested combination comes first; fixes outside it are left for later.
+  const inPlan = a => !p.corners || p.corners.includes(r.proofs[a.map.index].corner); // older reports: no subset recorded
+  if (p && p.valid) proven = proven.filter(inPlan);
+  const steps = (proven.length ? proven.slice(0, 5) : other.slice(0, 3));
+  if (!done || !steps.length) { box.hidden = true; return; }
+  box.hidden = false;
+  let ticked = [];
+  try { ticked = JSON.parse(localStorage.getItem(planKey()) || "[]"); } catch (e) {}
+  $("planMeta").textContent = proven.length ? "proven fixes, biggest first" : "measured, not proven";
+  $("planList").innerHTML = steps.map((a, i) => `<li class="${ticked.includes(a.id) ? "done" : ""}"><label>
+      <input type="checkbox" data-id="${a.id}" ${ticked.includes(a.id) ? "checked" : ""}>
+      <span><span class="t">${esc(a.action.replace(/^Next race: /, "").split(". ")[0].replace(/^./, c => c.toUpperCase()))}</span>
+      <small>${esc(a.title)}${a.robust === false ? ", exact point only" : ""}</small></span>
+      ${a.impact_s != null && a.source === "proof" ? `<b>+${a.impact_s.toFixed(2)} s</b>` : ""}</label></li>`).join("");
+  $("planList").querySelectorAll("input").forEach(cb => cb.onchange = () => {
+    const ids = [...$("planList").querySelectorAll("input:checked")].map(x => x.dataset.id);
+    cb.closest("li").classList.toggle("done", cb.checked);
+    try { localStorage.setItem(planKey(), JSON.stringify(ids)); } catch (e) {}
+  });
+  const allNote = p ? (p.all_fixes === p.fixes ? "" : !p.all_valid ? ` Doing all ${p.all_fixes} at once crashed the car in our test.`
+    : p.all_gain_s > 0 ? ` All ${p.all_fixes} at once gained only ${p.all_gain_s.toFixed(2)} s.` : ` All ${p.all_fixes} at once was ${Math.abs(p.all_gain_s).toFixed(2)} s slower.`) : "";
+  let total;
+  if (p && p.valid) total = `<span class="big">−${p.gain_s.toFixed(2)} s</span><p>The best combination: these ${p.fixes} fixes together on lap ${p.lap}, tested in a re-run of your race. Fixes affect each other, so this is the real total, not a sum.${allNote}</p>`;
+  else if (p) total = `<span class="big" style="color:var(--red)">One at a time</span><p>No combination of your fixes saved time together on lap ${p.lap}.${allNote} Practise the top fix first, then add the next one.</p>`;
+  else if (proven.length) total = `<span class="big">−${proven[0].impact_s.toFixed(2)} s</span><p>The top fix on its own, tested in the game. A combined test needs at least two proven fixes.</p>`;
+  else total = `<span class="big" style="color:var(--ink)">${other.reduce((s, a) => s + (a.impact_s || 0), 0).toFixed(1)} s</span><p>Time these spots cost you against your own best lap. No braking or throttle change was proven faster this race, so start here.</p>`;
+  $("planTotal").innerHTML = total + `<div class="actions"><button class="btn sm" type="button" id="copyPlan"><i class="ph ph-copy"></i>Copy plan</button></div>`;
+  $("copyPlan").onclick = async () => {
+    const text = `ProofPlay plan, ${r.setup.track}:\n` + steps.map((a, i) => `${i + 1}. ${a.action.replace(/^Next race: /, "").split(". ")[0]}`).join("\n");
+    try { await navigator.clipboard.writeText(text); $("copyPlan").innerHTML = '<i class="ph ph-check"></i>Copied'; }
+    catch (e) { $("copyPlan").textContent = "Copy failed"; }
+    setTimeout(() => { if ($("copyPlan")) $("copyPlan").innerHTML = '<i class="ph ph-copy"></i>Copy plan'; }, 1600);
+  };
+}
+
+// ---------- live session ----------
+// The player opens their game themselves; the server sees which supported game is running.
+let pendingPlayer = null, lastStatus = {};
+let lastRaces = 0;
+function sessionUi(st) {
+  // A race just arrived in this session: jump to its driver.
+  if (st.session && st.session.races > lastRaces && lastStatus.session) pendingPlayer = st.session.player;
+  lastRaces = st.session ? st.session.races : 0;
+  lastStatus = st;
+  const b = $("playGame"), on = !!st.session;
+  b.hidden = !st.local;
+  b.innerHTML = on ? '<i class="ph ph-stop"></i>Stop session' : '<i class="ph ph-record"></i>Start session';
+  b.classList.toggle("ghost", on);
+  const g = (st.games || [])[0];
+  $("gameChip").className = "gamechip" + (g ? " on" : "");
+  $("gameChip").innerHTML = g ? `<i class="ph ph-game-controller"></i>${esc(g.name)} is open` : `<i class="ph ph-game-controller"></i>No game open yet. Start the session, then open ${esc((st.supported || []).join(" or ") || "your game")}.`;
+}
+async function sessionCall(action, player) {
+  const res = await fetch(`/api/session/${action}` + (player ? "?player=" + encodeURIComponent(player) : ""), { method: "POST", headers: { "X-ProofPlay": "1" } });
+  const j = await res.json();
+  if (!j.ok) throw new Error(j.error || "That did not work.");
+  return j;
+}
+$("playGame").onclick = async () => {
+  if (lastStatus.session) { try { await sessionCall("stop"); } catch (e) {} return poll(); }
+  $("playMsg").textContent = ""; $("playMsg").className = "msg";
+  if (!$("playName").value) $("playName").value = $("player").value || "";
+  $("playDlg").showModal();
+};
+$("playForm").addEventListener("submit", async e => {
+  if (e.submitter && e.submitter.value === "cancel") return;
+  e.preventDefault();
+  if (!$("playForm").reportValidity()) return;
+  const msg = $("playMsg");
+  try {
+    const j = await sessionCall("start", $("playName").value.trim());
+    pendingPlayer = j.player;
+    msg.className = "msg ok"; msg.textContent = `Session started in ${j.game}. Go race!`;
+    poll(); setTimeout(() => $("playDlg").close(), 1400);
+  } catch (err) { msg.className = "msg err"; msg.textContent = err.message === "Failed to fetch" ? "The server is not reachable." : err.message; }
+});
+// While the dialog is open, notice the game being opened.
+setInterval(() => { if ($("playDlg").open) api("/api/status").then(sessionUi).catch(() => {}); }, 1500);
+$("quit").onclick = async () => {
+  try { await fetch("/api/quit", { method: "POST", headers: { "X-ProofPlay": "1" } }); } catch (e) {}
+  document.body.innerHTML = '<main class="wrap" style="padding:80px 16px"><h1>ProofPlay stopped.</h1><p class="note">Double-click ProofPlay to start it again.</p></main>';
+};
+
+// ---------- upload ----------
+const dlg = $("upDlg");
+function openUpload(files) {
+  $("upMsg").textContent = ""; $("upMsg").className = "msg";
+  if (!$("upName").value) $("upName").value = $("player").value || "";
+  if (files) $("upFile").files = files;
+  if (!dlg.open) dlg.showModal();
+}
+$("upload").onclick = () => openUpload();
+$("upForm").addEventListener("submit", async e => {
+  if (e.submitter && e.submitter.value === "cancel") return;
+  e.preventDefault();
+  const f = $("upFile").files[0], name = $("upName").value.trim(), msg = $("upMsg");
+  if (!f || !$("upForm").reportValidity()) return;
+  msg.className = "msg"; msg.textContent = "Uploading...";
+  try {
+    const res = await fetch("/api/upload?player=" + encodeURIComponent(name), { method: "POST", body: f, headers: { "Content-Type": "application/json" } });
+    const j = await res.json();
+    if (!j.ok) throw new Error(j.error || "Upload failed.");
+    msg.className = "msg ok"; msg.textContent = "Uploaded. The first results appear here in a few seconds.";
+    await loadPlayers(); $("player").value = name; await loadRuns(true);
+    setTimeout(() => dlg.close(), 1200);
+  } catch (err) { msg.className = "msg err"; msg.textContent = err.message === "Failed to fetch" ? "The server is not reachable." : err.message; }
+});
+let dragDepth = 0;
+addEventListener("dragenter", e => { if (e.dataTransfer && [...e.dataTransfer.types].includes("Files")) { dragDepth++; $("drop").classList.add("on"); } });
+addEventListener("dragleave", () => { if (--dragDepth <= 0) { dragDepth = 0; $("drop").classList.remove("on"); } });
+addEventListener("dragover", e => e.preventDefault());
+addEventListener("drop", e => { e.preventDefault(); dragDepth = 0; $("drop").classList.remove("on"); if (e.dataTransfer.files.length) openUpload(e.dataTransfer.files); });
+
+// ---------- radar ----------
+function drawRadar() {
+  const c = $("radar"), dpr = devicePixelRatio || 1, w = c.clientWidth, h = c.clientHeight;
+  if (!w) return;
+  c.width = w * dpr; c.height = h * dpr;
+  const ctx = c.getContext("2d"); ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, w, h);
+  if (!report || report.stage === "quick" || !report.attributes) return;
+  const a = report.attributes, cx = w / 2, cy = h / 2 + 2, R = Math.min(w, h) / 2 - 30, n = a.length;
+  const pt = (i, f) => [cx + Math.sin(i / n * Math.PI * 2) * R * f, cy - Math.cos(i / n * Math.PI * 2) * R * f];
+  ctx.strokeStyle = css("--line-2"); ctx.lineWidth = 1;
+  for (const f of [0.25, 0.5, 0.75, 1]) { ctx.beginPath(); for (let i = 0; i <= n; i++) { const [x, y] = pt(i % n, f); i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); } ctx.stroke(); }
+  for (let i = 0; i < n; i++) { const [x, y] = pt(i, 1); ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(x, y); ctx.stroke(); }
+  ctx.beginPath(); a.forEach((t, i) => { const [x, y] = pt(i, t.rating / 99); i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); }); ctx.closePath();
+  ctx.fillStyle = isDark() ? "rgba(61,214,140,.16)" : "rgba(14,143,95,.12)"; ctx.fill(); ctx.strokeStyle = css("--accent"); ctx.lineWidth = 2; ctx.stroke();
+  a.forEach((t, i) => { const [x, y] = pt(i, t.rating / 99); ctx.beginPath(); ctx.arc(x, y, 3, 0, 7); ctx.fillStyle = css("--accent"); ctx.fill(); });
+  ctx.font = "500 11px Schibsted Grotesk, sans-serif"; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillStyle = css("--muted");
+  a.forEach((t, i) => { const [x, y] = pt(i, 1.22); ctx.fillText(attrName(t), x, y); });
+}
+
+// ---------- map: camera ----------
+const IMG = {}, BOUNDS = {};
+const ASSET_V = "4"; // bump when tools/render_proofplay_assets.py re-renders, so browsers drop cached art
+function img(src) { if (!IMG[src]) { IMG[src] = new Image(); IMG[src].src = src; } return IMG[src].complete && IMG[src].naturalWidth ? IMG[src] : null; }
+function bounds(id) { if (!(id in BOUNDS)) { BOUNDS[id] = null; fetch(`assets/track_${id}.json?v=${ASSET_V}`).then(r => r.json()).then(b => BOUNDS[id] = b).catch(() => {}); } return BOUNDS[id]; }
+const cam = { cx: 0, cz: 0, s: 1, tx: 0, tz: 0, ts: 1, fitted: false };
+let W = 0, H = 0;
+function worldBox() {
+  const pts = report && report.track;
+  if (pts && pts.length) {
+    let x0 = 1e9, x1 = -1e9, z0 = 1e9, z1 = -1e9;
+    for (const [x, z] of pts) { x0 = Math.min(x0, x); x1 = Math.max(x1, x); z0 = Math.min(z0, z); z1 = Math.max(z1, z); }
+    return [x0 - 40, x1 + 40, z0 - 40, z1 + 40];
+  }
+  const b = report && bounds(report.setup.track);
+  return b ? [b.x0, b.x1, b.z0, b.z1] : null;
+}
+function frameBox(box, instant) {
+  if (!box || !W) return;
+  const [x0, x1, z0, z1] = box;
+  cam.tx = (x0 + x1) / 2; cam.tz = (z0 + z1) / 2; cam.ts = Math.min(W / ((x1 - x0) * 1.08), H / ((z1 - z0) * 1.08));
+  if (instant) { cam.cx = cam.tx; cam.cz = cam.tz; cam.s = cam.ts; }
+}
+function boxOf(arr, pad) { let a0 = 1e9, a1 = -1e9, c0 = 1e9, c1 = -1e9; for (let i = 0; i < arr.length; i += 2) { a0 = Math.min(a0, arr[i]); a1 = Math.max(a1, arr[i]); c0 = Math.min(c0, arr[i + 1]); c1 = Math.max(c1, arr[i + 1]); } return [a0 - pad, a1 + pad, c0 - pad, c1 + pad]; }
+function mapItem(a) {
+  if (!a || !a.map) return null;
+  if (a.map.type === "proof") return { type: "proof", x: report.proofs[a.map.index] };
+  if (a.map.type === "loss") return { type: "loss", x: report.losses[a.map.index] };
+  return null;
+}
+function focusSelection() {
+  const a = report && report.advice && report.advice[sel], item = mapItem(a);
+  if (item && item.type === "proof" && item.x.path_real.length > 2) return frameBox(boxOf(item.x.path_real.concat(item.x.path_fix), 50));
+  if (item && item.type === "loss" && item.x.path.length > 2) return frameBox(boxOf(item.x.path, 70));
+  if (a && a.where) return frameBox([a.where.x - 110, a.where.x + 110, a.where.z - 110, a.where.z + 110]);
+  frameBox(worldBox());
+}
+const S = (x, z) => [(x - cam.cx) * cam.s + W / 2, (cam.cz - z) * cam.s + H / 2];
+const Wd = (sx, sy) => [(sx - W / 2) / cam.s + cam.cx, cam.cz - (sy - H / 2) / cam.s];
+
+// ---------- map: interaction ----------
+const canvas = $("map");
+let drag = null, hover = null, pins = [];
+canvas.addEventListener("pointerdown", e => { drag = { x: e.clientX, y: e.clientY, cx: cam.cx, cz: cam.cz, moved: false }; canvas.setPointerCapture(e.pointerId); });
+canvas.addEventListener("pointermove", e => {
+  const rc = canvas.getBoundingClientRect(), mx = e.clientX - rc.left, my = e.clientY - rc.top;
+  if (drag) {
+    const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+    if (Math.abs(dx) + Math.abs(dy) > 3) drag.moved = true;
+    cam.cx = cam.tx = drag.cx - dx / cam.s; cam.cz = cam.tz = drag.cz + dy / cam.s; cam.ts = cam.s;
+  }
+  hover = pick(mx, my); canvas.style.cursor = drag ? "grabbing" : hover && hover.kind === "pin" ? "pointer" : "grab"; tooltip(mx, my);
+});
+canvas.addEventListener("pointerup", e => {
+  if (drag && !drag.moved) { const rc = canvas.getBoundingClientRect(), p = pick(e.clientX - rc.left, e.clientY - rc.top); if (p && p.kind === "pin") select(p.i, false); }
+  drag = null;
+});
+canvas.addEventListener("pointerleave", () => { hover = null; $("tip").classList.remove("on"); });
+canvas.addEventListener("wheel", e => { e.preventDefault(); const rc = canvas.getBoundingClientRect(); zoomAt(e.clientX - rc.left, e.clientY - rc.top, Math.exp(-e.deltaY * 0.0015)); }, { passive: false });
+canvas.addEventListener("dblclick", e => { const rc = canvas.getBoundingClientRect(); zoomAt(e.clientX - rc.left, e.clientY - rc.top, 1.8); });
+function zoomAt(mx, my, f) {
+  const [wx, wz] = Wd(mx, my), s = Math.max(0.05, Math.min(cam.s * f, 30));
+  cam.s = cam.ts = s; cam.cx = cam.tx = wx - (mx - W / 2) / s; cam.cz = cam.tz = wz + (my - H / 2) / s;
+}
+$("zin").onclick = () => zoomAt(W / 2, H / 2, 1.5);
+$("zout").onclick = () => zoomAt(W / 2, H / 2, 1 / 1.5);
+$("fit").onclick = () => frameBox(worldBox());
+$("play").onclick = () => {
+  playing = !playing;
+  $("play").innerHTML = `<i class="ph ${playing ? "ph-pause" : "ph-play"}"></i>`;
+  $("play").title = playing ? "Pause replay" : "Play replay"; $("play").setAttribute("aria-label", $("play").title);
+  if (playing) anim = performance.now() - pausedAt;
+};
+document.addEventListener("keydown", e => {
+  if (!report || !report.advice || /SELECT|INPUT|TEXTAREA/.test(e.target.tagName)) return;
+  if (e.key === "ArrowDown" || e.key === "j") { e.preventDefault(); select(Math.min(sel + 1, report.advice.length - 1), false); }
+  if (e.key === "ArrowUp" || e.key === "k") { e.preventDefault(); select(Math.max(sel - 1, 0), false); }
+  if (e.key === "Escape") frameBox(worldBox());
+});
+function pick(mx, my) {
+  for (const p of pins) if (Math.hypot(mx - p.sx, my - p.sy) < 15) return { kind: "pin", i: p.i };
+  const pts = report && report.track;
+  if (!pts) return null;
+  let best = 1e9, bi = -1;
+  for (let i = 0; i < pts.length; i++) { const [a, c] = S(pts[i][0], pts[i][1]); const d = Math.hypot(a - mx, c - my); if (d < best) { best = d; bi = i; } }
+  return best < Math.max(10, (report.track_half_width || 7) * cam.s) ? { kind: "track", m: bi * 5 } : null;
+}
+function tooltip(mx, my) {
+  const t = $("tip");
+  if (!hover) return t.classList.remove("on");
+  if (hover.kind === "pin") {
+    const a = report.advice[hover.i];
+    t.innerHTML = `<b>${hover.i + 1}. ${esc(a.title)}</b>${a.impact_s != null ? `<br><span>${a.source === "proof" ? "+" : "−"}${a.impact_s.toFixed(2)} s</span>` : ""}`;
+  } else t.innerHTML = `<span>${hover.m.toLocaleString("en")} m from the start line</span>`;
+  t.style.left = mx + "px"; t.style.top = my + "px"; t.classList.add("on");
+}
+
+// ---------- map: drawing ----------
+function fitCanvas() {
+  const dpr = devicePixelRatio || 1, w = canvas.clientWidth, h = canvas.clientHeight;
+  if (canvas.width !== Math.round(w * dpr) || canvas.height !== Math.round(h * dpr)) { canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr); }
+  const ctx = canvas.getContext("2d"); ctx.setTransform(dpr, 0, 0, dpr, 0, 0); W = w; H = h; return ctx;
+}
+function edges(pts, off) {
+  const out = [];
+  for (let i = 0; i < pts.length; i++) {
+    const a = pts[(i - 1 + pts.length) % pts.length], b = pts[(i + 1) % pts.length];
+    let dx = b[0] - a[0], dz = b[1] - a[1]; const l = Math.hypot(dx, dz) || 1; dx /= l; dz /= l;
+    out.push([pts[i][0] + dz * off, pts[i][1] - dx * off]);
+  }
+  return out;
+}
+function path(ctx, pts, closed) { ctx.beginPath(); pts.forEach(([x, z], i) => { const [a, c] = S(x, z); i ? ctx.lineTo(a, c) : ctx.moveTo(a, c); }); if (closed) ctx.closePath(); }
+function flat(ctx, arr) { ctx.beginPath(); for (let i = 0; i < arr.length; i += 2) { const [a, c] = S(arr[i], arr[i + 1]); i ? ctx.lineTo(a, c) : ctx.moveTo(a, c); } }
+function label(ctx, text, x, y, dark) {
+  ctx.font = "600 11px Schibsted Grotesk, sans-serif"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+  const tw = ctx.measureText(text).width + 14;
+  ctx.fillStyle = dark ? "#111" : "#fff"; ctx.beginPath(); ctx.roundRect(x - tw / 2, y - 10, tw, 20, 5); ctx.fill();
+  if (!dark) { ctx.strokeStyle = "#DEDCD6"; ctx.lineWidth = 1; ctx.stroke(); }
+  ctx.fillStyle = dark ? "#fff" : "#111"; ctx.fillText(text, x, y + 0.5);
+}
+
+function draw(now) {
+  requestAnimationFrame(draw);
+  if (!report) return;
+  const ctx = fitCanvas();
+  if (!W) return;
+  if (!cam.fitted) { frameBox(worldBox(), true); if (report.stage !== "quick") focusSelection(); cam.fitted = !!worldBox(); }
+  cam.cx += (cam.tx - cam.cx) * 0.14; cam.cz += (cam.tz - cam.cz) * 0.14; cam.s += (cam.ts - cam.s) * 0.14;
+  const dark = isDark();
+  ctx.fillStyle = css("--map-bg"); ctx.fillRect(0, 0, W, H);
+  const b = bounds(report.setup.track), bg = img(`assets/track_${report.setup.track}.png?v=${ASSET_V}`);
+  if (bg && b) {
+    const [x0, y0] = S(b.x0, b.z1), [x1, y1] = S(b.x1, b.z0);
+    ctx.globalAlpha = dark ? 0.5 : 0.42;
+    ctx.filter = dark ? "grayscale(1) brightness(.8) contrast(1.05)" : "grayscale(1) sepia(.12) contrast(.95) brightness(1.12)";
+    ctx.drawImage(bg, x0, y0, x1 - x0, y1 - y0); ctx.filter = "none"; ctx.globalAlpha = 1;
+  }
+  const pts = report.track;
+  if (!pts || !pts.length) return;
+  const hw = report.track_half_width || 7, ribbon = Math.max(7, hw * 2 * cam.s);
+  ctx.lineJoin = "round"; ctx.lineCap = "round";
+  ctx.save(); ctx.shadowColor = "rgba(0,0,0,.22)"; ctx.shadowBlur = 14; ctx.shadowOffsetY = 4;
+  path(ctx, pts, true); ctx.strokeStyle = dark ? "#050505" : "#1A1A1A"; ctx.lineWidth = ribbon + 4; ctx.stroke(); ctx.restore();
+  path(ctx, pts, true); ctx.strokeStyle = dark ? "#4A4D52" : "#3A3C3F"; ctx.lineWidth = ribbon; ctx.stroke();
+  if (ribbon > 14) {
+    for (const off of [-hw + 0.6, hw - 0.6]) { path(ctx, edges(pts, off), true); ctx.strokeStyle = "rgba(255,255,255,.8)"; ctx.lineWidth = 1.4; ctx.stroke(); }
+    path(ctx, pts, true); ctx.setLineDash([6, 9]); ctx.strokeStyle = "rgba(255,255,255,.3)"; ctx.lineWidth = 1.2; ctx.stroke(); ctx.setLineDash([]);
+  }
+  for (const c of report.corners || []) {
+    const i0 = Math.max(0, Math.round((c.apex_s - 30) / 5)), i1 = Math.min(pts.length - 1, Math.round((c.apex_s + 30) / 5)), seg = pts.slice(i0, i1 + 1);
+    if (seg.length < 2) continue;
+    for (const off of [-hw - 0.8, hw + 0.8]) {
+      const e = edges(seg, off), k = Math.max(3, 2 * cam.s);
+      path(ctx, e, false); ctx.strokeStyle = "#fff"; ctx.lineWidth = Math.max(2.5, 1.6 * cam.s); ctx.stroke();
+      ctx.setLineDash([k, k]); path(ctx, e, false); ctx.strokeStyle = "#111"; ctx.stroke(); ctx.setLineDash([]);
+    }
+  }
+  {
+    const [a0, c0] = S(pts[0][0], pts[0][1]), [a1, c1] = S(pts[1][0], pts[1][1]);
+    ctx.save(); ctx.translate(a0, c0); ctx.rotate(Math.atan2(c1 - c0, a1 - a0));
+    const cell = Math.max(2.5, ribbon / 8);
+    for (let k = 0; k < 8; k++) for (let r = 0; r < 2; r++) { ctx.fillStyle = (k + r) % 2 ? "#111" : "#fff"; ctx.fillRect(r * cell - cell, -ribbon / 2 + k * (ribbon / 8), cell, ribbon / 8); }
+    ctx.restore();
+  }
+  for (let m = 500; m < pts.length * 5; m += 500) {
+    const i = Math.round(m / 5); if (i >= pts.length - 1) break;
+    const [ex, ez] = edges([pts[i - 1], pts[i], pts[i + 1]], hw + 22 / cam.s)[1];
+    const [a, c] = S(ex, ez);
+    ctx.font = "500 10px IBM Plex Mono, monospace"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    const tw = ctx.measureText(`${m} m`).width + 10;
+    ctx.fillStyle = dark ? "rgba(26,26,26,.92)" : "rgba(255,255,255,.92)"; ctx.beginPath(); ctx.roundRect(a - tw / 2, c - 8, tw, 16, 4); ctx.fill();
+    ctx.fillStyle = css("--muted"); ctx.fillText(`${m} m`, a, c + 0.5);
+  }
+  for (const g of report.losses || []) { flat(ctx, g.path); ctx.strokeStyle = "rgba(159,47,45,.3)"; ctx.lineWidth = Math.max(6, ribbon * 0.55); ctx.stroke(); }
+  for (const c of report.corners || []) {
+    const i = Math.min(pts.length - 1, Math.round(c.apex_s / 5));
+    const [ex, ez] = edges([pts[Math.max(0, i - 1)], pts[i], pts[(i + 1) % pts.length]], -(hw + 24 / cam.s))[1];
+    const [a, cc] = S(ex, ez);
+    label(ctx, `T${c.id}`, a, cc, false);
+  }
+  const a = report.advice && report.advice[sel], item = mapItem(a);
+  if (item && item.type === "loss") { flat(ctx, item.x.path); ctx.strokeStyle = "rgba(159,47,45,.88)"; ctx.lineWidth = Math.max(7, ribbon * 0.7); ctx.stroke(); }
+  if (item && item.type === "proof") {
+    const p = item.x;
+    flat(ctx, p.path_real); ctx.setLineDash([7, 6]); ctx.strokeStyle = "rgba(255,255,255,.9)"; ctx.lineWidth = 5; ctx.stroke(); ctx.strokeStyle = "#8F8C86"; ctx.lineWidth = 3; ctx.stroke(); ctx.setLineDash([]);
+    flat(ctx, p.path_fix); ctx.strokeStyle = "rgba(255,255,255,.95)"; ctx.lineWidth = 6.5; ctx.stroke(); ctx.strokeStyle = css("--accent"); ctx.lineWidth = 3.5; ctx.stroke();
+    const carImg = img(`assets/car_${report.setup.car || "D01"}_top.png`);
+    if (playing) pausedAt = now - anim;
+    const t = playing ? now - anim : pausedAt, n = Math.max(p.path_real.length, p.path_fix.length) / 2, k = (t / 45) % (n + 25);
+    const car = (arr, fix) => {
+      const last = arr.length / 2 - 1, i = Math.min(Math.floor(k), last), j = Math.min(i + 1, last), i0 = Math.max(0, j - 1);
+      const [x, y] = S(arr[i * 2], arr[i * 2 + 1]), [x1, y1] = S(arr[j * 2], arr[j * 2 + 1]), [x0, y0] = S(arr[i0 * 2], arr[i0 * 2 + 1]);
+      const len = Math.max(30, 4.4 * cam.s * 1.6), wid = len * 0.5;
+      ctx.save(); ctx.translate(x, y); ctx.rotate(Math.atan2(x1 - x0, -(y1 - y0)));
+      ctx.shadowColor = "rgba(0,0,0,.3)"; ctx.shadowBlur = 8; ctx.shadowOffsetY = 3; ctx.globalAlpha = fix ? 1 : 0.8;
+      ctx.filter = fix ? "grayscale(1) brightness(.5)" : "grayscale(1) brightness(1.15)";
+      if (carImg) ctx.drawImage(carImg, -wid / 2, -len / 2, wid, len); else { ctx.fillStyle = fix ? "#111" : "#8F8C86"; ctx.fillRect(-wid / 2, -len / 2, wid, len); }
+      ctx.restore(); ctx.filter = "none";
+      label(ctx, fix ? "Proven fix" : "You", x, y - len / 2 - 14, fix);
+    };
+    car(p.path_real, false); car(p.path_fix, true);
+  }
+  pins = [];
+  (report.advice || []).forEach((ad, i) => {
+    if (!ad.where) return;
+    const [x, y] = S(ad.where.x, ad.where.z), on = i === sel, hov = hover && hover.kind === "pin" && hover.i === i;
+    pins.push({ sx: x, sy: y - 18, i });
+    ctx.save(); ctx.translate(x, y);
+    ctx.shadowColor = "rgba(0,0,0,.25)"; ctx.shadowBlur = 8; ctx.shadowOffsetY = 2;
+    ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(-6, -10); ctx.arc(0, -18, 11, Math.PI * 0.78, Math.PI * 2.22); ctx.closePath();
+    const tone = ad.source === "proof" ? "#0E8F5F" : ad.source === "loss" ? "#9F2F2D" : ad.source === "consistency" ? "#956400" : "#111";
+    ctx.fillStyle = on ? tone : "#fff"; ctx.fill(); ctx.shadowColor = "transparent";
+    ctx.lineWidth = hov || on ? 2.2 : 1.6; ctx.strokeStyle = tone; ctx.stroke();
+    ctx.fillStyle = on ? "#fff" : tone; ctx.font = "600 11px IBM Plex Mono, monospace"; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(i + 1, 0, -18);
+    ctx.restore();
+  });
+}
+
+// ---------- history + leaderboard ----------
+function drawHistory(runs) {
+  const c = $("history"), dpr = devicePixelRatio || 1, w = c.clientWidth, h = c.clientHeight;
+  if (!w) return;
+  c.width = w * dpr; c.height = h * dpr;
+  const ctx = c.getContext("2d"); ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, w, h);
+  $("histMeta").textContent = runs.length ? `${runs.length} race${runs.length > 1 ? "s" : ""}` : "";
+  if (!runs.length) { ctx.fillStyle = css("--muted"); ctx.font = "13px Schibsted Grotesk, sans-serif"; ctx.fillText("Ratings appear after the first analysed race.", 0, 20); return; }
+  const pad = 28, xs = i => pad + (runs.length === 1 ? (w - 2 * pad) / 2 : i * (w - 2 * pad) / (runs.length - 1)), ys = v => h - 18 - (v / 100) * (h - 40);
+  ctx.font = "11px IBM Plex Mono, monospace"; ctx.fillStyle = css("--muted"); ctx.strokeStyle = css("--line"); ctx.lineWidth = 1;
+  for (const v of [25, 50, 75]) { ctx.beginPath(); ctx.moveTo(pad, ys(v)); ctx.lineTo(w, ys(v)); ctx.stroke(); ctx.fillText(v, 0, ys(v) + 4); }
+  ctx.beginPath(); runs.forEach((r, i) => i ? ctx.lineTo(xs(i), ys(r.overall)) : ctx.moveTo(xs(i), ys(r.overall)));
+  ctx.strokeStyle = css("--accent"); ctx.lineWidth = 2; ctx.stroke();
+  runs.forEach((r, i) => {
+    ctx.beginPath(); ctx.arc(xs(i), ys(r.overall), 4, 0, 7); ctx.fillStyle = css("--surface"); ctx.fill(); ctx.strokeStyle = css("--accent"); ctx.lineWidth = 2; ctx.stroke();
+    ctx.fillStyle = css("--ink"); ctx.font = "500 12px IBM Plex Mono, monospace"; ctx.textAlign = "center"; ctx.fillText(r.overall, xs(i), ys(r.overall) - 11); ctx.textAlign = "left";
+  });
+}
+async function loadBoard() {
+  const rows = await api("/api/leaderboard");
+  const trend = v => v > 0 ? "+" + v : v < 0 ? "−" + -v : "0";
+  $("board").innerHTML = rows.length ? "<tr><th>#</th><th>Driver</th><th>Tier</th><th>Rating</th><th>Best time</th><th>Trend</th></tr>" +
+    rows.map((r, i) => `<tr><td class="n">${i + 1}</td><td>${esc(r.player)}<i class="ph ph-seal-check" title="Replay-verified"></i></td><td><span class="tier ${esc(String(r.league).toLowerCase())}">${esc(r.league)}</span></td><td class="n">${r.overall}</td><td class="n">${r.best_time_s ? fmtTime(r.best_time_s) : "-"}</td><td class="n">${trend(r.improvement || 0)}</td></tr>`).join("")
+    : `<tr><td><p class="note">No verified races yet.</p></td></tr>`;
+}
+
+async function poll() {
+  const st = $("status");
+  try {
+    const s = await api("/api/status");
+    st.className = "status" + (s.session ? " rec" : s.busy ? " busy" : "");
+    st.querySelector("span").textContent = s.busy && !s.session ? "Analysing " + s.busy.split("/")[0]
+      : s.session ? `Recording ${s.session.player}${s.session.game ? " in " + s.session.game : ", waiting for the game"}, ${s.session.races} race${s.session.races === 1 ? "" : "s"}` : "Up to date";
+    sessionUi(s);
+    await loadPlayers(); await loadBoard();
+  } catch (e) {
+    st.className = "status down"; st.querySelector("span").textContent = "Server unreachable, retrying";
+  }
+}
+$("player").onchange = () => loadRuns(true);
+$("run").onchange = loadReport;
+addEventListener("resize", () => { cam.fitted = false; drawHistory(lastHist); drawRadar(); });
+syncTheme();
+poll(); setInterval(poll, 3000);
+requestAnimationFrame(draw);
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+{
+ "source": "proofplay/sessions/AutoTest/20261009_145140.json",
+ "rejected": 10,
+ "forged": 10,
+ "rows": [
+  {
+   "case": "genuine (control)",
+   "forged": false,
+   "accepted": true,
+   "correct": true,
+   "detail": "replay C:\\Users\\Sanan\\AppData\\Local\\Temp\\tmpa1liqfb2\\1141182528837019006.json: MATCH (hash 14644033684379114432 vs 14644033684379114432), P4 185.56 s, wall 5.95 s (31.7x realtime)"
+  },
+  {
+   "case": "claim 5 s faster time",
+   "forged": true,
+   "accepted": false,
+   "correct": true,
+   "detail": "  differs: time (claimed P4 180.56 s)"
+  },
+  {
+   "case": "claim 1st place",
+   "forged": true,
+   "accepted": false,
+   "correct": true,
+   "detail": "  differs: position (claimed P1 185.56 s)"
+  },
+  {
+   "case": "random state hash",
+   "forged": true,
+   "accepted": false,
+   "correct": true,
+   "detail": "  differs: state-hash (claimed P4 185.56 s)"
+  },
+  {
+   "case": "one steering input flipped mid-race",
+   "forged": true,
+   "accepted": false,
+   "correct": true,
+   "detail": "  differs: finished state-hash (claimed P4 185.56 s)"
+  },
+  {
+   "case": "braking replaced by 2 s of full throttle",
+   "forged": true,
+   "accepted": false,
+   "correct": true,
+   "detail": "  differs: finished state-hash (claimed P4 185.56 s)"
+  },
+  {
+   "case": "easier opponents in the grid",
+   "forged": true,
+   "accepted": false,
+   "correct": true,
+   "detail": "  differs: finished state-hash (claimed P4 185.56 s)"
+  },
+  {
+   "case": "field difficulty Easy instead of Normal",
+   "forged": true,
+   "accepted": false,
+   "correct": true,
+   "detail": "  differs: finished state-hash (claimed P4 185.56 s)"
+  },
+  {
+   "case": "last 1000 steps cut off",
+   "forged": true,
+   "accepted": false,
+   "correct": true,
+   "detail": "  differs: ticks time finished state-hash (claimed P4 185.56 s)"
+  },
+  {
+   "case": "one lap fewer",
+   "forged": true,
+   "accepted": false,
+   "correct": true,
+   "detail": "  differs: time position state-hash (claimed P4 185.56 s)"
+  },
+  {
+   "case": "performance part added",
+   "forged": true,
+   "accepted": false,
+   "correct": true,
+   "detail": "  differs: finished state-hash (claimed P4 185.56 s)"
+  }
+ ]
+}

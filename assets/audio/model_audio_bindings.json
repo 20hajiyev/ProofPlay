@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "status": "technical_draft",
+  "bindings": [
+    {
+      "vehicle": "Volkswagen Golf GTI Mk5",
+      "family": "i4t",
+      "engine_layout": "turbocharged inline four",
+      "asset_prefix": "eng_i4t_"
+    },
+    {
+      "vehicle": "BMW M3 E46",
+      "family": "i6_na",
+      "engine_layout": "naturally aspirated inline six",
+      "asset_prefix": "eng_i6_na_"
+    },
+    {
+      "vehicle": "Subaru Impreza WRX STI 2005",
+      "family": "flat4_turbo",
+      "engine_layout": "turbocharged flat four",
+      "asset_prefix": "eng_flat4_turbo_"
+    },
+    {
+      "vehicle": "Ford Ranger Raptor 2019",
+      "family": "i4_diesel_biturbo",
+      "engine_layout": "2.0-litre bi-turbo inline-four diesel assumption",
+      "asset_prefix": "eng_i4_diesel_biturbo_"
+    }
+  ],
+  "limitations": [
+    "Original synthetic approximations, not recordings of named vehicles.",
+    "Vehicle naming describes intended binding only; no authenticity endorsement.",
+    "No measured real torque, RPM acoustic calibration, listening approval or in-engine approval.",
+    "All four original generic families retained for compatibility."
+  ]
+}

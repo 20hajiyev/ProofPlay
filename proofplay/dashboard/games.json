@@ -1,0 +1,10 @@
+[
+  {
+    "id": "rival_line",
+    "name": "RIVAL LINE",
+    "process": "racer_sandbox.exe",
+    "adapter": "input-replay",
+    "inbox": "Oyuncu",
+    "note": "Records every race itself (inputs per physics step). The folder the game writes to when no driver name is set is the inbox: races that land there during a session belong to the session's driver."
+  }
+]

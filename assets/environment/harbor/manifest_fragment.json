@@ -1,0 +1,724 @@
+{
+  "schema_version": 1,
+  "generator": "tools/generate_environment.py",
+  "seed": 7429,
+  "provenance": "Original procedural assets generated locally with Blender. No downloaded model, texture, sound or Blur content.",
+  "assets": [
+    {
+      "asset_id": "harbor_container",
+      "path": "assets/environment/harbor/container.glb",
+      "sha256": "86f14ed379ae9533c66be4b2a92d0c50d8d7d9fd6363d6e3a77f9136bc48c9bb",
+      "dimensions_m": [
+        2.46,
+        6.155,
+        2.59
+      ],
+      "triangles": 1306,
+      "triangle_budget": 6000,
+      "collision": "separate compound-box collision GLB",
+      "provenance": "Original procedural geometry authored by Codex; no external textures or trademarked models.",
+      "collision_path": "assets/environment/harbor/container_collision.glb",
+      "collision_sha256": "5db43d1e162c8e5044f2244fd692643582b6ecf77dd782aae6f8c5ace1a81681",
+      "preview_path": "assets/environment/harbor/container_preview.png"
+    },
+    {
+      "asset_id": "harbor_container_red",
+      "path": "assets/environment/harbor/container_red.glb",
+      "sha256": "d30c8bf77a55431f4a1bcbe885b8177d985a5d82ef820cc661a5e2843c8c08e0",
+      "dimensions_m": [
+        2.46,
+        6.155,
+        2.59
+      ],
+      "triangles": 1306,
+      "triangle_budget": 6000,
+      "collision": "separate compound-box collision GLB",
+      "provenance": "Original procedural geometry authored by Codex; no external textures or trademarked models.",
+      "collision_path": "assets/environment/harbor/container_red_collision.glb",
+      "collision_sha256": "2af29d738f42261446d8f3e9680543b1a7f785f25b29c5772adfd800fdd1f77d",
+      "preview_path": "assets/environment/harbor/container_red_preview.png"
+    },
+    {
+      "asset_id": "harbor_container_blue",
+      "path": "assets/environment/harbor/container_blue.glb",
+      "sha256": "b540b7fa38b6b96f8361fae99d1d0c28585d1ca982094500b63139472b1dd44d",
+      "dimensions_m": [
+        2.46,
+        6.155,
+        2.59
+      ],
+      "triangles": 1306,
+      "triangle_budget": 6000,
+      "collision": "separate compound-box collision GLB",
+      "provenance": "Original procedural geometry authored by Codex; no external textures or trademarked models.",
+      "collision_path": "assets/environment/harbor/container_blue_collision.glb",
+      "collision_sha256": "694c894a4d6ad92fc8c6edb4dfa65d4e504685463b7ecdb380d2cb8939f242ec",
+      "preview_path": "assets/environment/harbor/container_blue_preview.png"
+    },
+    {
+      "asset_id": "harbor_container_orange",
+      "path": "assets/environment/harbor/container_orange.glb",
+      "sha256": "71052d92f262c46ab2952629549ca3398af1189a166842cab24ca2b30a3761b1",
+      "dimensions_m": [
+        2.46,
+        6.155,
+        2.59
+      ],
+      "triangles": 1306,
+      "triangle_budget": 6000,
+      "collision": "separate compound-box collision GLB",
+      "provenance": "Original procedural geometry authored by Codex; no external textures or trademarked models.",
+      "collision_path": "assets/environment/harbor/container_orange_collision.glb",
+      "collision_sha256": "20fae986fcd5eff6230d20fbb52080410d0977b3afa069825f7b7942dbea5ffa",
+      "preview_path": "assets/environment/harbor/container_orange_preview.png"
+    },
+    {
+      "asset_id": "harbor_container_grey",
+      "path": "assets/environment/harbor/container_grey.glb",
+      "sha256": "5bcafe5b0bfd549bb0f2f5d54cc2056a71051642eed36be78ee710ba6a702c70",
+      "dimensions_m": [
+        2.46,
+        6.155,
+        2.59
+      ],
+      "triangles": 1306,
+      "triangle_budget": 6000,
+      "collision": "separate compound-box collision GLB",
+      "provenance": "Original procedural geometry authored by Codex; no external textures or trademarked models.",
+      "collision_path": "assets/environment/harbor/container_grey_collision.glb",
+      "collision_sha256": "7a35e67217c0689dcb58d4ece56010d0dfb7a3908ffa8c99baf9259ac2637cc2",
+      "preview_path": "assets/environment/harbor/container_grey_preview.png"
+    },
+    {
+      "asset_id": "harbor_bollard",
+      "path": "assets/environment/harbor/bollard.glb",
+      "sha256": "64405351bbd09bf4779ec6fa90c6339d3064f1064affaa00c58a4306485bf6b9",
+      "dimensions_m": [
+        0.64,
+        0.64,
+        1.1
+      ],
+      "triangles": 132,
+      "triangle_budget": 6000,
+      "collision": "separate compound-box collision GLB",
+      "provenance": "Original procedural geometry authored by Codex; no external textures or trademarked models.",
+      "collision_path": "assets/environment/harbor/bollard_collision.glb",
+      "collision_sha256": "8e3b5e9649c5eb6abef1516812cece68f7dbc19c35533d01c0b10e4a6b5cc4c8",
+      "preview_path": "assets/environment/harbor/bollard_preview.png"
+    },
+    {
+      "asset_id": "harbor_pallet",
+      "path": "assets/environment/harbor/pallet.glb",
+      "sha256": "503bbcb962fcb6686c69ad66827283f540f4f47890db88760f4a58a97858803a",
+      "dimensions_m": [
+        1.2,
+        1.02,
+        0.21
+      ],
+      "triangles": 96,
+      "triangle_budget": 6000,
+      "collision": "separate compound-box collision GLB",
+      "provenance": "Original procedural geometry authored by Codex; no external textures or trademarked models.",
+      "collision_path": "assets/environment/harbor/pallet_collision.glb",
+      "collision_sha256": "a945ea1001692961a1616d7eaa64a17baed1592dc1f11340e70fbe3bda09796d",
+      "preview_path": "assets/environment/harbor/pallet_preview.png"
+    },
+    {
+      "asset_id": "harbor_crate",
+      "path": "assets/environment/harbor/crate.glb",
+      "sha256": "f19b368d718483f526364e4db2370e6b2bef485ca7607f9d9eed1e3df15b1936",
+      "dimensions_m": [
+        1.25,
+        1.25,
+        1.2
+      ],
+      "triangles": 140,
+      "triangle_budget": 6000,
+      "collision": "separate compound-box collision GLB",
+      "provenance": "Original procedural geometry authored by Codex; no external textures or trademarked models.",
+      "collision_path": "assets/environment/harbor/crate_collision.glb",
+      "collision_sha256": "af23c0ab0ed3b78255d53533abb6bbc3bafd9c06e448987d21dc8315ac7d17c4",
+      "preview_path": "assets/environment/harbor/crate_preview.png"
+    },
+    {
+      "asset_id": "harbor_concrete_barrier",
+      "path": "assets/environment/harbor/concrete_barrier.glb",
+      "sha256": "6df06cc9c88332abc2ef09877ed4555ec0818bc6ad0d4530719ddf8573f6e460",
+      "dimensions_m": [
+        3.0,
+        0.7,
+        1.07
+      ],
+      "triangles": 148,
+      "triangle_budget": 6000,
+      "collision": "separate compound-box collision GLB",
+      "provenance": "Original procedural geometry authored by Codex; no external textures or trademarked models.",
+      "collision_path": "assets/environment/harbor/concrete_barrier_collision.glb",
+      "collision_sha256": "175d79b4a6723092bf44dfeb18be5e7f01594c7a500e5be9adae4e176390b7aa",
+      "preview_path": "assets/environment/harbor/concrete_barrier_preview.png"
+    },
+    {
+      "asset_id": "harbor_guardrail",
+      "path": "assets/environment/harbor/guardrail.glb",
+      "sha256": "528221712b2c8cb9d97f099329b52cc8fd1091a143fb1f5aceba9c1678effb10",
+      "dimensions_m": [
+        4.0,
+        0.23,
+        1.2
+      ],
+      "triangles": 112,
+      "triangle_budget": 6000,
+      "collision": "separate compound-box collision GLB",
+      "provenance": "Original procedural geometry authored by Codex; no external textures or trademarked models.",
+      "collision_path": "assets/environment/harbor/guardrail_collision.glb",
+      "collision_sha256": "0960fa206c1b1fb15dac670fba2ed694173020b60c9980a7c37d6557a7288c9f",
+      "preview_path": "assets/environment/harbor/guardrail_preview.png"
+    },
+    {
+      "asset_id": "harbor_cone",
+      "path": "assets/environment/harbor/cone.glb",
+      "sha256": "a82a9f40723055823389a3832e3e134e86b5775507ad1949ff6c241e761018c1",
+      "dimensions_m": [
+        0.5,
+        0.5,
+        0.725
+      ],
+      "triangles": 132,
+      "triangle_budget": 6000,
+      "collision": "separate compound-box collision GLB",
+      "provenance": "Original procedural geometry authored by Codex; no external textures or trademarked models.",
+      "collision_path": "assets/environment/harbor/cone_collision.glb",
+      "collision_sha256": "61f7cb2bbf8920e1c2fdbbe6b3267ecf8c3c5b3c99d2ecba3425b2051e8b941c",
+      "preview_path": "assets/environment/harbor/cone_preview.png"
+    },
+    {
+      "asset_id": "harbor_lamp",
+      "path": "assets/environment/harbor/lamp.glb",
+      "sha256": "3eb7a2550eece6a52c5955b00296ed01b5d16d743e80431c35340fda60606e72",
+      "dimensions_m": [
+        0.6,
+        1.9,
+        8.05
+      ],
+      "triangles": 92,
+      "triangle_budget": 6000,
+      "collision": "separate compound-box collision GLB",
+      "provenance": "Original procedural geometry authored by Codex; no external textures or trademarked models.",
+      "collision_path": "assets/environment/harbor/lamp_collision.glb",
+      "collision_sha256": "ae638179fdafe7eff08704e7f1b67501b56445ad5b1f79913632a8804896bece",
+      "preview_path": "assets/environment/harbor/lamp_preview.png"
+    },
+    {
+      "asset_id": "harbor_chevron_sign",
+      "path": "assets/environment/harbor/chevron_sign.glb",
+      "sha256": "3db90210300b475376679b23cff07a91869e22e22fed4ad85f149a986e78171e",
+      "dimensions_m": [
+        2.0,
+        0.146,
+        2.075
+      ],
+      "triangles": 140,
+      "triangle_budget": 6000,
+      "collision": "separate compound-box collision GLB",
+      "provenance": "Original procedural geometry authored by Codex; no external textures or trademarked models.",
+      "collision_path": "assets/environment/harbor/chevron_sign_collision.glb",
+      "collision_sha256": "2ce63296841c7a8c111bfcbc01f5b40b29ec43cb48671376cbaf2f80c5b4a452",
+      "preview_path": "assets/environment/harbor/chevron_sign_preview.png"
+    },
+    {
+      "asset_id": "harbor_pickup_pad",
+      "path": "assets/environment/harbor/pickup_pad.glb",
+      "sha256": "d7e6364fac3c72ac75beca180558449812183aaed47de18829e79713afc4e08e",
+      "dimensions_m": [
+        2.3,
+        2.3,
+        0.211
+      ],
+      "triangles": 276,
+      "triangle_budget": 6000,
+      "collision": "separate compound-box collision GLB",
+      "provenance": "Original procedural geometry authored by Codex; no external textures or trademarked models.",
+      "collision_path": "assets/environment/harbor/pickup_pad_collision.glb",
+      "collision_sha256": "790c3aa5d5185135378a12f49aec043ee4dd77d186d7941fd1b2099a55e1bc6f",
+      "preview_path": "assets/environment/harbor/pickup_pad_preview.png"
+    },
+    {
+      "asset_id": "harbor_start_gantry",
+      "path": "assets/environment/harbor/start_gantry.glb",
+      "sha256": "35a62aa12ecd3519ac532c3138cf535cc322cb5b8fd5fcbce89cfef293974da2",
+      "dimensions_m": [
+        17.3,
+        2.0,
+        6.71
+      ],
+      "triangles": 328,
+      "triangle_budget": 6000,
+      "collision": "separate compound-box collision GLB",
+      "provenance": "Original procedural geometry authored by Codex; no external textures or trademarked models.",
+      "collision_path": "assets/environment/harbor/start_gantry_collision.glb",
+      "collision_sha256": "396affdcb623341f30231cb014bb5ee2c1ea095ec8c0cd03f4186d70ec4c5667",
+      "preview_path": "assets/environment/harbor/start_gantry_preview.png"
+    },
+    {
+      "asset_id": "harbor_warehouse",
+      "path": "assets/environment/harbor/warehouse.glb",
+      "sha256": "83b8d2fe8d7b90264beb3c2ee82fb6e6dbd0e2f786d457b30b9819c1f8c7fd30",
+      "dimensions_m": [
+        24.4,
+        17.45,
+        9.8
+      ],
+      "triangles": 4368,
+      "triangle_budget": 20000,
+      "collision": "separate compound-box collision GLB",
+      "provenance": "Original procedural geometry authored by Codex; no external textures or trademarked models.",
+      "collision_path": "assets/environment/harbor/warehouse_collision.glb",
+      "collision_sha256": "64e3bbc22206c6e1911610720be16ad9ac2891d4b432767cd66b57e57c0b2bca",
+      "preview_path": "assets/environment/harbor/warehouse_preview.png"
+    },
+    {
+      "asset_id": "harbor_crane",
+      "path": "assets/environment/harbor/crane.glb",
+      "sha256": "a3663b169cd6da516b40b29c6f0a0ce0dccee3e8fedc0cc527f51e68a2a2c5f0",
+      "dimensions_m": [
+        20.7,
+        68.0,
+        54.9
+      ],
+      "triangles": 1964,
+      "triangle_budget": 20000,
+      "collision": "separate compound-box collision GLB",
+      "provenance": "Original procedural geometry authored by Codex; no external textures or trademarked models.",
+      "collision_path": "assets/environment/harbor/crane_collision.glb",
+      "collision_sha256": "d5674b7fc88a6e8cb19bb8bd50a8fb1a3d248bca7d9f1396df2db7b1c90a816b",
+      "preview_path": "assets/environment/harbor/crane_preview.png"
+    },
+    {
+      "asset_id": "harbor_ship",
+      "path": "assets/environment/harbor/ship.glb",
+      "sha256": "e50abddbe57c998dca8ade907ddade04baf649c544167056dda37c8fcfd8f153",
+      "dimensions_m": [
+        29.0,
+        170.0,
+        43.5
+      ],
+      "triangles": 3852,
+      "triangle_budget": 30000,
+      "collision": "separate compound-box collision GLB",
+      "provenance": "Original procedural geometry authored by Codex; no external textures or trademarked models.",
+      "collision_path": "assets/environment/harbor/ship_collision.glb",
+      "collision_sha256": "449026470f147448ab4615575c1676abc0e887967e09121d174c4b580b7bbd05",
+      "preview_path": "assets/environment/harbor/ship_preview.png"
+    },
+    {
+      "asset_id": "harbor_truck",
+      "path": "assets/environment/harbor/truck.glb",
+      "sha256": "79373340fb151b978aa8cb36bff9595ab09b722fdf5d89d6f91eba63f512aaea",
+      "dimensions_m": [
+        3.02,
+        16.1,
+        4.6
+      ],
+      "triangles": 2352,
+      "triangle_budget": 8000,
+      "collision": "separate compound-box collision GLB",
+      "provenance": "Original procedural geometry authored by Codex; no external textures or trademarked models.",
+      "collision_path": "assets/environment/harbor/truck_collision.glb",
+      "collision_sha256": "0c0d5ea1208f940954902c927db56c9227724d86bb8782ef26fa6c45413b59db",
+      "preview_path": "assets/environment/harbor/truck_preview.png"
+    },
+    {
+      "asset_id": "harbor_light_tower",
+      "path": "assets/environment/harbor/light_tower.glb",
+      "sha256": "a87e2e55bac12257d64ac62a22c5a1809a120a76f5acdc7a3c107b78b829f382",
+      "dimensions_m": [
+        4.2,
+        4.05,
+        34.3
+      ],
+      "triangles": 696,
+      "triangle_budget": 6000,
+      "collision": "separate compound-box collision GLB",
+      "provenance": "Original procedural geometry authored by Codex; no external textures or trademarked models.",
+      "collision_path": "assets/environment/harbor/light_tower_collision.glb",
+      "collision_sha256": "a242c6fe60aeb4cd30266700cea7f11619381d635094552da1b5895554202619",
+      "preview_path": "assets/environment/harbor/light_tower_preview.png"
+    },
+    {
+      "asset_id": "harbor_billboard",
+      "path": "assets/environment/harbor/billboard.glb",
+      "sha256": "3030dabe9f52eb0fa92e8af7e664813906b0b7064644370e9fdd1369ee467d7e",
+      "dimensions_m": [
+        12.4,
+        1.6,
+        9.2
+      ],
+      "triangles": 248,
+      "triangle_budget": 6000,
+      "collision": "separate compound-box collision GLB",
+      "provenance": "Original procedural geometry authored by Codex; no external textures or trademarked models.",
+      "collision_path": "assets/environment/harbor/billboard_collision.glb",
+      "collision_sha256": "a8e343501bf61ce9ff224fd52db7506b39fe08e6bac32249622ca10b83d30a14",
+      "preview_path": "assets/environment/harbor/billboard_preview.png"
+    },
+    {
+      "asset_id": "harbor_overpass",
+      "path": "assets/environment/harbor/overpass.glb",
+      "sha256": "816eed67ab080fc79bbc60c284afbc627965e2f446687df931ea1d364c129483",
+      "dimensions_m": [
+        100.0,
+        15.29,
+        14.5
+      ],
+      "triangles": 1476,
+      "triangle_budget": 6000,
+      "collision": "separate compound-box collision GLB",
+      "provenance": "Original procedural geometry authored by Codex; no external textures or trademarked models.",
+      "collision_path": "assets/environment/harbor/overpass_collision.glb",
+      "collision_sha256": "654ab82fc6362b5a83b10cf67db3c10beeaae229dc87577475ccf0c9cd60175f",
+      "preview_path": "assets/environment/harbor/overpass_preview.png"
+    }
+  ],
+  "files": [
+    {
+      "path": "assets/environment/harbor/billboard.glb",
+      "sha256": "3030dabe9f52eb0fa92e8af7e664813906b0b7064644370e9fdd1369ee467d7e",
+      "bytes": 20716
+    },
+    {
+      "path": "assets/environment/harbor/billboard_collision.glb",
+      "sha256": "a8e343501bf61ce9ff224fd52db7506b39fe08e6bac32249622ca10b83d30a14",
+      "bytes": 2172
+    },
+    {
+      "path": "assets/environment/harbor/billboard_preview.png",
+      "sha256": "ddd1f438ace268b2a1733bcf4c58d7136600c283033b66ee80774081989c4a7a",
+      "bytes": 334231
+    },
+    {
+      "path": "assets/environment/harbor/bollard.glb",
+      "sha256": "64405351bbd09bf4779ec6fa90c6339d3064f1064affaa00c58a4306485bf6b9",
+      "bytes": 10792
+    },
+    {
+      "path": "assets/environment/harbor/bollard_collision.glb",
+      "sha256": "8e3b5e9649c5eb6abef1516812cece68f7dbc19c35533d01c0b10e4a6b5cc4c8",
+      "bytes": 2160
+    },
+    {
+      "path": "assets/environment/harbor/bollard_preview.png",
+      "sha256": "d304393330fe7f24f34e3370f3a34f805ff9c7c85bd8b6e18a72bf29fff39881",
+      "bytes": 346604
+    },
+    {
+      "path": "assets/environment/harbor/chevron_sign.glb",
+      "sha256": "3db90210300b475376679b23cff07a91869e22e22fed4ad85f149a986e78171e",
+      "bytes": 13284
+    },
+    {
+      "path": "assets/environment/harbor/chevron_sign_collision.glb",
+      "sha256": "2ce63296841c7a8c111bfcbc01f5b40b29ec43cb48671376cbaf2f80c5b4a452",
+      "bytes": 5220
+    },
+    {
+      "path": "assets/environment/harbor/chevron_sign_preview.png",
+      "sha256": "008ab498f26d296984b6b8bcd61814807ca3d33ced0b1908fc8aad6665e2ba16",
+      "bytes": 332555
+    },
+    {
+      "path": "assets/environment/harbor/concrete_barrier.glb",
+      "sha256": "6df06cc9c88332abc2ef09877ed4555ec0818bc6ad0d4530719ddf8573f6e460",
+      "bytes": 23424
+    },
+    {
+      "path": "assets/environment/harbor/concrete_barrier_collision.glb",
+      "sha256": "175d79b4a6723092bf44dfeb18be5e7f01594c7a500e5be9adae4e176390b7aa",
+      "bytes": 2140
+    },
+    {
+      "path": "assets/environment/harbor/concrete_barrier_preview.png",
+      "sha256": "3a78dbaccf0e43c9190a5af10814168e5aa446969c86af413d66ddce4154d6ab",
+      "bytes": 335275
+    },
+    {
+      "path": "assets/environment/harbor/cone.glb",
+      "sha256": "a82a9f40723055823389a3832e3e134e86b5775507ad1949ff6c241e761018c1",
+      "bytes": 11304
+    },
+    {
+      "path": "assets/environment/harbor/cone_collision.glb",
+      "sha256": "61f7cb2bbf8920e1c2fdbbe6b3267ecf8c3c5b3c99d2ecba3425b2051e8b941c",
+      "bytes": 2104
+    },
+    {
+      "path": "assets/environment/harbor/cone_preview.png",
+      "sha256": "98d062e7314043b2a411dea97d4eaee8dd73142e0aa9b34eaceb36aeeac80c3b",
+      "bytes": 345814
+    },
+    {
+      "path": "assets/environment/harbor/container.glb",
+      "sha256": "86f14ed379ae9533c66be4b2a92d0c50d8d7d9fd6363d6e3a77f9136bc48c9bb",
+      "bytes": 138724
+    },
+    {
+      "path": "assets/environment/harbor/container_blue.glb",
+      "sha256": "b540b7fa38b6b96f8361fae99d1d0c28585d1ca982094500b63139472b1dd44d",
+      "bytes": 138364
+    },
+    {
+      "path": "assets/environment/harbor/container_blue_collision.glb",
+      "sha256": "694c894a4d6ad92fc8c6edb4dfa65d4e504685463b7ecdb380d2cb8939f242ec",
+      "bytes": 2184
+    },
+    {
+      "path": "assets/environment/harbor/container_blue_preview.png",
+      "sha256": "45a09c8e72d63b0b322b91368ebd4e922092333b46c620a511acb0dd167496fa",
+      "bytes": 416790
+    },
+    {
+      "path": "assets/environment/harbor/container_collision.glb",
+      "sha256": "5db43d1e162c8e5044f2244fd692643582b6ecf77dd782aae6f8c5ace1a81681",
+      "bytes": 2180
+    },
+    {
+      "path": "assets/environment/harbor/container_grey.glb",
+      "sha256": "5bcafe5b0bfd549bb0f2f5d54cc2056a71051642eed36be78ee710ba6a702c70",
+      "bytes": 135872
+    },
+    {
+      "path": "assets/environment/harbor/container_grey_collision.glb",
+      "sha256": "7a35e67217c0689dcb58d4ece56010d0dfb7a3908ffa8c99baf9259ac2637cc2",
+      "bytes": 2184
+    },
+    {
+      "path": "assets/environment/harbor/container_grey_preview.png",
+      "sha256": "2f22b41b2fef65927bafb40083afab9a12db869e604d9f96f64b02740089791b",
+      "bytes": 402838
+    },
+    {
+      "path": "assets/environment/harbor/container_orange.glb",
+      "sha256": "71052d92f262c46ab2952629549ca3398af1189a166842cab24ca2b30a3761b1",
+      "bytes": 137380
+    },
+    {
+      "path": "assets/environment/harbor/container_orange_collision.glb",
+      "sha256": "20fae986fcd5eff6230d20fbb52080410d0977b3afa069825f7b7942dbea5ffa",
+      "bytes": 2188
+    },
+    {
+      "path": "assets/environment/harbor/container_orange_preview.png",
+      "sha256": "87396e601bc2e6b616f23312ab6157494433d8ea9a8bb26af084cd738990d441",
+      "bytes": 402408
+    },
+    {
+      "path": "assets/environment/harbor/container_preview.png",
+      "sha256": "164cc2b1aeb237bf621e5f2f3b76c91c851d30b5fb638c136d458f6fe5146976",
+      "bytes": 406375
+    },
+    {
+      "path": "assets/environment/harbor/container_red.glb",
+      "sha256": "d30c8bf77a55431f4a1bcbe885b8177d985a5d82ef820cc661a5e2843c8c08e0",
+      "bytes": 137140
+    },
+    {
+      "path": "assets/environment/harbor/container_red_collision.glb",
+      "sha256": "2af29d738f42261446d8f3e9680543b1a7f785f25b29c5772adfd800fdd1f77d",
+      "bytes": 2184
+    },
+    {
+      "path": "assets/environment/harbor/container_red_preview.png",
+      "sha256": "dbeba6c942976bbf782c4d4ae9491f891d289d03a8b94234a0535db07c7ea292",
+      "bytes": 399545
+    },
+    {
+      "path": "assets/environment/harbor/crane.glb",
+      "sha256": "a3663b169cd6da516b40b29c6f0a0ce0dccee3e8fedc0cc527f51e68a2a2c5f0",
+      "bytes": 164408
+    },
+    {
+      "path": "assets/environment/harbor/crane_collision.glb",
+      "sha256": "d5674b7fc88a6e8cb19bb8bd50a8fb1a3d248bca7d9f1396df2db7b1c90a816b",
+      "bytes": 8008
+    },
+    {
+      "path": "assets/environment/harbor/crane_preview.png",
+      "sha256": "2237b67334197001a23a3850792206cd26e5439fc6fa669bd0abd000d306a2d0",
+      "bytes": 368054
+    },
+    {
+      "path": "assets/environment/harbor/crate.glb",
+      "sha256": "f19b368d718483f526364e4db2370e6b2bef485ca7607f9d9eed1e3df15b1936",
+      "bytes": 12336
+    },
+    {
+      "path": "assets/environment/harbor/crate_collision.glb",
+      "sha256": "af23c0ab0ed3b78255d53533abb6bbc3bafd9c06e448987d21dc8315ac7d17c4",
+      "bytes": 2104
+    },
+    {
+      "path": "assets/environment/harbor/crate_preview.png",
+      "sha256": "86e96f94d87571d64113158566a93be927b184175955d39eb7f6e02688b85e6f",
+      "bytes": 429005
+    },
+    {
+      "path": "assets/environment/harbor/guardrail.glb",
+      "sha256": "528221712b2c8cb9d97f099329b52cc8fd1091a143fb1f5aceba9c1678effb10",
+      "bytes": 9752
+    },
+    {
+      "path": "assets/environment/harbor/guardrail_collision.glb",
+      "sha256": "0960fa206c1b1fb15dac670fba2ed694173020b60c9980a7c37d6557a7288c9f",
+      "bytes": 5196
+    },
+    {
+      "path": "assets/environment/harbor/guardrail_preview.png",
+      "sha256": "cf1dbe9cd2965914735c351ca594944deb5c12fea1ca8b83eec017519e8b2f06",
+      "bytes": 302114
+    },
+    {
+      "path": "assets/environment/harbor/harbor_kit.blend",
+      "sha256": "017dc66d01ea035f02ac0553217b1782bd9f56983d7fc96a7670341572677e6e",
+      "bytes": 2751213
+    },
+    {
+      "path": "assets/environment/harbor/harbor_kit_preview.png",
+      "sha256": "13b521594e4af92bbb0a179ab4ed2e0be0e03079f4228155acef63e8b365769e",
+      "bytes": 1911305
+    },
+    {
+      "path": "assets/environment/harbor/lamp.glb",
+      "sha256": "3eb7a2550eece6a52c5955b00296ed01b5d16d743e80431c35340fda60606e72",
+      "bytes": 20104
+    },
+    {
+      "path": "assets/environment/harbor/lamp_collision.glb",
+      "sha256": "ae638179fdafe7eff08704e7f1b67501b56445ad5b1f79913632a8804896bece",
+      "bytes": 3584
+    },
+    {
+      "path": "assets/environment/harbor/lamp_preview.png",
+      "sha256": "cc369e4d488cddba055cb73a704d683b4b38a0e205e9f131a1f636183dfbf85c",
+      "bytes": 289794
+    },
+    {
+      "path": "assets/environment/harbor/light_tower.glb",
+      "sha256": "a87e2e55bac12257d64ac62a22c5a1809a120a76f5acdc7a3c107b78b829f382",
+      "bytes": 90788
+    },
+    {
+      "path": "assets/environment/harbor/light_tower_collision.glb",
+      "sha256": "a242c6fe60aeb4cd30266700cea7f11619381d635094552da1b5895554202619",
+      "bytes": 2164
+    },
+    {
+      "path": "assets/environment/harbor/light_tower_preview.png",
+      "sha256": "b97363e120b82b19933c17d44fed8d8fb26e3997f8c8365fb0152047959434bf",
+      "bytes": 294833
+    },
+    {
+      "path": "assets/environment/harbor/overpass.glb",
+      "sha256": "816eed67ab080fc79bbc60c284afbc627965e2f446687df931ea1d364c129483",
+      "bytes": 176708
+    },
+    {
+      "path": "assets/environment/harbor/overpass_collision.glb",
+      "sha256": "654ab82fc6362b5a83b10cf67db3c10beeaae229dc87577475ccf0c9cd60175f",
+      "bytes": 2104
+    },
+    {
+      "path": "assets/environment/harbor/overpass_preview.png",
+      "sha256": "6fd3738bc46226f91de8a44d346c5dc015b8ae8316d868a51df049b9904a0f01",
+      "bytes": 310417
+    },
+    {
+      "path": "assets/environment/harbor/pallet.glb",
+      "sha256": "503bbcb962fcb6686c69ad66827283f540f4f47890db88760f4a58a97858803a",
+      "bytes": 8148
+    },
+    {
+      "path": "assets/environment/harbor/pallet_collision.glb",
+      "sha256": "a945ea1001692961a1616d7eaa64a17baed1592dc1f11340e70fbe3bda09796d",
+      "bytes": 2160
+    },
+    {
+      "path": "assets/environment/harbor/pallet_preview.png",
+      "sha256": "ec057d8f0d1606d6c7195b887038e2b907bbb667f6217dd56f79cdb1e1aea5cb",
+      "bytes": 361247
+    },
+    {
+      "path": "assets/environment/harbor/pickup_pad.glb",
+      "sha256": "d7e6364fac3c72ac75beca180558449812183aaed47de18829e79713afc4e08e",
+      "bytes": 17560
+    },
+    {
+      "path": "assets/environment/harbor/pickup_pad_collision.glb",
+      "sha256": "790c3aa5d5185135378a12f49aec043ee4dd77d186d7941fd1b2099a55e1bc6f",
+      "bytes": 2160
+    },
+    {
+      "path": "assets/environment/harbor/pickup_pad_preview.png",
+      "sha256": "a653310eba6d18c845126c54f3ad9356cdc30f186573699ae5ef4c3bb294777e",
+      "bytes": 337538
+    },
+    {
+      "path": "assets/environment/harbor/ship.glb",
+      "sha256": "e50abddbe57c998dca8ade907ddade04baf649c544167056dda37c8fcfd8f153",
+      "bytes": 462804
+    },
+    {
+      "path": "assets/environment/harbor/ship_collision.glb",
+      "sha256": "449026470f147448ab4615575c1676abc0e887967e09121d174c4b580b7bbd05",
+      "bytes": 2060
+    },
+    {
+      "path": "assets/environment/harbor/ship_preview.png",
+      "sha256": "f18f7f59dfab1d21551110093578ef384951b06c81fa3caa867f173acefbdd20",
+      "bytes": 328622
+    },
+    {
+      "path": "assets/environment/harbor/start_gantry.glb",
+      "sha256": "35a62aa12ecd3519ac532c3138cf535cc322cb5b8fd5fcbce89cfef293974da2",
+      "bytes": 58356
+    },
+    {
+      "path": "assets/environment/harbor/start_gantry_collision.glb",
+      "sha256": "396affdcb623341f30231cb014bb5ee2c1ea095ec8c0cd03f4186d70ec4c5667",
+      "bytes": 5064
+    },
+    {
+      "path": "assets/environment/harbor/start_gantry_preview.png",
+      "sha256": "a3582ea0b9bdbf92bf7d19928853f26cb4c3f2df2f76d4158debdf2a5c16fa1b",
+      "bytes": 313282
+    },
+    {
+      "path": "assets/environment/harbor/truck.glb",
+      "sha256": "79373340fb151b978aa8cb36bff9595ab09b722fdf5d89d6f91eba63f512aaea",
+      "bytes": 186236
+    },
+    {
+      "path": "assets/environment/harbor/truck_collision.glb",
+      "sha256": "0c0d5ea1208f940954902c927db56c9227724d86bb8782ef26fa6c45413b59db",
+      "bytes": 2172
+    },
+    {
+      "path": "assets/environment/harbor/truck_preview.png",
+      "sha256": "2b514ce74113c823e9ba8ae1dc2a4b72fff1382cd991531a0cb4fb18165fd8da",
+      "bytes": 329777
+    },
+    {
+      "path": "assets/environment/harbor/warehouse.glb",
+      "sha256": "83b8d2fe8d7b90264beb3c2ee82fb6e6dbd0e2f786d457b30b9819c1f8c7fd30",
+      "bytes": 354000
+    },
+    {
+      "path": "assets/environment/harbor/warehouse_collision.glb",
+      "sha256": "64e3bbc22206c6e1911610720be16ad9ac2891d4b432767cd66b57e57c0b2bca",
+      "bytes": 2172
+    },
+    {
+      "path": "assets/environment/harbor/warehouse_preview.png",
+      "sha256": "bb2ee4c247491dd9e0fadb984d68e6318efa95ab3b6f67dc1731251b5747245b",
+      "bytes": 459230
+    }
+  ]
+}

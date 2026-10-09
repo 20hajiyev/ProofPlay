@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "generator": "tools/generate_environment.py",
+  "seed": 7429,
+  "provenance": "Original procedural assets generated locally with Blender. No downloaded model, texture, sound or Blur content.",
+  "assets": [],
+  "files": [
+    {
+      "path": "assets/tracks/container_run/container_run.blend",
+      "sha256": "f38be1dcfdffc839bb861ef09d1d3937b2ceb5a584565780435ec3899a34ec6d",
+      "bytes": 9236292
+    },
+    {
+      "path": "assets/tracks/container_run/container_run_greybox.glb",
+      "sha256": "2b69eca12a59f3dc39bc80a7d05246bb46102620ad2b6d0ae9534c9722342144",
+      "bytes": 3692276
+    },
+    {
+      "path": "assets/tracks/container_run/container_run_overhead.png",
+      "sha256": "f8bd4d422bfae58ea44e1e2207ff91c04ba84e0bea3943f5e7d024c028c1f4dc",
+      "bytes": 2755672
+    },
+    {
+      "path": "assets/tracks/container_run/geometric_checks.json",
+      "sha256": "216e101c9786c06fe8a77c94d40e031bbdab0011218d0b6d3e60b4f8a3bed473",
+      "bytes": 727
+    },
+    {
+      "path": "assets/tracks/container_run/minimap.svg",
+      "sha256": "c1c08cbc5e485787fcaa642d801f842d312e75a27ce88483d1917ae6226ddd9e",
+      "bytes": 6522
+    }
+  ]
+}

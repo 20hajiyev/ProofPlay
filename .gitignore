@@ -1,0 +1,30 @@
+.tools/
+build/
+__pycache__/
+*.blend1
+*.blend2
+tmp/
+
+# Real-brand car models for the owner's private local play only (D-035): never committed or shipped.
+assets/local_only/
+
+# Claude Code Game Studios (CCGS) per-developer / per-session files
+.claude/settings.local.json
+CLAUDE.local.md
+project.local.yaml
+production/session-logs/
+production/session-state/
+
+# ProofPlay: local LLM credentials and generated data
+proofplay/llm.env
+proofplay/sessions/
+proofplay/reports/
+proofplay/proofplay.db
+proofplay/bench/data/
+dist/
+
+# Local runtime files
+proofplay/proofplay.log
+proofplay/session.json
+.scratch/
+log.txt

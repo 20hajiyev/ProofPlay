@@ -1,0 +1,31 @@
+{
+  "features": [
+    {
+      "type": "hump",
+      "s": 315.0,
+      "height_m": 2.2
+    },
+    {
+      "type": "jump",
+      "s": 2101.0,
+      "height_m": 1.7,
+      "lip_index": 238
+    },
+    {
+      "type": "overpass",
+      "s": 3424.0
+    }
+  ],
+  "length_m": 3599.999913507342,
+  "sample_count": 400,
+  "grid_count": 20,
+  "pickup_count": 57,
+  "barrier_pieces": 2400,
+  "scenery_placed": 444,
+  "yard_containers": 1106,
+  "scenery_rejected_too_close": 107,
+  "all_coordinates_finite": true,
+  "limits": "Geometry only here; drivability, AI completion and performance are tested in the game (racer_handling_tests).",
+  "road_faces_upward": true,
+  "all_prop_triangle_budgets_pass": true
+}

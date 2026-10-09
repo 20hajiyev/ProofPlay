@@ -1,0 +1,41 @@
+# CCGS project configuration — single source of truth for project settings.
+# See .claude/docs/effects-map.md for full schema.
+
+schema_version: 1
+
+framework:
+  version: 1.1.1
+  last_upgraded: 2026-09-24
+
+# NOTE: this template ships with no `modes:` block, and the six knobs below must
+# never be added to one.
+#
+# `/start` DOES add `modes.rigor` and `modes.automation` here — that is its job,
+# and a `modes:` block containing those two is the expected state of a configured
+# project, not a mistake.
+#
+# What must stay absent is the six knobs `modes.rigor` FRONTS:
+# `modes.review_mode`, `modes.workflow`, `docs.density`, `qa.level`,
+# `modes.story_granularity` and `team.size`. Seeding any of them in this file
+# pins that value and shadows the rigor expansion, so `/start` asking "what are
+# you building?" would stop changing anything. `/start` Phase 3c documents the
+# same rule for the file it writes.
+#
+# Per-developer preferences belong in `project.local.yaml` (gitignored), not
+# here. `/settings <key>=<value>` writes there. See
+# `.claude/docs/config-resolution.md` for the full precedence order.
+
+# --- Gamee (2026-09-29, installed by Claude; see docs/DECISIONS_M2.md D-041) ---
+project:
+  name: Combat Racer (Gamee)
+  stage: Production
+modes:
+  automation: autonomous     # owner's standing rule: decide, record in docs/DECISIONS*.md, report
+# The template's engine.name only accepts Godot|Unity|Unreal. This project runs on a Wicked
+# Engine C++ fork, so engine facts live here and engine.name stays unset (no preset agents).
+gamee:
+  engine: Wicked Engine 0.72.106 (C++ fork, engine/WickedEngine, patches in engine/patches)
+  language: C++20
+  build: CMake + Visual Studio 2022, build dir build/game
+  code_root: game/
+  decisions: docs/DECISIONS.md, docs/DECISIONS_M1.md, docs/DECISIONS_M2.md

@@ -1,0 +1,813 @@
+{
+  "assets": [
+    {
+      "asset_id": "UI_P01_COLOR",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/abilities/P01_surge_color.svg"
+      ],
+      "sha256": "8996884ac6fd7885be4f1957990b83730fb9f7dfe7618f0073db8d8c6edb8198",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "semantic": "Surge",
+      "variant": "color",
+      "viewbox": [
+        0,
+        0,
+        64,
+        64
+      ]
+    },
+    {
+      "asset_id": "UI_P01_MONO",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/abilities/P01_surge_mono.svg"
+      ],
+      "sha256": "db22de8be1af22d046561e7c30ed39373911b4b3ca90c8538a0b6d9d3fb06af6",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "semantic": "Surge",
+      "variant": "mono",
+      "viewbox": [
+        0,
+        0,
+        64,
+        64
+      ]
+    },
+    {
+      "asset_id": "UI_P02_COLOR",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/abilities/P02_lance_color.svg"
+      ],
+      "sha256": "8a16170e16bf8c159d709fa294502a17532d5c53d14f8ed2e31b875937cc4993",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "semantic": "Lance",
+      "variant": "color",
+      "viewbox": [
+        0,
+        0,
+        64,
+        64
+      ]
+    },
+    {
+      "asset_id": "UI_P02_MONO",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/abilities/P02_lance_mono.svg"
+      ],
+      "sha256": "ec8f08a4e3126340430649117a276c6afac224bdd4c9cafd965438fa6fc61250",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "semantic": "Lance",
+      "variant": "mono",
+      "viewbox": [
+        0,
+        0,
+        64,
+        64
+      ]
+    },
+    {
+      "asset_id": "UI_P03_COLOR",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/abilities/P03_pulse_color.svg"
+      ],
+      "sha256": "2f851be4606a79186c7b4f77a9cde681725fae5f16c1d8729a24f7070a04e932",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "semantic": "Pulse",
+      "variant": "color",
+      "viewbox": [
+        0,
+        0,
+        64,
+        64
+      ]
+    },
+    {
+      "asset_id": "UI_P03_MONO",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/abilities/P03_pulse_mono.svg"
+      ],
+      "sha256": "784cbb23efc7731f32a54b575cba5b87878989a6d8bbe8f4e0ac0520407bd3f8",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "semantic": "Pulse",
+      "variant": "mono",
+      "viewbox": [
+        0,
+        0,
+        64,
+        64
+      ]
+    },
+    {
+      "asset_id": "UI_P04_COLOR",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/abilities/P04_trap_color.svg"
+      ],
+      "sha256": "a2de8aeb444cb8c62d561db890c20baea812c61a309b87a8820d3c81d4ea351f",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "semantic": "Trap",
+      "variant": "color",
+      "viewbox": [
+        0,
+        0,
+        64,
+        64
+      ]
+    },
+    {
+      "asset_id": "UI_P04_MONO",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/abilities/P04_trap_mono.svg"
+      ],
+      "sha256": "4532757e00478a4cc89356f0abfd52a02aedc94db24c34c58b3fe503d0c8d447",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "semantic": "Trap",
+      "variant": "mono",
+      "viewbox": [
+        0,
+        0,
+        64,
+        64
+      ]
+    },
+    {
+      "asset_id": "UI_P05_COLOR",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/abilities/P05_needle_color.svg"
+      ],
+      "sha256": "d59fec1f02ee1979de0df9bd6cf2773446bcfcc0ec1b4900a0b967abde7b1dd8",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "semantic": "Needle",
+      "variant": "color",
+      "viewbox": [
+        0,
+        0,
+        64,
+        64
+      ]
+    },
+    {
+      "asset_id": "UI_P05_MONO",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/abilities/P05_needle_mono.svg"
+      ],
+      "sha256": "3105b267050b397d4e76f856e54d9766ceec57943f2be866ed14977e1dfe2a8e",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "semantic": "Needle",
+      "variant": "mono",
+      "viewbox": [
+        0,
+        0,
+        64,
+        64
+      ]
+    },
+    {
+      "asset_id": "UI_P06_COLOR",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/abilities/P06_ward_color.svg"
+      ],
+      "sha256": "df2569cf7ed47b2633546409aeb5c4c6a26399288cf551197cf35b4a192c754d",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "semantic": "Ward",
+      "variant": "color",
+      "viewbox": [
+        0,
+        0,
+        64,
+        64
+      ]
+    },
+    {
+      "asset_id": "UI_P06_MONO",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/abilities/P06_ward_mono.svg"
+      ],
+      "sha256": "059cf56757531693c2b4c925a1fc4493e4f7982c333242b76f0b3d6344088567",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "semantic": "Ward",
+      "variant": "mono",
+      "viewbox": [
+        0,
+        0,
+        64,
+        64
+      ]
+    },
+    {
+      "asset_id": "UI_P07_COLOR",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/abilities/P07_mend_color.svg"
+      ],
+      "sha256": "81f03990c066b11812202c264c73676fc6d12c9f2bae31ad49474f487faffab5",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "semantic": "Mend",
+      "variant": "color",
+      "viewbox": [
+        0,
+        0,
+        64,
+        64
+      ]
+    },
+    {
+      "asset_id": "UI_P07_MONO",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/abilities/P07_mend_mono.svg"
+      ],
+      "sha256": "3affd2afbc2d2ed32e69a8782b471f9432d72765c911159f9d65c75ad99e7d82",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "semantic": "Mend",
+      "variant": "mono",
+      "viewbox": [
+        0,
+        0,
+        64,
+        64
+      ]
+    },
+    {
+      "asset_id": "UI_P08_COLOR",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/abilities/P08_storm_color.svg"
+      ],
+      "sha256": "4f9634a2e244561c9e6e3534559da20bddf3886ffdf57c603e2ef50c52fb6806",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "semantic": "Storm",
+      "variant": "color",
+      "viewbox": [
+        0,
+        0,
+        64,
+        64
+      ]
+    },
+    {
+      "asset_id": "UI_P08_MONO",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/abilities/P08_storm_mono.svg"
+      ],
+      "sha256": "5de188659b1e2a480e4e6c6ee15090f87fc3729d6ffe9b50a57d15362fea19fe",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "semantic": "Storm",
+      "variant": "mono",
+      "viewbox": [
+        0,
+        0,
+        64,
+        64
+      ]
+    },
+    {
+      "asset_id": "UI_BUTTON_NORMAL",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/controls/button_normal.svg"
+      ],
+      "sha256": "90222abdb005a89fb3b4a23a67c6ae356735f6f6671744edd6542c262a7e6b71",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "viewbox": [
+        0,
+        0,
+        320,
+        64
+      ],
+      "text_baked": false
+    },
+    {
+      "asset_id": "UI_BUTTON_HOVER",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/controls/button_hover.svg"
+      ],
+      "sha256": "047b74d6342d8f4835de71158655125e5ae31b116b197225a6476c43c66a213f",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "viewbox": [
+        0,
+        0,
+        320,
+        64
+      ],
+      "text_baked": false
+    },
+    {
+      "asset_id": "UI_BUTTON_FOCUS",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/controls/button_focus.svg"
+      ],
+      "sha256": "d5ac038b799dbdb5c687e0969b942399cad0384d7233dcb04ec38a30e049065a",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "viewbox": [
+        0,
+        0,
+        320,
+        64
+      ],
+      "text_baked": false
+    },
+    {
+      "asset_id": "UI_BUTTON_PRESSED",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/controls/button_pressed.svg"
+      ],
+      "sha256": "3d0fbe2579601b17c2d77c5d7eea8c1acbc8b81ae8c01d2fbfe7b50f79fb90d8",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "viewbox": [
+        0,
+        0,
+        320,
+        64
+      ],
+      "text_baked": false
+    },
+    {
+      "asset_id": "UI_BUTTON_DISABLED",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/controls/button_disabled.svg"
+      ],
+      "sha256": "b6da70678065215d8a49e7fdeb35b8942e1c0afbf5456364bd56c26be5b23941",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "viewbox": [
+        0,
+        0,
+        320,
+        64
+      ],
+      "text_baked": false
+    },
+    {
+      "asset_id": "UI_HUD_POSITION",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/hud/position.svg"
+      ],
+      "sha256": "257054281aabc1129fdbf79e9366f584565051c955a2e6a45825ec7f31d19ea2",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false
+    },
+    {
+      "asset_id": "UI_HUD_LAP",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/hud/lap.svg"
+      ],
+      "sha256": "d5314782b88fbf3828a46924aaadbb25bbf7c393b9e1af9c7474821e7a8f7236",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false
+    },
+    {
+      "asset_id": "UI_HUD_TIMER",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/hud/timer.svg"
+      ],
+      "sha256": "eb48174e060c2897222fdeed609c6fba9c7f1cc07f1455de51732e3b1672d45f",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false
+    },
+    {
+      "asset_id": "UI_HUD_HEALTH",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/hud/health.svg"
+      ],
+      "sha256": "77854e752970190bd7203efdb039749a42f637389f411034b8e514f079ae798e",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false
+    },
+    {
+      "asset_id": "UI_HUD_WARNING",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/hud/warning.svg"
+      ],
+      "sha256": "c4d357ff092a9c20959ab5481a62eb77dafdc12bfa458a2e0e200e2e13671cc1",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false
+    },
+    {
+      "asset_id": "UI_HUD_SAVE",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/hud/save.svg"
+      ],
+      "sha256": "7d3aa1ff9e5a14b7a6e11c6636c8a76d165c654c32466b38f7cfd83f5d1f7dd9",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false
+    },
+    {
+      "asset_id": "UI_HUD_MEDAL",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/hud/medal.svg"
+      ],
+      "sha256": "7f05fa08f82e2659afc0cd4c60bbe6dfe85915cb79ab3a4d63956539aad7d405",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false
+    },
+    {
+      "asset_id": "UI_HUD_SOUND",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/hud/sound.svg"
+      ],
+      "sha256": "82717077e0259282d51cb5da9e0de398c39cde89b08d04cd834a3fc175b36b9b",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false
+    },
+    {
+      "asset_id": "UI_KEY_W",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/glyphs/key_w.svg"
+      ],
+      "sha256": "5b356bf2a9224cd90ab68152f32411962aab7db7c9468c063a729f57179158e1",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "editable_text": true
+    },
+    {
+      "asset_id": "UI_KEY_A",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/glyphs/key_a.svg"
+      ],
+      "sha256": "c86c7732b24624b1bdd4eb584eca5a876718e5e099974e15f11afcf6bf38dc8f",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "editable_text": true
+    },
+    {
+      "asset_id": "UI_KEY_S",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/glyphs/key_s.svg"
+      ],
+      "sha256": "1415bd6c1adc049e01148ad3299715034de1496bfccd2db6dc36c1c0c5cbb474",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "editable_text": true
+    },
+    {
+      "asset_id": "UI_KEY_D",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/glyphs/key_d.svg"
+      ],
+      "sha256": "b0f5dd8e7c5c27049dd23536e96f739421dd5a376be95e946e55164b771057f5",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "editable_text": true
+    },
+    {
+      "asset_id": "UI_KEY_Q",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/glyphs/key_q.svg"
+      ],
+      "sha256": "338499fb8f9094d7c37c5ec531730846b39ca00d6fdb84f9198fec47888e1660",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "editable_text": true
+    },
+    {
+      "asset_id": "UI_KEY_R",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/glyphs/key_r.svg"
+      ],
+      "sha256": "7cb5c37b0999e03a9ebd9b4a65e54f05a755d95f11fe215c379318f51ee4a82e",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "editable_text": true
+    },
+    {
+      "asset_id": "UI_KEY_F",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/glyphs/key_f.svg"
+      ],
+      "sha256": "c85ac9a8bb6378d7d309816c471f3a17bea9564c27bc350f65e26d7fedb8f8d5",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "editable_text": true
+    },
+    {
+      "asset_id": "UI_KEY_C",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/glyphs/key_c.svg"
+      ],
+      "sha256": "9f431ce2fdede6af64070cda0b8dbd4ec5a703169ec3d59e91dd26ac525072ed",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "editable_text": true
+    },
+    {
+      "asset_id": "UI_KEY_1",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/glyphs/key_1.svg"
+      ],
+      "sha256": "107ab00fdd0ec4f4d241bd2d6e54240b1b91a34e98a4e52094eeb096c46fd9e3",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "editable_text": true
+    },
+    {
+      "asset_id": "UI_KEY_2",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/glyphs/key_2.svg"
+      ],
+      "sha256": "f0f0bac3d96ba2cf46ac4ed3bc1d74c2dd578a32995bda63184f393a046cc593",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "editable_text": true
+    },
+    {
+      "asset_id": "UI_KEY_3",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/glyphs/key_3.svg"
+      ],
+      "sha256": "dcbcce9e2779d9789e51c2f65a756ed953816c00108541a3b63c15bcaae92108",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "editable_text": true
+    },
+    {
+      "asset_id": "UI_KEY_ESC",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/glyphs/key_esc.svg"
+      ],
+      "sha256": "e333f66c675608b3828988d70d291303e3ba14aff3ad77162af83668a2eadb7a",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "editable_text": true
+    },
+    {
+      "asset_id": "UI_KEY_TAB",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/glyphs/key_tab.svg"
+      ],
+      "sha256": "334f4ddc4578edc34179e6d5a66c424511833d949507b0332af98bceb19e1357",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "editable_text": true
+    },
+    {
+      "asset_id": "UI_KEY_SHIFT",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/glyphs/key_shift.svg"
+      ],
+      "sha256": "f16ebde25573892e3a3e8700aecca153ee8895d1260c7565e763456f5134f069",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "editable_text": true
+    },
+    {
+      "asset_id": "UI_KEY_CTRL",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/glyphs/key_ctrl.svg"
+      ],
+      "sha256": "cad0cf4f2cdf0c6184b074251527a194a05a785119c2081dafeb6262d2b04330",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "editable_text": true
+    },
+    {
+      "asset_id": "UI_KEY_SPACE",
+      "category": "ui",
+      "status": "built",
+      "source_paths": [
+        "tools/generate_ui.py"
+      ],
+      "files": [
+        "assets/ui/glyphs/key_space.svg"
+      ],
+      "sha256": "d831cfbdb6dfd29c7e95ce0471b619e047b8ea804ff74c004f3e693dbd300b7d",
+      "provenance": "Original deterministic SVG geometry",
+      "engine_integration": false,
+      "editable_text": true
+    }
+  ]
+}

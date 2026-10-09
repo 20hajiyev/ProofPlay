@@ -1,0 +1,347 @@
+INFO Draco mesh compression is available, use library at C:\Users\Sanan\Documents\Cursor\Gamee\.tools\blender-4.5.14-windows-x64\4.5\scripts\addons_core\io_scene_gltf2\extern_draco.dll
+19:12:11 | INFO: Starting glTF 2.0 export
+19:12:11 | INFO: Extracting primitive: Cube.001
+19:12:11 | INFO: Primitives created: 2
+19:12:11 | INFO: Finished glTF 2.0 export in 0.010370969772338867 s
+
+19:12:11 | INFO: Starting glTF 2.0 export
+19:12:11 | INFO: Extracting primitive: Cube.058
+19:12:11 | INFO: Primitives created: 1
+19:12:11 | INFO: Finished glTF 2.0 export in 0.008075714111328125 s
+Blender 4.5.14 LTS (hash 62c1db4208e8 built 2026-09-15 01:33:49)
+Fra:1 Mem:49.71M (Peak 49.73M) | Time:00:26.44 | Rendering 1 / 64 samples
+Fra:1 Mem:49.71M (Peak 49.73M) | Time:00:26.69 | Rendering 25 / 64 samples
+Fra:1 Mem:49.71M (Peak 49.73M) | Time:00:26.75 | Rendering 50 / 64 samples
+Fra:1 Mem:49.71M (Peak 49.73M) | Time:00:26.79 | Rendering 64 / 64 samples
+Saved: 'C:\Users\Sanan\Documents\Cursor\Gamee\assets\environment\harbor\container_preview.png'
+Time: 00:27.01 (Saving: 00:00.18)
+
+
+19:12:38 | INFO: Starting glTF 2.0 export
+19:12:38 | INFO: Extracting primitive: Cylinder
+19:12:38 | INFO: Primitives created: 2
+19:12:38 | INFO: Finished glTF 2.0 export in 0.006658315658569336 s
+
+19:12:38 | INFO: Starting glTF 2.0 export
+19:12:38 | INFO: Extracting primitive: Cube.060
+19:12:38 | INFO: Primitives created: 1
+19:12:38 | INFO: Finished glTF 2.0 export in 0.004513740539550781 s
+Fra:1 Mem:49.71M (Peak 49.71M) | Time:00:00.06 | Rendering 1 / 64 samples
+Fra:1 Mem:49.71M (Peak 49.71M) | Time:00:00.11 | Rendering 25 / 64 samples
+Fra:1 Mem:49.71M (Peak 49.71M) | Time:00:00.16 | Rendering 50 / 64 samples
+Fra:1 Mem:49.71M (Peak 49.71M) | Time:00:00.19 | Rendering 64 / 64 samples
+Saved: 'C:\Users\Sanan\Documents\Cursor\Gamee\assets\environment\harbor\bollard_preview.png'
+Time: 00:00.27 (Saving: 00:00.05)
+
+
+19:12:38 | INFO: Starting glTF 2.0 export
+19:12:38 | INFO: Extracting primitive: Cube.061
+19:12:38 | INFO: Primitives created: 1
+19:12:38 | INFO: Finished glTF 2.0 export in 0.0066678524017333984 s
+
+19:12:38 | INFO: Starting glTF 2.0 export
+19:12:38 | INFO: Extracting primitive: Cube.069
+19:12:38 | INFO: Primitives created: 1
+19:12:38 | INFO: Finished glTF 2.0 export in 0.006446123123168945 s
+Fra:1 Mem:49.68M (Peak 49.68M) | Time:00:00.05 | Rendering 1 / 64 samples
+Fra:1 Mem:49.68M (Peak 49.68M) | Time:00:00.10 | Rendering 25 / 64 samples
+Fra:1 Mem:49.68M (Peak 49.68M) | Time:00:00.14 | Rendering 50 / 64 samples
+Fra:1 Mem:49.68M (Peak 49.68M) | Time:00:00.17 | Rendering 64 / 64 samples
+Saved: 'C:\Users\Sanan\Documents\Cursor\Gamee\assets\environment\harbor\pallet_preview.png'
+Time: 00:00.25 (Saving: 00:00.05)
+
+
+19:12:39 | INFO: Starting glTF 2.0 export
+19:12:39 | INFO: Extracting primitive: Cube.070
+19:12:39 | INFO: Primitives created: 2
+19:12:39 | INFO: Finished glTF 2.0 export in 0.006615638732910156 s
+
+19:12:39 | INFO: Starting glTF 2.0 export
+19:12:39 | INFO: Extracting primitive: Cube.079
+19:12:39 | INFO: Primitives created: 1
+19:12:39 | INFO: Finished glTF 2.0 export in 0.00490260124206543 s
+Fra:1 Mem:49.85M (Peak 49.85M) | Time:00:00.05 | Rendering 1 / 64 samples
+Fra:1 Mem:49.85M (Peak 49.85M) | Time:00:00.11 | Rendering 25 / 64 samples
+Fra:1 Mem:49.85M (Peak 49.85M) | Time:00:00.16 | Rendering 50 / 64 samples
+Fra:1 Mem:49.85M (Peak 49.85M) | Time:00:00.19 | Rendering 64 / 64 samples
+Saved: 'C:\Users\Sanan\Documents\Cursor\Gamee\assets\environment\harbor\crate_preview.png'
+Time: 00:00.28 (Saving: 00:00.06)
+
+
+19:12:39 | INFO: Starting glTF 2.0 export
+19:12:39 | INFO: Extracting primitive: Cube.080
+19:12:39 | INFO: Primitives created: 2
+19:12:39 | INFO: Finished glTF 2.0 export in 0.007957696914672852 s
+
+19:12:39 | INFO: Starting glTF 2.0 export
+19:12:39 | INFO: Extracting primitive: Cube.087
+19:12:39 | INFO: Primitives created: 1
+19:12:39 | INFO: Finished glTF 2.0 export in 0.004994392395019531 s
+Fra:1 Mem:49.91M (Peak 49.91M) | Time:00:00.05 | Rendering 1 / 64 samples
+Fra:1 Mem:49.91M (Peak 49.91M) | Time:00:00.10 | Rendering 25 / 64 samples
+Fra:1 Mem:49.91M (Peak 49.91M) | Time:00:00.14 | Rendering 50 / 64 samples
+Fra:1 Mem:49.91M (Peak 49.91M) | Time:00:00.17 | Rendering 64 / 64 samples
+Saved: 'C:\Users\Sanan\Documents\Cursor\Gamee\assets\environment\harbor\concrete_barrier_preview.png'
+Time: 00:00.23 (Saving: 00:00.04)
+
+
+19:12:39 | INFO: Starting glTF 2.0 export
+19:12:39 | INFO: Extracting primitive: Cube.088
+19:12:39 | INFO: Primitives created: 1
+19:12:39 | INFO: Finished glTF 2.0 export in 0.005989551544189453 s
+
+19:12:39 | INFO: Starting glTF 2.0 export
+19:12:39 | INFO: Extracting primitive: Cube.092
+19:12:39 | INFO: Primitives created: 1
+19:12:39 | INFO: Extracting primitive: Cube.093
+19:12:39 | INFO: Primitives created: 1
+19:12:39 | INFO: Extracting primitive: Cube.094
+19:12:39 | INFO: Primitives created: 1
+19:12:39 | INFO: Finished glTF 2.0 export in 0.00815439224243164 s
+Fra:1 Mem:49.88M (Peak 49.88M) | Time:00:00.05 | Rendering 1 / 64 samples
+Fra:1 Mem:49.88M (Peak 49.88M) | Time:00:00.08 | Rendering 25 / 64 samples
+Fra:1 Mem:49.88M (Peak 49.88M) | Time:00:00.12 | Rendering 50 / 64 samples
+Fra:1 Mem:49.88M (Peak 49.88M) | Time:00:00.14 | Rendering 64 / 64 samples
+Saved: 'C:\Users\Sanan\Documents\Cursor\Gamee\assets\environment\harbor\guardrail_preview.png'
+Time: 00:00.21 (Saving: 00:00.04)
+
+
+19:12:39 | INFO: Starting glTF 2.0 export
+19:12:39 | INFO: Extracting primitive: Cube.095
+19:12:39 | INFO: Primitives created: 3
+19:12:39 | INFO: Finished glTF 2.0 export in 0.008869171142578125 s
+
+19:12:39 | INFO: Starting glTF 2.0 export
+19:12:39 | INFO: Extracting primitive: Cube.096
+19:12:39 | INFO: Primitives created: 1
+19:12:39 | INFO: Finished glTF 2.0 export in 0.004516124725341797 s
+Fra:1 Mem:50.10M (Peak 50.10M) | Time:00:00.05 | Rendering 1 / 64 samples
+Fra:1 Mem:50.10M (Peak 50.10M) | Time:00:00.10 | Rendering 25 / 64 samples
+Fra:1 Mem:50.10M (Peak 50.10M) | Time:00:00.15 | Rendering 50 / 64 samples
+Fra:1 Mem:50.10M (Peak 50.10M) | Time:00:00.17 | Rendering 64 / 64 samples
+Saved: 'C:\Users\Sanan\Documents\Cursor\Gamee\assets\environment\harbor\cone_preview.png'
+Time: 00:00.24 (Saving: 00:00.04)
+
+
+19:12:40 | INFO: Starting glTF 2.0 export
+19:12:40 | INFO: Extracting primitive: Cube.097
+19:12:40 | INFO: Primitives created: 4
+19:12:40 | INFO: Finished glTF 2.0 export in 0.010995626449584961 s
+
+19:12:40 | INFO: Starting glTF 2.0 export
+19:12:40 | INFO: Extracting primitive: Cube.101
+19:12:40 | INFO: Primitives created: 1
+19:12:40 | INFO: Extracting primitive: Cube.102
+19:12:40 | INFO: Primitives created: 1
+19:12:40 | INFO: Finished glTF 2.0 export in 0.006994724273681641 s
+Fra:1 Mem:50.25M (Peak 50.25M) | Time:00:00.05 | Rendering 1 / 64 samples
+Fra:1 Mem:50.25M (Peak 50.25M) | Time:00:00.09 | Rendering 25 / 64 samples
+Fra:1 Mem:50.25M (Peak 50.25M) | Time:00:00.12 | Rendering 50 / 64 samples
+Fra:1 Mem:50.25M (Peak 50.25M) | Time:00:00.15 | Rendering 64 / 64 samples
+Saved: 'C:\Users\Sanan\Documents\Cursor\Gamee\assets\environment\harbor\lamp_preview.png'
+Time: 00:00.22 (Saving: 00:00.04)
+
+
+19:12:40 | INFO: Starting glTF 2.0 export
+19:12:40 | INFO: Extracting primitive: Cube.103
+19:12:40 | INFO: Primitives created: 3
+19:12:40 | INFO: Finished glTF 2.0 export in 0.009640693664550781 s
+
+19:12:40 | INFO: Starting glTF 2.0 export
+19:12:40 | INFO: Extracting primitive: Cube.112
+19:12:40 | INFO: Primitives created: 1
+19:12:40 | INFO: Extracting primitive: Cube.113
+19:12:40 | INFO: Primitives created: 1
+19:12:40 | INFO: Extracting primitive: Cube.114
+19:12:40 | INFO: Primitives created: 1
+19:12:40 | INFO: Finished glTF 2.0 export in 0.009050369262695312 s
+Fra:1 Mem:50.25M (Peak 50.25M) | Time:00:00.05 | Rendering 1 / 64 samples
+Fra:1 Mem:50.25M (Peak 50.25M) | Time:00:00.09 | Rendering 25 / 64 samples
+Fra:1 Mem:50.25M (Peak 50.25M) | Time:00:00.13 | Rendering 50 / 64 samples
+Fra:1 Mem:50.25M (Peak 50.25M) | Time:00:00.16 | Rendering 64 / 64 samples
+Saved: 'C:\Users\Sanan\Documents\Cursor\Gamee\assets\environment\harbor\chevron_sign_preview.png'
+Time: 00:00.22 (Saving: 00:00.04)
+
+
+19:12:40 | INFO: Starting glTF 2.0 export
+19:12:40 | INFO: Extracting primitive: Cylinder.003
+19:12:40 | INFO: Primitives created: 3
+19:12:40 | INFO: Finished glTF 2.0 export in 0.009650230407714844 s
+
+19:12:40 | INFO: Starting glTF 2.0 export
+19:12:40 | INFO: Extracting primitive: Cube.115
+19:12:40 | INFO: Primitives created: 1
+19:12:40 | INFO: Finished glTF 2.0 export in 0.004518985748291016 s
+Fra:1 Mem:50.30M (Peak 50.30M) | Time:00:00.05 | Rendering 1 / 64 samples
+Fra:1 Mem:50.30M (Peak 50.30M) | Time:00:00.10 | Rendering 25 / 64 samples
+Fra:1 Mem:50.30M (Peak 50.30M) | Time:00:00.14 | Rendering 50 / 64 samples
+Fra:1 Mem:50.30M (Peak 50.30M) | Time:00:00.17 | Rendering 64 / 64 samples
+Saved: 'C:\Users\Sanan\Documents\Cursor\Gamee\assets\environment\harbor\pickup_pad_preview.png'
+Time: 00:00.23 (Saving: 00:00.04)
+
+
+19:12:41 | INFO: Starting glTF 2.0 export
+19:12:41 | INFO: Extracting primitive: Cube.116
+19:12:41 | INFO: Primitives created: 4
+19:12:41 | INFO: Finished glTF 2.0 export in 0.009887218475341797 s
+
+19:12:41 | INFO: Starting glTF 2.0 export
+19:12:41 | INFO: Extracting primitive: Cube.125
+19:12:41 | INFO: Primitives created: 1
+19:12:41 | INFO: Extracting primitive: Cube.126
+19:12:41 | INFO: Primitives created: 1
+19:12:41 | INFO: Extracting primitive: Cube.127
+19:12:41 | INFO: Primitives created: 1
+19:12:41 | INFO: Finished glTF 2.0 export in 0.005501985549926758 s
+Fra:1 Mem:50.54M (Peak 50.54M) | Time:00:00.04 | Rendering 1 / 64 samples
+Fra:1 Mem:50.54M (Peak 50.54M) | Time:00:00.08 | Rendering 25 / 64 samples
+Fra:1 Mem:50.54M (Peak 50.54M) | Time:00:00.12 | Rendering 50 / 64 samples
+Fra:1 Mem:50.54M (Peak 50.54M) | Time:00:00.14 | Rendering 64 / 64 samples
+Saved: 'C:\Users\Sanan\Documents\Cursor\Gamee\assets\environment\harbor\start_gantry_preview.png'
+Time: 00:00.21 (Saving: 00:00.04)
+
+
+19:12:41 | INFO: Starting glTF 2.0 export
+19:12:41 | INFO: Extracting primitive: Cube.128
+19:12:41 | INFO: Primitives created: 4
+19:12:41 | INFO: Finished glTF 2.0 export in 0.010071516036987305 s
+
+19:12:41 | INFO: Starting glTF 2.0 export
+19:12:41 | INFO: Extracting primitive: Cube.148
+19:12:41 | INFO: Primitives created: 1
+19:12:41 | INFO: Finished glTF 2.0 export in 0.005531787872314453 s
+Fra:1 Mem:50.68M (Peak 50.68M) | Time:00:00.04 | Rendering 1 / 64 samples
+Fra:1 Mem:50.68M (Peak 50.68M) | Time:00:00.08 | Rendering 25 / 64 samples
+Fra:1 Mem:50.68M (Peak 50.68M) | Time:00:00.13 | Rendering 50 / 64 samples
+Fra:1 Mem:50.68M (Peak 50.68M) | Time:00:00.15 | Rendering 64 / 64 samples
+Saved: 'C:\Users\Sanan\Documents\Cursor\Gamee\assets\environment\harbor\warehouse_preview.png'
+Time: 00:00.22 (Saving: 00:00.04)
+
+
+19:12:41 | INFO: Starting glTF 2.0 export
+19:12:41 | INFO: Extracting primitive: Cube.149
+19:12:41 | INFO: Primitives created: 4
+19:12:41 | INFO: Finished glTF 2.0 export in 0.01152181625366211 s
+
+19:12:41 | INFO: Starting glTF 2.0 export
+19:12:41 | INFO: Extracting primitive: Cube.177
+19:12:41 | INFO: Primitives created: 1
+19:12:41 | INFO: Extracting primitive: Cube.178
+19:12:41 | INFO: Primitives created: 1
+19:12:41 | INFO: Extracting primitive: Cube.179
+19:12:41 | INFO: Primitives created: 1
+19:12:41 | INFO: Extracting primitive: Cube.180
+19:12:41 | INFO: Primitives created: 1
+19:12:41 | INFO: Extracting primitive: Cube.181
+19:12:41 | INFO: Primitives created: 1
+19:12:41 | INFO: Finished glTF 2.0 export in 0.009514093399047852 s
+Fra:1 Mem:50.91M (Peak 50.91M) | Time:00:00.05 | Rendering 1 / 64 samples
+Fra:1 Mem:50.91M (Peak 50.91M) | Time:00:00.09 | Rendering 25 / 64 samples
+Fra:1 Mem:50.91M (Peak 50.91M) | Time:00:00.14 | Rendering 50 / 64 samples
+Fra:1 Mem:50.91M (Peak 50.91M) | Time:00:00.16 | Rendering 64 / 64 samples
+Saved: 'C:\Users\Sanan\Documents\Cursor\Gamee\assets\environment\harbor\crane_preview.png'
+Time: 00:00.23 (Saving: 00:00.05)
+
+Fra:1 Mem:67.94M (Peak 67.94M) | Time:00:00.07 | Rendering 1 / 64 samples
+Fra:1 Mem:67.94M (Peak 67.94M) | Time:00:00.16 | Rendering 25 / 64 samples
+Fra:1 Mem:67.94M (Peak 67.94M) | Time:00:00.26 | Rendering 50 / 64 samples
+Fra:1 Mem:67.94M (Peak 67.94M) | Time:00:00.31 | Rendering 64 / 64 samples
+Saved: 'C:\Users\Sanan\Documents\Cursor\Gamee\assets\environment\harbor\harbor_kit_preview.png'
+Time: 00:00.58 (Saving: 00:00.21)
+
+
+Info: Saved as "harbor_kit.blend"
+19:12:42 | INFO: Starting glTF 2.0 export
+19:12:42 | INFO: Extracting primitive: race_road
+19:12:42 | INFO: Primitives created: 1
+19:12:42 | INFO: Finished glTF 2.0 export in 0.00842428207397461 s
+
+19:12:42 | INFO: Starting glTF 2.0 export
+19:12:42 | INFO: Extracting primitive: race_road
+19:12:42 | INFO: Primitives created: 1
+19:12:42 | INFO: Extracting primitive: shoulder
+19:12:42 | INFO: Primitives created: 1
+19:12:42 | INFO: Extracting primitive: edge_line
+19:12:42 | INFO: Primitives created: 1
+19:12:42 | INFO: Extracting primitive: safety_verge
+19:12:42 | INFO: Primitives created: 1
+19:12:42 | INFO: Extracting primitive: shoulder.001
+19:12:42 | INFO: Primitives created: 1
+19:12:42 | INFO: Extracting primitive: edge_line.001
+19:12:42 | INFO: Primitives created: 1
+19:12:42 | INFO: Extracting primitive: safety_verge.001
+19:12:42 | INFO: Primitives created: 1
+19:12:42 | INFO: Extracting primitive: Cube.080
+19:12:42 | INFO: Primitives created: 2
+19:12:42 | INFO: Extracting primitive: Cube.097
+19:12:42 | INFO: Primitives created: 4
+19:12:42 | INFO: Extracting primitive: Cube.103
+19:12:42 | INFO: Primitives created: 3
+19:12:42 | INFO: Extracting primitive: Cube.128
+19:12:43 | INFO: Primitives created: 4
+19:12:43 | INFO: Extracting primitive: Cube.001
+19:12:43 | INFO: Primitives created: 2
+19:12:43 | INFO: Extracting primitive: Cube.149
+19:12:43 | INFO: Primitives created: 4
+19:12:43 | INFO: Extracting primitive: Cube.116
+19:12:43 | INFO: Primitives created: 4
+19:12:43 | INFO: Extracting primitive: Cylinder.003
+19:12:43 | INFO: Primitives created: 3
+19:12:43 | INFO: Extracting primitive: Cube.183
+19:12:43 | INFO: Primitives created: 1
+19:12:43 | INFO: Extracting primitive: Cube.184
+19:12:43 | INFO: Primitives created: 1
+19:12:43 | INFO: Extracting primitive: Cube.185
+19:12:43 | INFO: Primitives created: 1
+19:12:43 | INFO: Extracting primitive: Cube.186
+19:12:43 | INFO: Primitives created: 1
+19:12:43 | INFO: Extracting primitive: Cube.187
+19:12:43 | INFO: Primitives created: 1
+19:12:43 | INFO: Extracting primitive: Cube.188
+19:12:43 | INFO: Primitives created: 1
+19:12:43 | INFO: Extracting primitive: Cube.189
+19:12:43 | INFO: Primitives created: 1
+19:12:43 | INFO: Extracting primitive: Cube.190
+19:12:43 | INFO: Primitives created: 1
+19:12:43 | INFO: Extracting primitive: Cube.191
+19:12:43 | INFO: Primitives created: 1
+19:12:43 | INFO: Extracting primitive: Cube.192
+19:12:43 | INFO: Primitives created: 1
+19:12:43 | INFO: Extracting primitive: Cube.193
+19:12:43 | INFO: Primitives created: 1
+19:12:43 | INFO: Extracting primitive: Cube.194
+19:12:43 | INFO: Primitives created: 1
+19:12:43 | INFO: Extracting primitive: Cube.195
+19:12:43 | INFO: Primitives created: 1
+19:12:43 | INFO: Extracting primitive: Cube.196
+19:12:43 | INFO: Primitives created: 1
+19:12:43 | INFO: Extracting primitive: Cube.197
+19:12:43 | INFO: Primitives created: 1
+19:12:43 | INFO: Extracting primitive: Cube.198
+19:12:43 | INFO: Primitives created: 1
+19:12:43 | INFO: Extracting primitive: Cube.199
+19:12:43 | INFO: Primitives created: 1
+19:12:43 | INFO: Extracting primitive: Cube.200
+19:12:43 | INFO: Primitives created: 1
+19:12:43 | INFO: Extracting primitive: Cube.201
+19:12:43 | INFO: Primitives created: 1
+19:12:43 | INFO: Extracting primitive: Cube.202
+19:12:43 | INFO: Primitives created: 1
+19:12:43 | INFO: Extracting primitive: Cube.203
+19:12:43 | INFO: Primitives created: 1
+19:12:43 | INFO: Extracting primitive: Cube.204
+19:12:43 | INFO: Primitives created: 1
+19:12:43 | INFO: Finished glTF 2.0 export in 0.1783597469329834 s
+Fra:1 Mem:86.23M (Peak 86.23M) | Time:00:00.10 | Rendering 1 / 64 samples
+Fra:1 Mem:86.23M (Peak 86.23M) | Time:00:00.11 | Rendering 25 / 64 samples
+Fra:1 Mem:86.23M (Peak 86.23M) | Time:00:00.11 | Rendering 50 / 64 samples
+Fra:1 Mem:86.23M (Peak 86.23M) | Time:00:00.11 | Rendering 64 / 64 samples
+Saved: 'C:\Users\Sanan\Documents\Cursor\Gamee\assets\tracks\dock_loop\dock_loop_overhead.png'
+Time: 00:00.66 (Saving: 00:00.22)
+
+
+Info: Saved as "dock_loop.blend"
+HARBOR_GENERATION_COMPLETE {"centerline_length_2200m": true, "sample_count": 256, "grid_count": 20, "checkpoint_count": 16, "pickup_count": 32, "reset_count": 32, "minimum_road_width_m": 14, "all_coordinates_finite": true, "limits": "No drivability, collision cooking, engine import, AI or timing checks executed.", "road_faces_upward": true, "all_prop_triangle_budgets_pass": true}
+Unable to delete file
+
+Blender quit

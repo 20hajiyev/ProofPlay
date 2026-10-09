@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "files_checked": 403,
+  "counts": {
+    "audio": 248,
+    "concepts": 1,
+    "environment": 41,
+    "fixtures": 4,
+    "modern_coupes": 6,
+    "modern_germans": 12,
+    "tracks": 5,
+    "ui": 45,
+    "vehicles": 28,
+    "vehicles_realistic": 13
+  },
+  "failures": [],
+  "limits": "Structural checks only. No perceptual audio, artistic signoff, full glTF spec conformance or runtime frame-time certification."
+}

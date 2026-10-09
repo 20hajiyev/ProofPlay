@@ -1,0 +1,368 @@
+{
+  "schema_version": 1,
+  "generator": "tools/generate_harbor_materials.py",
+  "provenance": "Procedural synthesis (numpy FFT noise). No photographs, scans or downloaded textures.",
+  "contract": "albedo sRGB; normal tangent-space OpenGL; ORM R=AO G=roughness B=metallic (plan 3.3)",
+  "maps": [
+    {
+      "file": "assets/materials/harbor/asphalt_albedo.png",
+      "material": "asphalt",
+      "map": "albedo",
+      "color_space": "sRGB",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.858,
+      "sha256": "53d39a7b190a242a2cf65cadaff9718a0d6f835642f6d7c72e7f622afd37e6c7"
+    },
+    {
+      "file": "assets/materials/harbor/asphalt_normal.png",
+      "material": "asphalt",
+      "map": "normal",
+      "color_space": "linear",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.96,
+      "sha256": "99a2b7e97d57bce7f6caf8d7bfe31afbe8023f9f8a16cb06170b299d949ac374"
+    },
+    {
+      "file": "assets/materials/harbor/asphalt_orm.png",
+      "material": "asphalt",
+      "map": "orm",
+      "color_space": "linear",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.901,
+      "sha256": "7b0c0acf17315f358e364df8de6def375039b09fab6b100ce2fc1d8f5d6867ef"
+    },
+    {
+      "file": "assets/materials/harbor/concrete_slab_albedo.png",
+      "material": "concrete_slab",
+      "map": "albedo",
+      "color_space": "sRGB",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.994,
+      "sha256": "9c47471bef2781aedff92da8284012639537036c607f10eb48b8e0af902a1bf6"
+    },
+    {
+      "file": "assets/materials/harbor/concrete_slab_normal.png",
+      "material": "concrete_slab",
+      "map": "normal",
+      "color_space": "linear",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.993,
+      "sha256": "d92dc26428dbea5bca69b7b11e1717eaf3d4a7582f292e2408ff597b3b683f90"
+    },
+    {
+      "file": "assets/materials/harbor/concrete_slab_orm.png",
+      "material": "concrete_slab",
+      "map": "orm",
+      "color_space": "linear",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.014,
+      "sha256": "b4f432a2eaf363206f56394ee0ee6462dcf6b09ffa0716f8fd84bf4be9a5999c"
+    },
+    {
+      "file": "assets/materials/harbor/barrier_concrete_albedo.png",
+      "material": "barrier_concrete",
+      "map": "albedo",
+      "color_space": "sRGB",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.709,
+      "sha256": "980147e40d8868381362b43cb2c2fc9b19ca7ec6de44fee10ead435038f250a2"
+    },
+    {
+      "file": "assets/materials/harbor/barrier_concrete_normal.png",
+      "material": "barrier_concrete",
+      "map": "normal",
+      "color_space": "linear",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.777,
+      "sha256": "c66caede316873eff25804bdaccabfe02a8242bfb2fef393cedd74108cf95aff"
+    },
+    {
+      "file": "assets/materials/harbor/barrier_concrete_orm.png",
+      "material": "barrier_concrete",
+      "map": "orm",
+      "color_space": "linear",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.756,
+      "sha256": "cba8fa6210067640ad660f81804aa1d749c856716b99d45918bb627ec8f2f898"
+    },
+    {
+      "file": "assets/materials/harbor/galvanized_steel_albedo.png",
+      "material": "galvanized_steel",
+      "map": "albedo",
+      "color_space": "sRGB",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.897,
+      "sha256": "265f07af0f668cb5ed1ce161d47bda3c9d1128a19000fa8d73f8c31cc122e7f7"
+    },
+    {
+      "file": "assets/materials/harbor/galvanized_steel_normal.png",
+      "material": "galvanized_steel",
+      "map": "normal",
+      "color_space": "linear",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.951,
+      "sha256": "ffcaab618fc93e5081f7cdf58cf57ba98a259400f6df26fcd2e38d3b75e27660"
+    },
+    {
+      "file": "assets/materials/harbor/galvanized_steel_orm.png",
+      "material": "galvanized_steel",
+      "map": "orm",
+      "color_space": "linear",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.907,
+      "sha256": "e4023c7f8fe26b3a999228e1e4ed16aef1a344f49665b6989947539350699677"
+    },
+    {
+      "file": "assets/materials/harbor/water_albedo.png",
+      "material": "water",
+      "map": "albedo",
+      "color_space": "sRGB",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.0,
+      "sha256": "2c190ee6c981f30c31f2bebdd707161e29954b55f253e829815fb2f1b55382ff"
+    },
+    {
+      "file": "assets/materials/harbor/water_normal.png",
+      "material": "water",
+      "map": "normal",
+      "color_space": "linear",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.93,
+      "sha256": "776d36b7e486af3eea4caa25ac474ab1c3b11e8a574315c9005c75f27c8cfb47"
+    },
+    {
+      "file": "assets/materials/harbor/water_orm.png",
+      "material": "water",
+      "map": "orm",
+      "color_space": "linear",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.0,
+      "sha256": "d3b9aa227aebb840bddc726839c4f3e19e756faee311cb0566a1bc76bb3efe22"
+    },
+    {
+      "file": "assets/materials/harbor/paint_teal_albedo.png",
+      "material": "paint_teal",
+      "map": "albedo",
+      "color_space": "sRGB",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.631,
+      "sha256": "d247dcfb3cafdd773f3a74dfa022436a86be47213d92f24cd61de1f653e05429"
+    },
+    {
+      "file": "assets/materials/harbor/paint_teal_normal.png",
+      "material": "paint_teal",
+      "map": "normal",
+      "color_space": "linear",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.76,
+      "sha256": "d93498c36ed1d5aecfee8b7b3b9dab8a0e0c8d509f3134f1c064294862150717"
+    },
+    {
+      "file": "assets/materials/harbor/paint_teal_orm.png",
+      "material": "paint_teal",
+      "map": "orm",
+      "color_space": "linear",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.637,
+      "sha256": "891a5426f2ee4d5e385da313e7c25e98b818606584346a579e691767fe439e33"
+    },
+    {
+      "file": "assets/materials/harbor/paint_red_albedo.png",
+      "material": "paint_red",
+      "map": "albedo",
+      "color_space": "sRGB",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.64,
+      "sha256": "53d9248fb269b34005cb0ec2384115a0d600d8d212e8dfd906f905d99dcd6552"
+    },
+    {
+      "file": "assets/materials/harbor/paint_red_normal.png",
+      "material": "paint_red",
+      "map": "normal",
+      "color_space": "linear",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.76,
+      "sha256": "d93498c36ed1d5aecfee8b7b3b9dab8a0e0c8d509f3134f1c064294862150717"
+    },
+    {
+      "file": "assets/materials/harbor/paint_red_orm.png",
+      "material": "paint_red",
+      "map": "orm",
+      "color_space": "linear",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.637,
+      "sha256": "891a5426f2ee4d5e385da313e7c25e98b818606584346a579e691767fe439e33"
+    },
+    {
+      "file": "assets/materials/harbor/paint_blue_albedo.png",
+      "material": "paint_blue",
+      "map": "albedo",
+      "color_space": "sRGB",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.643,
+      "sha256": "6bc031896d6b9f8a51f409e484819397b558925d05dd807529b0a873ce368882"
+    },
+    {
+      "file": "assets/materials/harbor/paint_blue_normal.png",
+      "material": "paint_blue",
+      "map": "normal",
+      "color_space": "linear",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.76,
+      "sha256": "d93498c36ed1d5aecfee8b7b3b9dab8a0e0c8d509f3134f1c064294862150717"
+    },
+    {
+      "file": "assets/materials/harbor/paint_blue_orm.png",
+      "material": "paint_blue",
+      "map": "orm",
+      "color_space": "linear",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.637,
+      "sha256": "891a5426f2ee4d5e385da313e7c25e98b818606584346a579e691767fe439e33"
+    },
+    {
+      "file": "assets/materials/harbor/paint_orange_albedo.png",
+      "material": "paint_orange",
+      "map": "albedo",
+      "color_space": "sRGB",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.641,
+      "sha256": "1b79d54cfb42335814691442aafe4aab1ab86a9d18b63ee31931bda7038ec066"
+    },
+    {
+      "file": "assets/materials/harbor/paint_orange_normal.png",
+      "material": "paint_orange",
+      "map": "normal",
+      "color_space": "linear",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.76,
+      "sha256": "d93498c36ed1d5aecfee8b7b3b9dab8a0e0c8d509f3134f1c064294862150717"
+    },
+    {
+      "file": "assets/materials/harbor/paint_orange_orm.png",
+      "material": "paint_orange",
+      "map": "orm",
+      "color_space": "linear",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.637,
+      "sha256": "891a5426f2ee4d5e385da313e7c25e98b818606584346a579e691767fe439e33"
+    },
+    {
+      "file": "assets/materials/harbor/paint_grey_albedo.png",
+      "material": "paint_grey",
+      "map": "albedo",
+      "color_space": "sRGB",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.627,
+      "sha256": "3a053f73cc5818c8ecaf0566c85733cd8f959e5493cff22a50bbb9c41f44a03c"
+    },
+    {
+      "file": "assets/materials/harbor/paint_grey_normal.png",
+      "material": "paint_grey",
+      "map": "normal",
+      "color_space": "linear",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.76,
+      "sha256": "d93498c36ed1d5aecfee8b7b3b9dab8a0e0c8d509f3134f1c064294862150717"
+    },
+    {
+      "file": "assets/materials/harbor/paint_grey_orm.png",
+      "material": "paint_grey",
+      "map": "orm",
+      "color_space": "linear",
+      "size": [
+        1024,
+        1024
+      ],
+      "seam_ratio": 0.637,
+      "sha256": "891a5426f2ee4d5e385da313e7c25e98b818606584346a579e691767fe439e33"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+diff --git a/WickedEngine/shaders/outlinePS.hlsl b/WickedEngine/shaders/outlinePS.hlsl
+index 2ef7dcc..52d9e75 100644
+--- a/WickedEngine/shaders/outlinePS.hlsl
++++ b/WickedEngine/shaders/outlinePS.hlsl
+@@ -4,6 +4,7 @@
+ PUSHCONSTANT(postprocess, PostProcess);
+ 
+ Texture2D<float> input : register(t0);
++Texture2D<float4> normals : register(t1); // racer P-003: visibility normal_roughness (valid when params0.z > 0)
+ 
+ float4 main(float4 pos : SV_Position, float2 uv : TEXCOORD) : SV_TARGET
+ {
+@@ -64,5 +65,30 @@ float4 main(float4 pos : SV_Position, float2 uv : TEXCOORD) : SV_TARGET
+ 
+ 	float edge = dist > outlineThreshold ? 1 : 0;
+ 
++	// racer P-003: crease/panel ink lines. Where an outlined surface folds more sharply than the
++	// crease cosine between this pixel and a neighbour on the same surface, draw ink too. Depth
++	// alone only finds silhouettes; cel-shaded cars (PS2-era look) also ink their creases.
++	const float crease = postprocess.params0.z;
++	[branch]
++	if (crease > 0 && middle > 0 && edge == 0)
++	{
++		const int2 p = int2(uv * dim);
++		const int t = max(1, (int)round(outlineThickness * 0.75));
++		const half3 nc = decode_normal(normals.Load(int3(p, 0)).rg);
++		const int2 offsets[4] = { int2(t, 0), int2(-t, 0), int2(0, t), int2(0, -t) };
++		[unroll]
++		for (int i = 0; i < 4; ++i)
++		{
++			const int2 q = clamp(p + offsets[i], int2(0, 0), int2(dim) - 1);
++			const float d = input.Load(int3(q, 0));
++			if (d > 0 && abs(d - middle) < middle * 0.05)
++			{
++				const half3 nq = decode_normal(normals.Load(int3(q, 0)).rg);
++				if (dot(nc, nq) < crease)
++					edge = 1;
++			}
++		}
++	}
++
+ 	return float4(outlineColor.rgb, outlineColor.a * edge);
+ }
+diff --git a/WickedEngine/wiRenderPath3D.cpp b/WickedEngine/wiRenderPath3D.cpp
+index a9bb887..901ca4d 100644
+--- a/WickedEngine/wiRenderPath3D.cpp
++++ b/WickedEngine/wiRenderPath3D.cpp
+@@ -619,6 +619,7 @@ namespace wi
+ 		// Check whether visibility resources are required:
+ 		if (
+ 			visibility_shading_in_compute ||
++			(getOutlineEnabled() && getOutlineCrease() > 0) || // racer P-003
+ 			getSSREnabled() ||
+ 			getSSGIEnabled() ||
+ 			getRaytracedReflectionEnabled() ||
+@@ -1037,7 +1038,8 @@ namespace wi
+ 				getRaytracedDiffuseEnabled() ||
+ 				wi::renderer::GetScreenSpaceShadowsEnabled() ||
+ 				wi::renderer::GetRaytracedShadowsEnabled() ||
+-				wi::renderer::GetVXGIEnabled()
++				wi::renderer::GetVXGIEnabled() ||
++				(getOutlineEnabled() && getOutlineCrease() > 0) // racer P-003: crease ink lines read the normals
+ 				)
+ 			{
+ 				// These post effects require surface normals and/or roughness
+@@ -1884,7 +1886,9 @@ namespace wi
+ 				cmd,
+ 				getOutlineThreshold(),
+ 				getOutlineThickness(),
+-				getOutlineColor()
++				getOutlineColor(),
++				getOutlineCrease() > 0 && visibilityResources.texture_normal_roughness.IsValid() ? &visibilityResources.texture_normal_roughness : nullptr,
++				getOutlineCrease()
+ 			);
+ 		}
+ 	}
+diff --git a/WickedEngine/wiRenderPath3D.h b/WickedEngine/wiRenderPath3D.h
+index 687b00c..6cb7a32 100644
+--- a/WickedEngine/wiRenderPath3D.h
++++ b/WickedEngine/wiRenderPath3D.h
+@@ -40,6 +40,7 @@ namespace wi
+ 		float sharpenFilterAmount = 0.28f;
+ 		float outlineThreshold = 0.2f;
+ 		float outlineThickness = 1.0f;
++		float outlineCrease = 0.0f; // racer P-003: ink lines where the surface normal turns more than this (cosine); 0 = off
+ 		XMFLOAT4 outlineColor = XMFLOAT4(0, 0, 0, 1);
+ 		float aoRange = 1.0f;
+ 		uint32_t aoSampleCount = 16;
+@@ -244,6 +245,7 @@ namespace wi
+ 		constexpr float getSharpenFilterAmount() const { return sharpenFilterAmount; }
+ 		constexpr float getOutlineThreshold() const { return outlineThreshold; }
+ 		constexpr float getOutlineThickness() const { return outlineThickness; }
++		constexpr float getOutlineCrease() const { return outlineCrease; }
+ 		constexpr XMFLOAT4 getOutlineColor() const { return outlineColor; }
+ 		constexpr float getAORange() const { return aoRange; }
+ 		constexpr uint32_t getAOSampleCount() const { return aoSampleCount; }
+@@ -308,6 +310,7 @@ namespace wi
+ 		constexpr void setSharpenFilterAmount(float value) { sharpenFilterAmount = value; }
+ 		constexpr void setOutlineThreshold(float value) { outlineThreshold = value; }
+ 		constexpr void setOutlineThickness(float value) { outlineThickness = value; }
++		constexpr void setOutlineCrease(float value) { outlineCrease = value; }
+ 		constexpr void setOutlineColor(const XMFLOAT4& value) { outlineColor = value; }
+ 		constexpr void setAORange(float value) { aoRange = value; }
+ 		constexpr void setAOSampleCount(uint32_t value) { aoSampleCount = value; }
+diff --git a/WickedEngine/wiRenderer.cpp b/WickedEngine/wiRenderer.cpp
+index 38e081a..c68e6ea 100644
+--- a/WickedEngine/wiRenderer.cpp
++++ b/WickedEngine/wiRenderer.cpp
+@@ -16685,7 +16685,9 @@ void Postprocess_Outline(
+ 	CommandList cmd,
+ 	float threshold,
+ 	float thickness,
+-	const XMFLOAT4& color
++	const XMFLOAT4& color,
++	const Texture* normals,
++	float crease
+ )
+ {
+ 	device->EventBegin("Postprocess_Outline", cmd);
+@@ -16694,6 +16696,7 @@ void Postprocess_Outline(
+ 	device->BindPipelineState(&PSO_outline, cmd);
+ 
+ 	device->BindResource(&input, 0, cmd);
++	device->BindResource(normals != nullptr ? normals : &input, 1, cmd); // racer P-003
+ 
+ 	PostProcess postprocess;
+ 	postprocess.resolution.x = (uint)input.GetDesc().width;
+@@ -16702,6 +16705,7 @@ void Postprocess_Outline(
+ 	postprocess.resolution_rcp.y = 1.0f / postprocess.resolution.y;
+ 	postprocess.params0.x = threshold;
+ 	postprocess.params0.y = thickness;
++	postprocess.params0.z = normals != nullptr ? crease : 0; // racer P-003
+ 	postprocess.params1.x = color.x;
+ 	postprocess.params1.y = color.y;
+ 	postprocess.params1.z = color.z;
+diff --git a/WickedEngine/wiRenderer.h b/WickedEngine/wiRenderer.h
+index 45c424d..5ac6c7c 100644
+--- a/WickedEngine/wiRenderer.h
++++ b/WickedEngine/wiRenderer.h
+@@ -813,7 +813,9 @@ namespace wi::renderer
+ 		wi::graphics::CommandList cmd,
+ 		float threshold = 0.1f,
+ 		float thickness = 1.0f,
+-		const XMFLOAT4& color = XMFLOAT4(0, 0, 0, 1)
++		const XMFLOAT4& color = XMFLOAT4(0, 0, 0, 1),
++		const wi::graphics::Texture* normals = nullptr, // racer P-003: crease lines from surface normals
++		float crease = 0.0f
+ 	);
+ 	struct MotionBlurResources
+ 	{

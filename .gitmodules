@@ -1,0 +1,9 @@
+[submodule "engine/WickedEngine"]
+	path = engine/WickedEngine
+	url = https://github.com/turanszkij/WickedEngine.git
+[submodule "third_party/miniaudio"]
+	path = third_party/miniaudio
+	url = https://github.com/mackron/miniaudio.git
+[submodule "third_party/json"]
+	path = third_party/json
+	url = https://github.com/nlohmann/json.git

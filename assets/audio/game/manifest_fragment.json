@@ -1,0 +1,1944 @@
+{
+  "schema_version": 1,
+  "generator": "tools/generate_game_audio.py",
+  "assets": [
+    {
+      "asset_id": "ENGINE_I4_NA_RPM1000_ON",
+      "file": "assets/audio/game/engine/I4_NA/rpm1000_on.wav",
+      "sha256": "bc712522e0c2a24fbbb2ac67891774e9f150eadf978bef804c90b3a9d9358eac",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 1000,
+      "load": "on",
+      "channels": 1,
+      "validation": {
+        "file": "engine/I4_NA/rpm1000_on.wav",
+        "seconds": 1.02,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.12,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_I4_NA_RPM1000_OFF",
+      "file": "assets/audio/game/engine/I4_NA/rpm1000_off.wav",
+      "sha256": "86a37fa09324c164c93f121af87e7f1999a428e165830a2c0dc79dbfaf6ca3af",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 1000,
+      "load": "off",
+      "channels": 1,
+      "validation": {
+        "file": "engine/I4_NA/rpm1000_off.wav",
+        "seconds": 1.02,
+        "peak_dbfs": -4.0,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.058,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_I4_NA_RPM2500_ON",
+      "file": "assets/audio/game/engine/I4_NA/rpm2500_on.wav",
+      "sha256": "cdd204c4486b0013fb5e452d0a24d1791b19bcc00a8ac8d1003ff2e6d0f54dd7",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 2500,
+      "load": "on",
+      "channels": 1,
+      "validation": {
+        "file": "engine/I4_NA/rpm2500_on.wav",
+        "seconds": 1.008,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.248,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_I4_NA_RPM2500_OFF",
+      "file": "assets/audio/game/engine/I4_NA/rpm2500_off.wav",
+      "sha256": "9e7ac82fadaca78ea650fdade5642541d66d171ca95dfeb4aa3b54c2c9cc31f9",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 2500,
+      "load": "off",
+      "channels": 1,
+      "validation": {
+        "file": "engine/I4_NA/rpm2500_off.wav",
+        "seconds": 1.008,
+        "peak_dbfs": -4.0,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.021,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_I4_NA_RPM4000_ON",
+      "file": "assets/audio/game/engine/I4_NA/rpm4000_on.wav",
+      "sha256": "fc3cb02915f76f45eca139527c64abbc011a2f1a03475ef44ad7315323ac01b6",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 4000,
+      "load": "on",
+      "channels": 1,
+      "validation": {
+        "file": "engine/I4_NA/rpm4000_on.wav",
+        "seconds": 1.005,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.343,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_I4_NA_RPM4000_OFF",
+      "file": "assets/audio/game/engine/I4_NA/rpm4000_off.wav",
+      "sha256": "d0fef41a62e24ea54549d09b688252c109ba320eae8d5aab788368fd70b465bf",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 4000,
+      "load": "off",
+      "channels": 1,
+      "validation": {
+        "file": "engine/I4_NA/rpm4000_off.wav",
+        "seconds": 1.005,
+        "peak_dbfs": -4.0,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.246,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_I4_NA_RPM5500_ON",
+      "file": "assets/audio/game/engine/I4_NA/rpm5500_on.wav",
+      "sha256": "a7c5cb014c455a858dbad449100b1a04fdd46d1563fe1fcf830f8710e76806a8",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 5500,
+      "load": "on",
+      "channels": 1,
+      "validation": {
+        "file": "engine/I4_NA/rpm5500_on.wav",
+        "seconds": 1.0036,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.088,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_I4_NA_RPM5500_OFF",
+      "file": "assets/audio/game/engine/I4_NA/rpm5500_off.wav",
+      "sha256": "c5899848d15dd9efc09bf48e187390e77b517fd1686edc7fb9ec4b046bee1c3f",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 5500,
+      "load": "off",
+      "channels": 1,
+      "validation": {
+        "file": "engine/I4_NA/rpm5500_off.wav",
+        "seconds": 1.0036,
+        "peak_dbfs": -4.0,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.095,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_I4_NA_RPM7000_ON",
+      "file": "assets/audio/game/engine/I4_NA/rpm7000_on.wav",
+      "sha256": "7b548adb74062ce86324e98c89b8bb91b4570cb8c06c1d452fbbaceb45117fc1",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 7000,
+      "load": "on",
+      "channels": 1,
+      "validation": {
+        "file": "engine/I4_NA/rpm7000_on.wav",
+        "seconds": 1.0029,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.198,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_I4_NA_RPM7000_OFF",
+      "file": "assets/audio/game/engine/I4_NA/rpm7000_off.wav",
+      "sha256": "2a288183f811fbe13e29252e6407c9bfb2aa6902fe715d12274543ad0a146995",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 7000,
+      "load": "off",
+      "channels": 1,
+      "validation": {
+        "file": "engine/I4_NA/rpm7000_off.wav",
+        "seconds": 1.0029,
+        "peak_dbfs": -4.0,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.024,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_I4_TURBO_RPM1000_ON",
+      "file": "assets/audio/game/engine/I4_TURBO/rpm1000_on.wav",
+      "sha256": "62021049daa287982e853b3fb1de06180c4c10e179cc0060a31b4135b868f737",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 1000,
+      "load": "on",
+      "channels": 1,
+      "validation": {
+        "file": "engine/I4_TURBO/rpm1000_on.wav",
+        "seconds": 1.02,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.254,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_I4_TURBO_RPM1000_OFF",
+      "file": "assets/audio/game/engine/I4_TURBO/rpm1000_off.wav",
+      "sha256": "4945818a486d3cc9b5aef4e98d5362c79b298fd039b311cd8e29b2fdab8d4c41",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 1000,
+      "load": "off",
+      "channels": 1,
+      "validation": {
+        "file": "engine/I4_TURBO/rpm1000_off.wav",
+        "seconds": 1.02,
+        "peak_dbfs": -4.0,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.161,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_I4_TURBO_RPM2500_ON",
+      "file": "assets/audio/game/engine/I4_TURBO/rpm2500_on.wav",
+      "sha256": "0c3943267a8fda80a7ce999ecaa8e4451711c06740d48ed70f8a563b4664f87d",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 2500,
+      "load": "on",
+      "channels": 1,
+      "validation": {
+        "file": "engine/I4_TURBO/rpm2500_on.wav",
+        "seconds": 1.008,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.07,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_I4_TURBO_RPM2500_OFF",
+      "file": "assets/audio/game/engine/I4_TURBO/rpm2500_off.wav",
+      "sha256": "4129eaf06c2b3a0477274ad372ac982b94b4f80461d652a50bf2592546d588c3",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 2500,
+      "load": "off",
+      "channels": 1,
+      "validation": {
+        "file": "engine/I4_TURBO/rpm2500_off.wav",
+        "seconds": 1.008,
+        "peak_dbfs": -4.0,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.037,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_I4_TURBO_RPM4000_ON",
+      "file": "assets/audio/game/engine/I4_TURBO/rpm4000_on.wav",
+      "sha256": "e083fbef11882a189988a06e213e2fc0201296e002987c8da1e1cb53fac7855b",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 4000,
+      "load": "on",
+      "channels": 1,
+      "validation": {
+        "file": "engine/I4_TURBO/rpm4000_on.wav",
+        "seconds": 1.005,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.434,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_I4_TURBO_RPM4000_OFF",
+      "file": "assets/audio/game/engine/I4_TURBO/rpm4000_off.wav",
+      "sha256": "e4a180f4765fb05b82adfc805dd39104dcb721347d22881bbef03de807f14c2d",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 4000,
+      "load": "off",
+      "channels": 1,
+      "validation": {
+        "file": "engine/I4_TURBO/rpm4000_off.wav",
+        "seconds": 1.005,
+        "peak_dbfs": -4.0,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.061,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_I4_TURBO_RPM5500_ON",
+      "file": "assets/audio/game/engine/I4_TURBO/rpm5500_on.wav",
+      "sha256": "55eb2d753d1c1f548b4cb5fc15f7193fca0c8ea05b45cc4c50f66ffaab32cfbf",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 5500,
+      "load": "on",
+      "channels": 1,
+      "validation": {
+        "file": "engine/I4_TURBO/rpm5500_on.wav",
+        "seconds": 1.0036,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.036,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_I4_TURBO_RPM5500_OFF",
+      "file": "assets/audio/game/engine/I4_TURBO/rpm5500_off.wav",
+      "sha256": "88cf03c46280790552041dcddd43b429b6aea2b270374c452cc4316c526b1a7f",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 5500,
+      "load": "off",
+      "channels": 1,
+      "validation": {
+        "file": "engine/I4_TURBO/rpm5500_off.wav",
+        "seconds": 1.0036,
+        "peak_dbfs": -4.0,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.127,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_I4_TURBO_RPM7200_ON",
+      "file": "assets/audio/game/engine/I4_TURBO/rpm7200_on.wav",
+      "sha256": "f738a915408c65d66cdb629e8ebc57dcdc2f3761afbf4ccc642d7462093b44ed",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 7200,
+      "load": "on",
+      "channels": 1,
+      "validation": {
+        "file": "engine/I4_TURBO/rpm7200_on.wav",
+        "seconds": 1.0,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.673,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_I4_TURBO_RPM7200_OFF",
+      "file": "assets/audio/game/engine/I4_TURBO/rpm7200_off.wav",
+      "sha256": "14cdbe034a6f6b21041d1dd7cb742b4291c149240c494bb404cb01fa89c02cf8",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 7200,
+      "load": "off",
+      "channels": 1,
+      "validation": {
+        "file": "engine/I4_TURBO/rpm7200_off.wav",
+        "seconds": 1.0,
+        "peak_dbfs": -4.0,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.034,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_V6_RPM900_ON",
+      "file": "assets/audio/game/engine/V6/rpm900_on.wav",
+      "sha256": "969ba33b45ddda5966a3f9a237d54f97510c3c03d0fa5fbd238896b7d875690e",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 900,
+      "load": "on",
+      "channels": 1,
+      "validation": {
+        "file": "engine/V6/rpm900_on.wav",
+        "seconds": 1.0,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.039,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_V6_RPM900_OFF",
+      "file": "assets/audio/game/engine/V6/rpm900_off.wav",
+      "sha256": "85f164acc1acfb2f1d09fcf892dd123a510ca0b2002cca93d75a7b655d237111",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 900,
+      "load": "off",
+      "channels": 1,
+      "validation": {
+        "file": "engine/V6/rpm900_off.wav",
+        "seconds": 1.0,
+        "peak_dbfs": -4.0,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.094,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_V6_RPM2400_ON",
+      "file": "assets/audio/game/engine/V6/rpm2400_on.wav",
+      "sha256": "7fce700a71e084ad5b5b4de997dbe192a746275726e7df319b69d7763ce6ea90",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 2400,
+      "load": "on",
+      "channels": 1,
+      "validation": {
+        "file": "engine/V6/rpm2400_on.wav",
+        "seconds": 1.0,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.69,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_V6_RPM2400_OFF",
+      "file": "assets/audio/game/engine/V6/rpm2400_off.wav",
+      "sha256": "adca1435b14c8ff99a347737133d72e47a71ff0af880fee917d7801b1ae65a64",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 2400,
+      "load": "off",
+      "channels": 1,
+      "validation": {
+        "file": "engine/V6/rpm2400_off.wav",
+        "seconds": 1.0,
+        "peak_dbfs": -4.0,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.099,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_V6_RPM3900_ON",
+      "file": "assets/audio/game/engine/V6/rpm3900_on.wav",
+      "sha256": "60a0cacf35353304bd60c1d110480baa2a5228a34cc8dda4e9c3c03064b6c3fa",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 3900,
+      "load": "on",
+      "channels": 1,
+      "validation": {
+        "file": "engine/V6/rpm3900_on.wav",
+        "seconds": 1.0,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.399,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_V6_RPM3900_OFF",
+      "file": "assets/audio/game/engine/V6/rpm3900_off.wav",
+      "sha256": "b05b717603321e9a74b88739e1aec59238108ed54386094cd65f5309b7462eb8",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 3900,
+      "load": "off",
+      "channels": 1,
+      "validation": {
+        "file": "engine/V6/rpm3900_off.wav",
+        "seconds": 1.0,
+        "peak_dbfs": -4.0,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.404,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_V6_RPM5400_ON",
+      "file": "assets/audio/game/engine/V6/rpm5400_on.wav",
+      "sha256": "c468d406f047089542d784c5620f92250637dc1705f4b82a3ad9894daa8e9445",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 5400,
+      "load": "on",
+      "channels": 1,
+      "validation": {
+        "file": "engine/V6/rpm5400_on.wav",
+        "seconds": 1.0,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.62,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_V6_RPM5400_OFF",
+      "file": "assets/audio/game/engine/V6/rpm5400_off.wav",
+      "sha256": "6b3fd112ae75d0406a4e58f03e3512b214f8b1962eb5d6a7a840d300d1b160cd",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 5400,
+      "load": "off",
+      "channels": 1,
+      "validation": {
+        "file": "engine/V6/rpm5400_off.wav",
+        "seconds": 1.0,
+        "peak_dbfs": -4.0,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.165,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_V6_RPM6800_ON",
+      "file": "assets/audio/game/engine/V6/rpm6800_on.wav",
+      "sha256": "2687d24b12bbe84661ff330d16350ecbcf32b1957c1fda3439e52d5766a8235d",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 6800,
+      "load": "on",
+      "channels": 1,
+      "validation": {
+        "file": "engine/V6/rpm6800_on.wav",
+        "seconds": 0.9971,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.697,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_V6_RPM6800_OFF",
+      "file": "assets/audio/game/engine/V6/rpm6800_off.wav",
+      "sha256": "1cd551ea7afd63dd7a72351d349eb15df13d40af672e5fe1331dfa7b53e09860",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 6800,
+      "load": "off",
+      "channels": 1,
+      "validation": {
+        "file": "engine/V6/rpm6800_off.wav",
+        "seconds": 0.9971,
+        "peak_dbfs": -4.0,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.232,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_V8_RPM800_ON",
+      "file": "assets/audio/game/engine/V8/rpm800_on.wav",
+      "sha256": "b01078db7b016bcbbd45aefee10e294d0548510e4acf8c84993567aa09b53ebe",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 800,
+      "load": "on",
+      "channels": 1,
+      "validation": {
+        "file": "engine/V8/rpm800_on.wav",
+        "seconds": 0.975,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.136,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_V8_RPM800_OFF",
+      "file": "assets/audio/game/engine/V8/rpm800_off.wav",
+      "sha256": "be4c20a4e469912c70a02903d3a40b6da69bb9afabf23f9c2c9db5304f8fa64a",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 800,
+      "load": "off",
+      "channels": 1,
+      "validation": {
+        "file": "engine/V8/rpm800_off.wav",
+        "seconds": 0.975,
+        "peak_dbfs": -4.0,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.196,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_V8_RPM2000_ON",
+      "file": "assets/audio/game/engine/V8/rpm2000_on.wav",
+      "sha256": "aee641f7763a97bae598dbbce5da120491e1dd53f31db59225038b2734727c4a",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 2000,
+      "load": "on",
+      "channels": 1,
+      "validation": {
+        "file": "engine/V8/rpm2000_on.wav",
+        "seconds": 0.99,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.572,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_V8_RPM2000_OFF",
+      "file": "assets/audio/game/engine/V8/rpm2000_off.wav",
+      "sha256": "3fd6e84969d3e056069cd06286caeb438d2f672fc8f7b4db38a69496fb589f71",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 2000,
+      "load": "off",
+      "channels": 1,
+      "validation": {
+        "file": "engine/V8/rpm2000_off.wav",
+        "seconds": 0.99,
+        "peak_dbfs": -4.0,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.101,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_V8_RPM3300_ON",
+      "file": "assets/audio/game/engine/V8/rpm3300_on.wav",
+      "sha256": "413fac2ffa863577c0183cbfa8fbf9cba1d8b783a9662ac30f12130869c7013f",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 3300,
+      "load": "on",
+      "channels": 1,
+      "validation": {
+        "file": "engine/V8/rpm3300_on.wav",
+        "seconds": 1.0,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.018,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_V8_RPM3300_OFF",
+      "file": "assets/audio/game/engine/V8/rpm3300_off.wav",
+      "sha256": "452a35c3655f64133d5b3adc060903595a37c6ee0ad0311da7c88837846161bd",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 3300,
+      "load": "off",
+      "channels": 1,
+      "validation": {
+        "file": "engine/V8/rpm3300_off.wav",
+        "seconds": 1.0,
+        "peak_dbfs": -4.0,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.225,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_V8_RPM4700_ON",
+      "file": "assets/audio/game/engine/V8/rpm4700_on.wav",
+      "sha256": "487f79f5d752ec43f42e1d32ce3aaab209dc129a7d809d0d2b980009a8c32111",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 4700,
+      "load": "on",
+      "channels": 1,
+      "validation": {
+        "file": "engine/V8/rpm4700_on.wav",
+        "seconds": 0.9958,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.546,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_V8_RPM4700_OFF",
+      "file": "assets/audio/game/engine/V8/rpm4700_off.wav",
+      "sha256": "8f6bc9936460b16426520feb247cfbd7bb0c43ffbf8afaedb8be1df51b986d1e",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 4700,
+      "load": "off",
+      "channels": 1,
+      "validation": {
+        "file": "engine/V8/rpm4700_off.wav",
+        "seconds": 0.9958,
+        "peak_dbfs": -4.0,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.107,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_V8_RPM6200_ON",
+      "file": "assets/audio/game/engine/V8/rpm6200_on.wav",
+      "sha256": "a976f176fbed8ab9ea59c453bc6af737cbca5accdfbee8c7f8444c18b7aeea07",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 6200,
+      "load": "on",
+      "channels": 1,
+      "validation": {
+        "file": "engine/V8/rpm6200_on.wav",
+        "seconds": 0.9968,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.839,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "ENGINE_V8_RPM6200_OFF",
+      "file": "assets/audio/game/engine/V8/rpm6200_off.wav",
+      "sha256": "b67894c6faa9b240d7e6fa20be53ccc81bbaea1064e143b634fb42ad674dfd9d",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "engine_loop",
+      "root_rpm": 6200,
+      "load": "off",
+      "channels": 1,
+      "validation": {
+        "file": "engine/V8/rpm6200_off.wav",
+        "seconds": 0.9968,
+        "peak_dbfs": -4.0,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.14,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "SFX_PICKUP",
+      "file": "assets/audio/game/sfx/pickup.wav",
+      "sha256": "c8c759eab050288e350eedc0627c6f480a0f97a5b60277a3e9bce52d581f2803",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "sfx",
+      "channels": 1,
+      "validation": {
+        "file": "sfx/pickup.wav",
+        "seconds": 0.35,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "SFX_USE_SURGE",
+      "file": "assets/audio/game/sfx/use_surge.wav",
+      "sha256": "8d73c4fbefb25af120da7f3428a5f654709839a0782e1111ec98f4bc0e4a89a7",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "sfx",
+      "channels": 1,
+      "validation": {
+        "file": "sfx/use_surge.wav",
+        "seconds": 0.9,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "SFX_USE_LANCE",
+      "file": "assets/audio/game/sfx/use_lance.wav",
+      "sha256": "4c86f8d6dbb8c732fa62e140b54341c9de900c89cf5443c6490f318a63a80c36",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "sfx",
+      "channels": 1,
+      "validation": {
+        "file": "sfx/use_lance.wav",
+        "seconds": 0.5,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "SFX_USE_PULSE",
+      "file": "assets/audio/game/sfx/use_pulse.wav",
+      "sha256": "3d7bbac03b6691ce1e922dc9a550ecd993ad7fafe11c37b16cb2f438f6461daa",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "sfx",
+      "channels": 1,
+      "validation": {
+        "file": "sfx/use_pulse.wav",
+        "seconds": 0.7,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "SFX_USE_TRAP",
+      "file": "assets/audio/game/sfx/use_trap.wav",
+      "sha256": "d1b6e505cfc7f651b26c6ab32e853d35964a9ab49f624a20da7b8a8d9cf8130b",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "sfx",
+      "channels": 1,
+      "validation": {
+        "file": "sfx/use_trap.wav",
+        "seconds": 0.3,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "SFX_USE_NEEDLE",
+      "file": "assets/audio/game/sfx/use_needle.wav",
+      "sha256": "256413e19926bc9f4d77555791148c42d8d7542bab3db60dc3eb8b0b3c7681de",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "sfx",
+      "channels": 1,
+      "validation": {
+        "file": "sfx/use_needle.wav",
+        "seconds": 0.12,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "SFX_USE_WARD",
+      "file": "assets/audio/game/sfx/use_ward.wav",
+      "sha256": "72305e99045cdcc1889b225dc38efb0a1030a31a6336591a66c1bf0568987426",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "sfx",
+      "channels": 1,
+      "validation": {
+        "file": "sfx/use_ward.wav",
+        "seconds": 0.8,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "SFX_USE_MEND",
+      "file": "assets/audio/game/sfx/use_mend.wav",
+      "sha256": "9f0093f5595b28cc82a1eae5da582e207bf5c4f4f5f3ab6447dbca5078cbe948",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "sfx",
+      "channels": 1,
+      "validation": {
+        "file": "sfx/use_mend.wav",
+        "seconds": 0.9,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "SFX_USE_STORM",
+      "file": "assets/audio/game/sfx/use_storm.wav",
+      "sha256": "8e9636d69b4361e10442142593c136d971a2cc60bcb9534318d869e9a3478f89",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "sfx",
+      "channels": 1,
+      "validation": {
+        "file": "sfx/use_storm.wav",
+        "seconds": 1.2,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "SFX_IMPACT_HEAVY",
+      "file": "assets/audio/game/sfx/impact_heavy.wav",
+      "sha256": "f38d9c54cb759d1d0e2735e2672b428175c663ef691eaf0a9025d07315628d25",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "sfx",
+      "channels": 1,
+      "validation": {
+        "file": "sfx/impact_heavy.wav",
+        "seconds": 0.8,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "SFX_IMPACT_LIGHT",
+      "file": "assets/audio/game/sfx/impact_light.wav",
+      "sha256": "6682246b81ce5a9fc0b86f7c9c703cec1e85bd70ecfaa8065c788dbd658449e6",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "sfx",
+      "channels": 1,
+      "validation": {
+        "file": "sfx/impact_light.wav",
+        "seconds": 0.25,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "SFX_BLOCK",
+      "file": "assets/audio/game/sfx/block.wav",
+      "sha256": "97d94293117ff5674fa485d8bec9a372bce020be94bc393878bcaf5eec351565",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "sfx",
+      "channels": 1,
+      "validation": {
+        "file": "sfx/block.wav",
+        "seconds": 0.4,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "SFX_WRECK",
+      "file": "assets/audio/game/sfx/wreck.wav",
+      "sha256": "938262cdfa718cdf15956d1a2aa0d3393cd45aee2f78f540fcf42138ea8c0121",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "sfx",
+      "channels": 1,
+      "validation": {
+        "file": "sfx/wreck.wav",
+        "seconds": 1.6,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "SFX_COUNTDOWN",
+      "file": "assets/audio/game/sfx/countdown.wav",
+      "sha256": "f57a8d591074306eba1addd9acfdee4fa35350dc141b393264f0cf7c1d9cb334",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "sfx",
+      "channels": 1,
+      "validation": {
+        "file": "sfx/countdown.wav",
+        "seconds": 0.18,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "SFX_GO",
+      "file": "assets/audio/game/sfx/go.wav",
+      "sha256": "d0bdfd3d2c7158ef69e4aa382a2f00ca95ef4b9d9a7404674ea7d95b3706f778",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "sfx",
+      "channels": 1,
+      "validation": {
+        "file": "sfx/go.wav",
+        "seconds": 0.45,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "SFX_WARNING",
+      "file": "assets/audio/game/sfx/warning.wav",
+      "sha256": "ec07cb3a0a32f68738e0b74bd63eba9153dc997b7bee9e9655b12c0add288394",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "sfx",
+      "channels": 1,
+      "validation": {
+        "file": "sfx/warning.wav",
+        "seconds": 0.28,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "SFX_UI_MOVE",
+      "file": "assets/audio/game/sfx/ui_move.wav",
+      "sha256": "4c136c51a9e6559aec48858e27c569cba15532d4989bb9dbdb484b857d4ad3ac",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "sfx",
+      "channels": 1,
+      "validation": {
+        "file": "sfx/ui_move.wav",
+        "seconds": 0.06,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "SFX_UI_CONFIRM",
+      "file": "assets/audio/game/sfx/ui_confirm.wav",
+      "sha256": "bb747b3ae9c053be30a7eccad187b9c2c39f650203b5c67ea86f5eb3112495c6",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "sfx",
+      "channels": 1,
+      "validation": {
+        "file": "sfx/ui_confirm.wav",
+        "seconds": 0.15,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "SFX_UI_BACK",
+      "file": "assets/audio/game/sfx/ui_back.wav",
+      "sha256": "dd0e65ffc7bd62b980e5aefdfc4fdad2fd13d1de11daf12748dc653ef8a194c9",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "sfx",
+      "channels": 1,
+      "validation": {
+        "file": "sfx/ui_back.wav",
+        "seconds": 0.15,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "SFX_HORN",
+      "file": "assets/audio/game/sfx/horn.wav",
+      "sha256": "d61f4a8abd376f4aadbb94ce4d668ebd88f4bd9df7850f699cc93f54490008c8",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "sfx",
+      "channels": 1,
+      "validation": {
+        "file": "sfx/horn.wav",
+        "seconds": 0.55,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "SFX_INDICATOR",
+      "file": "assets/audio/game/sfx/indicator.wav",
+      "sha256": "e485cf586d4303e6e7b448acfd159b9a37c2ae3eec1f679df536046797e5e7f3",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "sfx",
+      "channels": 1,
+      "validation": {
+        "file": "sfx/indicator.wav",
+        "seconds": 0.03,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "SFX_WIPER",
+      "file": "assets/audio/game/sfx/wiper.wav",
+      "sha256": "88e944dc3874da149b456d534b193583088182bce470657b298b32981c5578a1",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "sfx",
+      "channels": 1,
+      "validation": {
+        "file": "sfx/wiper.wav",
+        "seconds": 0.45,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "SFX_BLOWOFF",
+      "file": "assets/audio/game/sfx/blowoff.wav",
+      "sha256": "8bc7db61dd06d32a40b1d6e8404dd9699776a2d3af5c4bf8a41af2211b2b685e",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "sfx",
+      "channels": 1,
+      "validation": {
+        "file": "sfx/blowoff.wav",
+        "seconds": 0.5,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "SFX_BACKFIRE",
+      "file": "assets/audio/game/sfx/backfire.wav",
+      "sha256": "a1021bf14ec63cc43af80077f10c345abc6df5ebcb4d07993b0a57ea265cd841",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "sfx",
+      "channels": 1,
+      "validation": {
+        "file": "sfx/backfire.wav",
+        "seconds": 0.22,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "SFX_BACKFIRE2",
+      "file": "assets/audio/game/sfx/backfire2.wav",
+      "sha256": "d9b7862625b06610109f2377a763ea0fe6970961bada16fc3f375ba2e793d1b5",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "sfx",
+      "channels": 1,
+      "validation": {
+        "file": "sfx/backfire2.wav",
+        "seconds": 0.22,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "LOOPS_TURBO_WHINE",
+      "file": "assets/audio/game/loops/turbo_whine.wav",
+      "sha256": "0ec6741462b62c27d94453fc87b47b15184eec1356cc6aa21a75c9df305577f9",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "loop",
+      "channels": 1,
+      "validation": {
+        "file": "loops/turbo_whine.wav",
+        "seconds": 1.0,
+        "peak_dbfs": -1.5,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.953,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "MUSIC_HARBOR_DRUMS",
+      "file": "assets/audio/game/music/harbor/drums.wav",
+      "sha256": "f265f102139c64cc7dcaf867313eb78dff2ee4d1dc79fa770df137c7cca149fb",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "music_stem",
+      "bpm": 128,
+      "bars": 16,
+      "frames": 1440000,
+      "channels": 2,
+      "validation": {
+        "file": "music/harbor/drums.wav",
+        "seconds": 30.0,
+        "peak_dbfs": -11.98,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.0,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "MUSIC_HARBOR_BASS",
+      "file": "assets/audio/game/music/harbor/bass.wav",
+      "sha256": "c6a4ff4c9cc41a8d811b315e6434d45a8b950c5e383cc60866c85679675d5e50",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "music_stem",
+      "bpm": 128,
+      "bars": 16,
+      "frames": 1440000,
+      "channels": 2,
+      "validation": {
+        "file": "music/harbor/bass.wav",
+        "seconds": 30.0,
+        "peak_dbfs": -17.89,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.0,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "MUSIC_HARBOR_HARMONY",
+      "file": "assets/audio/game/music/harbor/harmony.wav",
+      "sha256": "f1de6ac513c3714c368d5d920b73f86017966846224ffaa02370e61451fcf6b8",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "music_stem",
+      "bpm": 128,
+      "bars": 16,
+      "frames": 1440000,
+      "channels": 2,
+      "validation": {
+        "file": "music/harbor/harmony.wav",
+        "seconds": 30.0,
+        "peak_dbfs": -15.44,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.0,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "MUSIC_HARBOR_INTENSITY",
+      "file": "assets/audio/game/music/harbor/intensity.wav",
+      "sha256": "619349a9ca7468348e689bb8abc217ab1559fbfa12197ca189d034c30018eab8",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "music_stem",
+      "bpm": 128,
+      "bars": 16,
+      "frames": 1440000,
+      "channels": 2,
+      "validation": {
+        "file": "music/harbor/intensity.wav",
+        "seconds": 30.0,
+        "peak_dbfs": -24.67,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.002,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "MUSIC_NIGHTDRIVE_DRUMS",
+      "file": "assets/audio/game/music/nightdrive/drums.wav",
+      "sha256": "26fc3fb7b0f4b898f61266a435aa326514beef1825b32c11ca89f56e6bcb5eb5",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "music_stem",
+      "bpm": 100,
+      "bars": 16,
+      "frames": 1843200,
+      "channels": 2,
+      "validation": {
+        "file": "music/nightdrive/drums.wav",
+        "seconds": 38.4,
+        "peak_dbfs": -11.98,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.0,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "MUSIC_NIGHTDRIVE_BASS",
+      "file": "assets/audio/game/music/nightdrive/bass.wav",
+      "sha256": "535d42b836be31bb06db8aa12eb67ba53a62da39a8124c0b82524e638f3426cf",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "music_stem",
+      "bpm": 100,
+      "bars": 16,
+      "frames": 1843200,
+      "channels": 2,
+      "validation": {
+        "file": "music/nightdrive/bass.wav",
+        "seconds": 38.4,
+        "peak_dbfs": -17.95,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.0,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "MUSIC_NIGHTDRIVE_HARMONY",
+      "file": "assets/audio/game/music/nightdrive/harmony.wav",
+      "sha256": "0c1409280229eb6077900c977825368479ae69cd1d350018950be5646925c3c6",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "music_stem",
+      "bpm": 100,
+      "bars": 16,
+      "frames": 1843200,
+      "channels": 2,
+      "validation": {
+        "file": "music/nightdrive/harmony.wav",
+        "seconds": 38.4,
+        "peak_dbfs": -15.6,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.001,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "MUSIC_NIGHTDRIVE_INTENSITY",
+      "file": "assets/audio/game/music/nightdrive/intensity.wav",
+      "sha256": "fb13b0bfe8de5720c85a994551d1d6701e6bfa937f057fd0fbbaae959e904e4d",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "music_stem",
+      "bpm": 100,
+      "bars": 16,
+      "frames": 1843200,
+      "channels": 2,
+      "validation": {
+        "file": "music/nightdrive/intensity.wav",
+        "seconds": 38.4,
+        "peak_dbfs": -24.65,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.001,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "MUSIC_RUSH_DRUMS",
+      "file": "assets/audio/game/music/rush/drums.wav",
+      "sha256": "d4f0a0a0860bb773f5349ff3988c0d3c38aea9007c9c4e9aca492f2642176f28",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "music_stem",
+      "bpm": 140,
+      "bars": 16,
+      "frames": 1316571,
+      "channels": 2,
+      "validation": {
+        "file": "music/rush/drums.wav",
+        "seconds": 27.4286,
+        "peak_dbfs": -11.97,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.0,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "MUSIC_RUSH_BASS",
+      "file": "assets/audio/game/music/rush/bass.wav",
+      "sha256": "e2d96072753a28c66e9970415a95b6511886872e3086796f50494161c9864945",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "music_stem",
+      "bpm": 140,
+      "bars": 16,
+      "frames": 1316571,
+      "channels": 2,
+      "validation": {
+        "file": "music/rush/bass.wav",
+        "seconds": 27.4286,
+        "peak_dbfs": -17.96,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.0,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "MUSIC_RUSH_HARMONY",
+      "file": "assets/audio/game/music/rush/harmony.wav",
+      "sha256": "4ed6570eb76e52565be3f91acb0f45a308c90663c6783a58fe38c4ed80703568",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "music_stem",
+      "bpm": 140,
+      "bars": 16,
+      "frames": 1316571,
+      "channels": 2,
+      "validation": {
+        "file": "music/rush/harmony.wav",
+        "seconds": 27.4286,
+        "peak_dbfs": -15.16,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.0,
+        "loop_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "asset_id": "MUSIC_RUSH_INTENSITY",
+      "file": "assets/audio/game/music/rush/intensity.wav",
+      "sha256": "53237b5b88834a6a2cac0341a8eb73597375db97bb52175a1bfae68f9164fe15",
+      "status": "built",
+      "provenance": {
+        "method": "procedural synthesis",
+        "generator": "tools/generate_game_audio.py",
+        "external_inputs": [],
+        "is_recording": false
+      },
+      "category": "music_stem",
+      "bpm": 140,
+      "bars": 16,
+      "frames": 1316571,
+      "channels": 2,
+      "validation": {
+        "file": "music/rush/intensity.wav",
+        "seconds": 27.4286,
+        "peak_dbfs": -24.67,
+        "dc_offset": 0.0,
+        "clipping": false,
+        "loop_seam_ratio": 0.0,
+        "loop_ok": true,
+        "ok": true
+      }
+    }
+  ]
+}

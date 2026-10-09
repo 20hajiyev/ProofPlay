@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "region": "R01",
+  "vehicle_class": "D",
+  "events": [
+    {
+      "id": "R01_E01",
+      "name_key": "event.R01_E01.name",
+      "mode": "CombatRace",
+      "track": "S01",
+      "participants": 12,
+      "laps": 3,
+      "difficulty": "Easy",
+      "allowed_abilities": [
+        "Surge",
+        "Ward",
+        "Mend"
+      ],
+      "objectives": [
+        {
+          "type": "finish_top",
+          "value": 3,
+          "text_key": "objective.finish_top3"
+        },
+        {
+          "type": "uses_at_least",
+          "value": 3,
+          "text_key": "objective.use3"
+        }
+      ]
+    },
+    {
+      "id": "R01_E02",
+      "name_key": "event.R01_E02.name",
+      "mode": "CombatRace",
+      "track": "L01",
+      "participants": 16,
+      "laps": 2,
+      "difficulty": "Easy",
+      "allowed_abilities": [
+        "Surge",
+        "Ward",
+        "Mend",
+        "Needle",
+        "Lance"
+      ],
+      "objectives": [
+        {
+          "type": "finish_top",
+          "value": 3,
+          "text_key": "objective.finish_top3"
+        },
+        {
+          "type": "hits_at_least",
+          "value": 2,
+          "text_key": "objective.hits2"
+        }
+      ]
+    },
+    {
+      "id": "R01_E03",
+      "name_key": "event.R01_E03.name",
+      "mode": "TimeTrial",
+      "track": "S01",
+      "participants": 1,
+      "laps": 2,
+      "difficulty": "Normal",
+      "allowed_abilities": [],
+      "reference_time_s": 113.5,
+      "objectives": [
+        {
+          "type": "time_under",
+          "value": 113.5,
+          "text_key": "objective.beat_reference"
+        },
+        {
+          "type": "no_wreck",
+          "text_key": "objective.clean_run"
+        }
+      ]
+    },
+    {
+      "id": "R01_E04",
+      "name_key": "event.R01_E04.name",
+      "mode": "CheckpointRun",
+      "track": "L01",
+      "participants": 1,
+      "laps": 1,
+      "difficulty": "Normal",
+      "allowed_abilities": [],
+      "reference_time_s": 131.6,
+      "objectives": [
+        {
+          "type": "time_under",
+          "value": 138.9,
+          "text_key": "objective.beat_reference"
+        },
+        {
+          "type": "no_wreck",
+          "text_key": "objective.clean_run"
+        }
+      ]
+    },
+    {
+      "id": "R01_E05",
+      "name_key": "event.R01_E05.name",
+      "mode": "CombatRace",
+      "track": "S01",
+      "participants": 20,
+      "laps": 3,
+      "difficulty": "Normal",
+      "allowed_abilities": [
+        "Surge",
+        "Lance",
+        "Pulse",
+        "Trap",
+        "Needle",
+        "Ward",
+        "Mend",
+        "Storm"
+      ],
+      "objectives": [
+        {
+          "type": "finish_top",
+          "value": 5,
+          "text_key": "objective.finish_top5"
+        },
+        {
+          "type": "hits_at_least",
+          "value": 4,
+          "text_key": "objective.hits4"
+        }
+      ]
+    },
+    {
+      "id": "R01_E06",
+      "name_key": "event.R01_E06.name",
+      "mode": "Destruction",
+      "track": "S01",
+      "participants": 8,
+      "laps": 1,
+      "difficulty": "Normal",
+      "allowed_abilities": [
+        "Lance",
+        "Needle",
+        "Pulse"
+      ],
+      "objectives": [
+        {
+          "type": "hits_at_least",
+          "value": 5,
+          "text_key": "objective.hits5"
+        },
+        {
+          "type": "no_wreck",
+          "text_key": "objective.no_wreck"
+        }
+      ]
+    },
+    {
+      "id": "R01_E07",
+      "name_key": "event.R01_E07.name",
+      "mode": "CombatRace",
+      "track": "L01",
+      "participants": 20,
+      "laps": 3,
+      "difficulty": "Normal",
+      "allowed_abilities": [
+        "Surge",
+        "Lance",
+        "Pulse",
+        "Trap",
+        "Needle",
+        "Ward",
+        "Mend",
+        "Storm"
+      ],
+      "objectives": [
+        {
+          "type": "finish_top",
+          "value": 3,
+          "text_key": "objective.finish_top3"
+        },
+        {
+          "type": "damage_under",
+          "value": 60,
+          "text_key": "objective.damage_under60"
+        }
+      ],
+      "weather": "rain",
+      "weather_intensity": 1.0
+    },
+    {
+      "id": "R01_E08",
+      "name_key": "event.R01_E08.name",
+      "mode": "RivalDuel",
+      "track": "L01",
+      "participants": 2,
+      "laps": 2,
+      "difficulty": "Hard",
+      "allowed_abilities": [
+        "Surge",
+        "Lance",
+        "Pulse",
+        "Trap",
+        "Needle",
+        "Ward",
+        "Mend",
+        "Storm"
+      ],
+      "objectives": [
+        {
+          "type": "finish_top",
+          "value": 1,
+          "text_key": "objective.win"
+        },
+        {
+          "type": "no_wreck",
+          "text_key": "objective.no_wreck"
+        }
+      ]
+    }
+  ],
+  "mastery": [
+    {
+      "id": "R01_M1",
+      "kind": "total_hits",
+      "target": 25,
+      "text_key": "mastery.R01_M1"
+    },
+    {
+      "id": "R01_M2",
+      "kind": "clean_combat_finishes",
+      "target": 3,
+      "text_key": "mastery.R01_M2"
+    },
+    {
+      "id": "R01_M3",
+      "kind": "gold_in_events",
+      "target": 1,
+      "events": [
+        "R01_E03",
+        "R01_E04"
+      ],
+      "text_key": "mastery.R01_M3"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "D03",
+  "class": "D",
+  "drivetrain": "AWD",
+  "visual_asset": "assets/vehicles_toon/D03/D03.glb",
+  "audio_family": "V6",
+
+  "mass_kg": 1450,
+  "length_m": 4.72,
+  "width_m": 1.91,
+  "height_m": 1.46,
+  "wheelbase_m": 2.86,
+  "track_m": 1.79,
+  "wheel_radius_m": 0.36,
+  "wheel_width_m": 0.22,
+  "com_height_m": 0.52,
+
+  "max_engine_torque_nm": 205,
+  "min_rpm": 800,
+  "max_rpm": 6800,
+  "engine_inertia_kgm2": 0.16,
+  "shift_time_s": 0.25,
+  "torque_curve": [[800, 0.6], [2500, 0.88], [4200, 1.0], [5800, 0.95], [6800, 0.82]],
+  "gear_ratios": [3.2, 2.1, 1.5, 1.2, 1.1],
+  "reverse_ratio": -3.2,
+  "final_drive": 4.9,
+  "shift_up_rpm": 6400,
+  "shift_down_rpm": 3000,
+
+  "front_suspension": { "min_length_m": 0.2, "max_length_m": 0.45, "frequency_hz": 1.7, "damping": 0.55 },
+  "rear_suspension": { "min_length_m": 0.2, "max_length_m": 0.45, "frequency_hz": 1.8, "damping": 0.55 },
+  "steering": { "max_angle_deg": 31, "high_speed_angle_deg": 8, "high_speed_kmh": 150, "rate_per_s": 3.8, "return_rate_per_s": 6.0 },
+  "tires": { "longitudinal_grip": 1.0, "lateral_grip": 1.0 },
+  "brake_torque_nm": 2000,
+  "handbrake_torque_nm": 1500,
+  "handbrake_rear_grip": 0.55,
+  "drift_recovery_s": 0.3,
+
+  "top_speed_target_kmh": 170,
+  "health": 100
+}

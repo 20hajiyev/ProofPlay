@@ -1,0 +1,34 @@
+﻿diff --git a/WickedEngine/wiPhysics.h b/WickedEngine/wiPhysics.h
+index 6b600a4..fbb1e9e 100644
+--- a/WickedEngine/wiPhysics.h
++++ b/WickedEngine/wiPhysics.h
+@@ -178,6 +178,10 @@ namespace wi::physics
+ 	// Signed velocity amount in forward direction
+ 	float GetVehicleForwardVelocity(wi::scene::RigidBodyPhysicsComponent& physicscomponent);
+ 
++	// [racer P-001] Returns the underlying JPH::VehicleConstraint* (nullptr until the physics
++	//	object exists). Lets game code tune engine/transmission/tires and read telemetry.
++	void* GetVehicleConstraint(wi::scene::RigidBodyPhysicsComponent& physicscomponent);
++
+ 	// Override all vehicle wheel transforms in world space
+ 	void OverrideWehicleWheelTransforms(wi::scene::Scene& scene);
+ 
+diff --git a/WickedEngine/wiPhysics_Jolt.cpp b/WickedEngine/wiPhysics_Jolt.cpp
+index 32af9c2..6edb8f3 100644
+--- a/WickedEngine/wiPhysics_Jolt.cpp
++++ b/WickedEngine/wiPhysics_Jolt.cpp
+@@ -3703,6 +3703,14 @@ namespace wi::physics
+ 		return velocity;
+ 	}
+ 
++	// [racer P-001]
++	void* GetVehicleConstraint(wi::scene::RigidBodyPhysicsComponent& physicscomponent)
++	{
++		if (physicscomponent.physicsobject == nullptr)
++			return nullptr;
++		return GetRigidBody(physicscomponent).vehicle_constraint;
++	}
++
+ 	void OverrideWehicleWheelTransforms(wi::scene::Scene& scene)
+ 	{
+ 		if (scene.physics_scene == nullptr)

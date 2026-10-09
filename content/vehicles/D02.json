@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "D02",
+  "class": "D",
+  "drivetrain": "RWD",
+  "visual_asset": "assets/vehicles_toon/D02/D02.glb",
+  "audio_family": "I4_TURBO",
+
+  "mass_kg": 1250,
+  "length_m": 4.38,
+  "width_m": 1.83,
+  "height_m": 1.32,
+  "wheelbase_m": 2.62,
+  "track_m": 1.72,
+  "wheel_radius_m": 0.36,
+  "wheel_width_m": 0.22,
+  "com_height_m": 0.47,
+
+  "max_engine_torque_nm": 178,
+  "min_rpm": 900,
+  "max_rpm": 7200,
+  "engine_inertia_kgm2": 0.13,
+  "shift_time_s": 0.22,
+  "torque_curve": [[900, 0.45], [2500, 0.8], [3500, 1.0], [5500, 1.0], [7200, 0.78]],
+  "gear_ratios": [3.3, 2.1, 1.55, 1.25, 1.05],
+  "reverse_ratio": -3.3,
+  "final_drive": 5.4,
+  "shift_up_rpm": 6800,
+  "shift_down_rpm": 3200,
+
+  "front_suspension": { "min_length_m": 0.2, "max_length_m": 0.42, "frequency_hz": 2.0, "damping": 0.5 },
+  "rear_suspension": { "min_length_m": 0.2, "max_length_m": 0.42, "frequency_hz": 2.1, "damping": 0.5 },
+  "steering": { "max_angle_deg": 36, "high_speed_angle_deg": 10, "high_speed_kmh": 150, "rate_per_s": 5.0, "return_rate_per_s": 7.0 },
+  "tires": { "longitudinal_grip": 1.0, "lateral_grip": 0.96 },
+  "brake_torque_nm": 1800,
+  "handbrake_torque_nm": 1500,
+  "handbrake_rear_grip": 0.3,
+  "drift_recovery_s": 0.45,
+
+  "top_speed_target_kmh": 170,
+  "health": 95
+}

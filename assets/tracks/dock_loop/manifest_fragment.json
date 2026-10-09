@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "generator": "tools/generate_environment.py",
+  "seed": 7429,
+  "provenance": "Original procedural assets generated locally with Blender. No downloaded model, texture, sound or Blur content.",
+  "assets": [],
+  "files": [
+    {
+      "path": "assets/tracks/dock_loop/dock_loop.blend",
+      "sha256": "9ba4412468c40bb432b7c1760c5f9bdfd7d6f3ebe7e909df18c65b141ceca551",
+      "bytes": 7215120
+    },
+    {
+      "path": "assets/tracks/dock_loop/dock_loop_greybox.glb",
+      "sha256": "932706bf8f9dc3c385c285f34311a4ce7369bf8df15016f6f11cdbbae20dffe5",
+      "bytes": 3162968
+    },
+    {
+      "path": "assets/tracks/dock_loop/dock_loop_overhead.png",
+      "sha256": "e190a97f7baf8f2fa41c1541bbd56d1ba004173d54860fe02c91bc21aa0d3876",
+      "bytes": 3169734
+    },
+    {
+      "path": "assets/tracks/dock_loop/geometric_checks.json",
+      "sha256": "faadb351c83499662bab58fb702887ef117bf827515c0969e29966071009b812",
+      "bytes": 644
+    },
+    {
+      "path": "assets/tracks/dock_loop/minimap.svg",
+      "sha256": "39f253bd026d1727bc1e4d1d0902c3524f152851201d786fa18fdbc4aa3e3089",
+      "bytes": 4330
+    },
+    {
+      "path": "assets/tracks/dock_loop/road_collision.glb",
+      "sha256": "572d385731b6fea0489a99f15efe1458813efd9a686b7e41ddd190891653f56a",
+      "bytes": 16460
+    },
+    {
+      "path": "assets/tracks/dock_loop/track_geometry.json",
+      "sha256": "3351e639463f47acdeb153072e1f31d7fd5e8e8bf92c5883694af43cc019ce4d",
+      "bytes": 42478
+    }
+  ]
+}

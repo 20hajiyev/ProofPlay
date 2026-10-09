@@ -1,0 +1,6 @@
+add_library(racer_audio STATIC src/AudioRuntime.cpp)
+target_include_directories(racer_audio PUBLIC include)
+target_link_libraries(racer_audio PUBLIC racer_core PRIVATE miniaudio nlohmann_json)
+if(MSVC)
+    target_compile_options(racer_audio PRIVATE /W4 /WX)
+endif()

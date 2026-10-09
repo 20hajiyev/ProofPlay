@@ -1,0 +1,15 @@
+diff --git a/WickedEngine/wiScene.cpp b/WickedEngine/wiScene.cpp
+index f37071f..3906ac8 100644
+--- a/WickedEngine/wiScene.cpp
++++ b/WickedEngine/wiScene.cpp
+@@ -5369,7 +5369,9 @@ namespace wi::scene
+ 			rainEmitter.shaderType = wi::EmittedParticleSystem::PARTICLESHADERTYPE::SOFT_LIGHTING;
+ 			rainEmitter.SetCollidersDisabled(true);
+ 			rainEmitter.SetVolumeEnabled(true);
+-			constexpr uint32_t target_max_particle_count = 1000000;
++			// racer P-004: a near-zero rain_amount (the game's own rain only needs the blocker map) must
++			// not allocate the full million-particle pool (~600 MB measured with 20 cars, D-092)
++			const uint32_t target_max_particle_count = weather.rain_amount < 0.001f ? 1024u : 1000000u;
+ 			if (rainEmitter.GetMaxParticleCount() != target_max_particle_count)
+ 			{
+ 				rainEmitter.SetMaxParticleCount(target_max_particle_count);
