@@ -17,7 +17,8 @@
   <a href="#measured-results">Results</a> ·
   <a href="#quick-start">Quick start</a> ·
   <a href="#building-from-source">Build</a> ·
-  <a href="#team">Team</a>
+  <a href="#team">Team</a> ·
+  <a href="docs/hackathon/ProofPlay_Hackathon_Pitch.pptx">Pitch deck</a>
 </p>
 
 ---
@@ -410,6 +411,7 @@ genre. It existed before the hackathon; ProofPlay is the layer we built on top o
 | `tools/` | Blender generators, asset checks, map and car renders for the dashboard |
 | `engine/` | Wicked Engine submodule and our patches |
 | `docs/` | Every decision with its measurement, engine baseline, hackathon plan, pitch notes, deploy guide |
+| `docs/hackathon/ProofPlay_Hackathon_Pitch.pptx` | The hackathon pitch deck (12 slides) |
 | `PRODUCT.md` | Product context: users, purpose, principles |
 
 ## Tech stack
